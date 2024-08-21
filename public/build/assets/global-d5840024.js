@@ -1,0 +1,1 @@
+window.onload=function(){AOS.init({duration:800,once:!0})};window.addEventListener("scroll",function(){var e=document.querySelector("header");e.classList.toggle("sticky",window.scrollY>0)});window.swalSuccess=function(e){swal({title:"Berhasil!",icon:"success",content:{element:"p",attributes:{innerHTML:e}}})};

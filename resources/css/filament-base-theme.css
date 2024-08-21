@@ -1,0 +1,38 @@
+@import './../../vendor/filament/filament/resources/css/theme.css';
+@import './../../vendor/awcodes/filament-tiptap-editor/resources/css/plugin.css';
+
+@config './filament-base-theme.tailwind.config.js';
+
+.field-toggle-block {
+  margin-top: 1rem !important;
+}
+
+.text-money-in {
+  @apply text-green-500;
+}
+
+.text-money-out {
+  @apply text-red-500;
+}
+
+.notif-icon > svg {
+  @apply w-10 h-10 !important;
+}
+
+.notif-unread {
+  @apply bg-primary-200 dark:bg-primary-900 !important;
+}
+
+.filament-tables-tags-column > span.dark\:text-primary-500 {
+  @apply dark:text-slate-300 !important;
+}
+
+.tiptap-prosemirror-wrapper .tiptap-content .ProseMirror {
+  padding: 0.8rem !important;
+  max-width: 100% !important;
+  min-height: 320px !important;
+}
+
+.dark .choices__list--multiple .choices__item {
+  @apply text-white bg-primary-500 !important;
+}

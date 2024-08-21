@@ -1,0 +1,34 @@
+// VARIABLES
+
+// Colors
+$primary-color: #FF0000 !default;
+$secondary-color: #1D1F1C !default;
+$tertiary-color: #A20000 !default;
+$white: #FFF !default;
+$black: #1D1F1C !default;
+$grey: #ECECEC !default;
+$dark-grey: #C4C4C4 !default;
+$font-color: #1D1F1C !default;
+$link-color: #A20000 !default;
+
+// Typography
+@font-face {
+    font-family: "Guthen Bloots Personal Use";
+    src: url("/public/fonts/Guthen Bloots Personal Use.woff") format("woff")
+}
+
+$font-family-head: 'Guthen Bloots Personal Use', sans-serif;
+$font-family: 'Plus Jakarta Sans', sans-serif;
+$font-weight-extrabold: 800 !default;
+$font-weight-bold: 700 !default;
+$font-weight-medium: 500 !default;
+$font-weight-reg: 400 !default;
+
+// Breakpoints
+$bp-xxs: 375px !default;
+$bp-xs: 575px !default;
+$bp-sm: 767px !default;
+$bp-md: 992px !default;
+$bp-lg: 1200px !default;
+$bp-xl: 1366px !default;
+$bp-xxl: 1440px !default;

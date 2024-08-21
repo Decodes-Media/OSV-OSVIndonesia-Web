@@ -1,0 +1,21 @@
+includes:
+  - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+  paths:
+    - app
+    - config
+    - database
+    - lang
+    - resources/views
+    - routes
+  excludePaths:
+  level: 7 # https://phpstan.org/user-guide/rule-levels
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false
+  treatPhpDocTypesAsCertain: false
+  ignoreErrors:
+    - '#Access to an undefined property (.*)Model(.*)#'
+    - '#Cannot access property (.*)Model(.*)#'
+    - "#Call to an undefined method Spatie(.*)Role::givePermissionTo#"
+    - '#Function filament_user\(\) never returns (.*)(Admin|Vendor) so it can be removed#'

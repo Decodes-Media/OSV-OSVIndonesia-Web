@@ -1,0 +1,163 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Admin;
+use App\Models\Aspiration;
+use App\Models\Contact;
+use App\Models\Donation;
+use App\Models\MailingList;
+use App\Models\News;
+use App\Models\Page;
+use App\Models\Profile;
+use App\Models\RegisPersonal;
+use App\Models\RegisRecommend;
+use App\Settings\SiteSetting;
+use Filament\Facades\Filament;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Seeder;
+use Illuminate\Mail\Markdown;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
+
+class MasterDatabaseSeeder extends Seeder
+{
+    public function run(): void
+    {
+        Model::unguard();
+
+        $superadmin = Admin::firstWhere('email', config('base.superadmin_email'));
+
+        Filament::auth()->login($superadmin);
+
+        /** @var SiteSetting $siteSetting */
+        $siteSetting = app(SiteSetting::class);
+
+        $fnNoSpaces = fn ($x) => preg_replace('/\s+/', ' ', $x);
+
+        $fnRandomHtml = fn () => collect((array) fake()->paragraphs(rand(6, 12)))
+            ->map(fn ($x) => "<p>{$x}</p>")->implode('');
+
+        $fnData = fn (array $d) => array_merge($d, [
+            'id' => @$d['id'] ?: strtolower(Str::ulid()),
+            'created_at' => now()->toDateTimeString(),
+            'updated_at' => now()->toDateTimeString(),
+            'created_by_id' => $superadmin->id,
+            'updated_by_id' => $superadmin->id,
+        ]);
+
+        // foreach (config('base.master_pages') as $route => $title) {
+        //     Page::insert($fnData([
+        //         'type' => Page::class,
+        //         'title' => $title,
+        //         'slug' => Str::slug($title),
+        //         'status' => 'Published',
+        //         'cover_path' => null,
+        //         'body' => Markdown::parse(file_get_contents(
+        //             database_path("_raws/{$route}.md"),
+        //         ) ?: ''),
+        //         'is_published' => true,
+        //         'published_at' => now(),
+        //         'published_by' => $superadmin->id,
+        //         'is_master' => true,
+        //         'metadata' => json_encode(['route' => $route]),
+        //     ]));
+        // }
+
+        // Page::insert($fnData([
+        //     'type' => Page::class,
+        //     'title' => 'What is Wikipedia',
+        //     'slug' => 'what-is-wikipedia',
+        //     'status' => 'Published',
+        //     'cover_path' => null,
+        //     'body' => file_get_contents(database_path('_raws/wikipedia.html')),
+        //     'is_published' => true,
+        //     'published_at' => now(),
+        //     'published_by' => $superadmin->id,
+        // ]));
+
+        Profile::create([
+            'name' => 'Michael Victor Sianipar',
+            'slug' => 'michael-victor-sianipar',
+            'title' => 'Caleg Dapil 24 DKI Jakarta',
+            'photo_path' => 'static/caleg-1.webp',
+            'excerpt' => $fnNoSpaces(
+                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
+                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
+            'content' => $fnRandomHtml(),
+            'status' => 'Published',
+            'is_published' => true,
+            'published_at' => now(),
+            'published_by' => $superadmin->id,
+        ]);
+
+        Profile::create([
+            'name' => 'Rian Ernest',
+            'slug' => 'rian-ernest',
+            'title' => 'Caleg Dapil 25 DKI Jakarta',
+            'photo_path' => 'static/caleg-2.webp',
+            'excerpt' => $fnNoSpaces(
+                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
+                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
+            'content' => $fnRandomHtml(),
+            'status' => 'Published',
+            'is_published' => true,
+            'published_at' => now(),
+            'published_by' => $superadmin->id,
+        ]);
+
+        Profile::create([
+            'name' => 'Anggara Sastroamidjojo',
+            'slug' => 'anggara-sastroamidjojo',
+            'title' => 'Caleg Dapil 26 DKI Jakarta',
+            'photo_path' => 'static/caleg-3.webp',
+            'excerpt' => $fnNoSpaces(
+                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
+                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
+            'content' => $fnRandomHtml(),
+            'status' => 'Published',
+            'is_published' => true,
+            'published_at' => now(),
+            'published_by' => $superadmin->id,
+        ]);
+
+        Profile::create([
+            'name' => 'Manik Margamahendra',
+            'slug' => 'manik-margamahendra',
+            'title' => 'Caleg Dapil 27 DKI Jakarta',
+            'photo_path' => 'static/caleg-4.webp',
+            'excerpt' => $fnNoSpaces(
+                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
+                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
+            'content' => $fnRandomHtml(),
+            'status' => 'Published',
+            'is_published' => true,
+            'published_at' => now(),
+            'published_by' => $superadmin->id,
+        ]);
+
+        $siteSetting->profile_featured_ids = Profile::pluck('id')->toArray();
+        $siteSetting->save();
+
+        // News::factory(8)->create();
+
+        // Aspiration::factory(6)->create();
+
+        // Donation::factory(4)->create()
+        //     ->each(function (Donation $donation) {
+        //         $donation->created_at = Carbon::parse(fake()->dateTimeThisMonth());
+        //         $donation->save();
+        //     });
+
+        MailingList::factory(4)->create();
+
+        Contact::factory(8)->create()
+            ->each(function (Contact $contact) {
+                $contact->created_at = Carbon::parse(fake()->dateTimeThisMonth());
+                $contact->save();
+            });
+
+        RegisPersonal::factory(8)->create();
+        // RegisRecommend::factory(8)->create();
+    }
+}
