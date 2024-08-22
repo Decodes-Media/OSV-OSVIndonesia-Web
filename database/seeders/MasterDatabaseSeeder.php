@@ -3,15 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
-use App\Models\Aspiration;
 use App\Models\Contact;
-use App\Models\Donation;
-use App\Models\MailingList;
 use App\Models\News;
 use App\Models\Page;
 use App\Models\Profile;
-use App\Models\RegisPersonal;
-use App\Models\RegisRecommend;
 use App\Settings\SiteSetting;
 use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
@@ -76,69 +71,6 @@ class MasterDatabaseSeeder extends Seeder
         //     'published_by' => $superadmin->id,
         // ]));
 
-        Profile::create([
-            'name' => 'Michael Victor Sianipar',
-            'slug' => 'michael-victor-sianipar',
-            'title' => 'Caleg Dapil 24 DKI Jakarta',
-            'photo_path' => 'static/caleg-1.webp',
-            'excerpt' => $fnNoSpaces(
-                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
-                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
-            'content' => $fnRandomHtml(),
-            'status' => 'Published',
-            'is_published' => true,
-            'published_at' => now(),
-            'published_by' => $superadmin->id,
-        ]);
-
-        Profile::create([
-            'name' => 'Rian Ernest',
-            'slug' => 'rian-ernest',
-            'title' => 'Caleg Dapil 25 DKI Jakarta',
-            'photo_path' => 'static/caleg-2.webp',
-            'excerpt' => $fnNoSpaces(
-                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
-                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
-            'content' => $fnRandomHtml(),
-            'status' => 'Published',
-            'is_published' => true,
-            'published_at' => now(),
-            'published_by' => $superadmin->id,
-        ]);
-
-        Profile::create([
-            'name' => 'Anggara Sastroamidjojo',
-            'slug' => 'anggara-sastroamidjojo',
-            'title' => 'Caleg Dapil 26 DKI Jakarta',
-            'photo_path' => 'static/caleg-3.webp',
-            'excerpt' => $fnNoSpaces(
-                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
-                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
-            'content' => $fnRandomHtml(),
-            'status' => 'Published',
-            'is_published' => true,
-            'published_at' => now(),
-            'published_by' => $superadmin->id,
-        ]);
-
-        Profile::create([
-            'name' => 'Manik Margamahendra',
-            'slug' => 'manik-margamahendra',
-            'title' => 'Caleg Dapil 27 DKI Jakarta',
-            'photo_path' => 'static/caleg-4.webp',
-            'excerpt' => $fnNoSpaces(
-                'Lorem ipsum dolor sit amet consectetur. Velit mauris netus velit cursus.
-                Mauris suscipit tellus ipsum eros tortor nulla duis aliquam.'),
-            'content' => $fnRandomHtml(),
-            'status' => 'Published',
-            'is_published' => true,
-            'published_at' => now(),
-            'published_by' => $superadmin->id,
-        ]);
-
-        $siteSetting->profile_featured_ids = Profile::pluck('id')->toArray();
-        $siteSetting->save();
-
         // News::factory(8)->create();
 
         // Aspiration::factory(6)->create();
@@ -149,15 +81,10 @@ class MasterDatabaseSeeder extends Seeder
         //         $donation->save();
         //     });
 
-        MailingList::factory(4)->create();
-
-        Contact::factory(8)->create()
-            ->each(function (Contact $contact) {
-                $contact->created_at = Carbon::parse(fake()->dateTimeThisMonth());
-                $contact->save();
-            });
-
-        RegisPersonal::factory(8)->create();
-        // RegisRecommend::factory(8)->create();
+        // Contact::factory(8)->create()
+        //     ->each(function (Contact $contact) {
+        //         $contact->created_at = Carbon::parse(fake()->dateTimeThisMonth());
+        //         $contact->save();
+        //     });
     }
 }

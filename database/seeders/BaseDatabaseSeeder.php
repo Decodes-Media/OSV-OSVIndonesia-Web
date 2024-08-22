@@ -65,7 +65,6 @@ class BaseDatabaseSeeder extends Seeder
         ]);
 
         $role = Role::findByName('Admin', 'web:admin')->givePermissionTo([
-            'donation.*',
             'contact.*',
             'news.*',
             'page.*',
@@ -74,7 +73,7 @@ class BaseDatabaseSeeder extends Seeder
         $admin = Admin::create([
             'id' => strtolower(Str::ulid()),
             'name' => 'Admin Satu',
-            'email' => 'admin@mvs.app',
+            'email' => 'admin@osvi.app',
             'password' => Hash::make('password'),
             'password_updated_at' => now(),
         ]);
