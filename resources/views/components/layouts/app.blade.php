@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $seo_title }}</title>
+    <title>OSV Indonesia</title>
     <link rel="shortcut icon" href="{{ asset('faviconx.ico') }}" />
 
     <meta name="robots" content="index, follow">
@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    
 
     @vite('public/css/owl-carousel-custom.css')
     @vite('resources/sass/app.scss')
@@ -48,13 +49,26 @@
 </head>
 
 <body>
+    <div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+        <img src="{{ asset('img/logo-black.png') }}" class="icon" alt="Preloader Logo">
+    </div>
+
     <div id="app">
+        <div id="cursor" class="cursor">
+            <div class="ring">
+                <div><!--Border--></div>
+            </div>
+            <div class="ring">
+                <div><!--Pointer--></div>		
+            </div>
+        </div>
+        
         <x-layouts.navbars.navbar />
         {{ $slot }}
         <x-layouts.footers.footer />
     </div>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
@@ -62,8 +76,15 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/js/all.min.js"></script>
     <script defer type="module" src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.0/ionicons/ionicons.esm.min.js"></script>
     <script defer nomodule src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.0/ionicons/ionicons.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CSSRulePlugin.min.js"></script>
+    
     @vite('public/js/global.js')
+    @vite('public/js/cursor.js')
+    @vite('public/js/navbar.js')
+    @vite('public/js/owl-carousel-settings.js')
+    @vite('public/js/button.js')
+    @vite('public/js/preloader.js')
 
     @stack('pageScripts')
     @livewireScripts
