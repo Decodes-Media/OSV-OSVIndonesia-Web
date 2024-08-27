@@ -292,15 +292,126 @@ section {
 }
 
 @media screen and (max-width: $bp-lg) {
-
+    section {
+        &.highlights {
+            :is(h1, h2) {
+                font-size: clamp(2.5rem, 7vw + 1rem, 8.25rem);
+            }
+            
+            h2 {
+                font-size: clamp(2rem, 5vw + 1rem, 4rem);
+            }
+            
+            p {
+                font-size: clamp(1.625rem, 3vw + 1rem, 5rem);
+            }
+            
+            .section__content {
+                width: 600px;
+                padding: 0;
+            }
+            
+            footer {
+                font-size: clamp(1.625rem, 3vw + 1rem, 5rem);
+            }
+            
+            footer span:first-of-type {
+                font-size: 1.25rem;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $bp-md) {
+    section {
+        &.banner {
+            a {
+                font-size: 2rem;
+            }
+        }
 
+        &.highlights {
+            :is(h1, h2) {
+                font-size: clamp(2.25rem, 7vw + 1rem, 6rem);
+            }
+            
+            h2 {
+                font-size: clamp(1.75rem, 5vw + 1rem, 3.75rem);
+            }
+            
+            p {
+                font-size: clamp(1.5rem, 3vw + 1rem, 4.5rem);
+            }
+            
+            .section__content {
+                width: 600px;
+                padding: 0;
+            }
+            
+            footer {
+                font-size: clamp(1.5rem, 3vw + 1rem, 4.5rem);
+            }
+            
+            footer span:first-of-type {
+                font-size: 1.25rem;
+            }
+        }
+
+        &.cta {
+            padding: 100px 0;
+    
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $bp-sm) {
+    section {
+        padding: 40px 0;
 
+        &.banner {
+            a {
+                font-size: 1.5rem;
+            }
+        }
+
+        &.highlights {
+            :is(h1, h2) {
+                font-size: clamp(1.75rem, 7vw + 1rem, 4.5rem);
+            }
+            
+            h2 {
+                font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+            }
+            
+            p {
+                font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem);
+            }
+            
+            .section__content {
+                width: 450px;
+                padding: 0;
+            }
+            
+            footer {
+                font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem);
+            }
+            
+            footer span:first-of-type {
+                font-size: 1rem;
+            }
+        }
+
+        &.cta {
+            padding: 60px 0;
+    
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
 }
 
 
@@ -349,6 +460,13 @@ section {
     }
 }
 
+@media screen and (max-width: $bp-sm) {
+    .cursor {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
 
 
 // Banner
@@ -384,15 +502,39 @@ section {
 }
 
 @media screen and (max-width: $bp-lg) {
-
+    .banner {
+        &__thumb {
+            height: 500px;
+        }
+    
+        &__content {
+            padding: 40px;
+        }
+    }
 }
 
 @media screen and (max-width: $bp-md) {
-
+    .banner {
+        &__thumb {
+            height: 400px;
+        }
+    
+        &__content {
+            padding: 40px 20px;
+        }
+    }
 }
 
 @media screen and (max-width: $bp-sm) {
-
+    .banner {
+        &__thumb {
+            height: 280px;
+        }
+    
+        &__content {
+            padding: 20px 15px;
+        }
+    }
 }
 
 
@@ -503,12 +645,18 @@ section {
     }
 }
 
-@media screen and (max-width: $bp-md) {
-
-}
-
 @media screen and (max-width: $bp-sm) {
+    .btn {
+        &--primary {
+            padding: 8px 24px;
+            font-size: 1rem;
+        }
 
+        &--secondary {
+            padding: 8px 24px;
+            font-size: 1rem;
+        }
+    }
 }
 
 
@@ -640,11 +788,41 @@ section {
 }
 
 @media screen and (max-width: $bp-md) {
+    .card-animate {
+        height: 460px;
+    }
 
+    .card-animate figcaption {
+        font-size: 1.25rem;
+        padding: 20px;
+    }
+
+    .card-animate h3 {
+        font-size: 1.75rem;
+    }
+
+    .card-animate p {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: $bp-sm) {
+    .card-animate {
+        height: 360px;
+    }
 
+    .card-animate figcaption {
+        font-size: 0.875rem;
+        padding: 20px 15px;
+    }
+
+    .card-animate h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-animate p {
+        font-size: 0.75rem;
+    }
 }
 
 
@@ -839,8 +1017,8 @@ body:not(.no-js) .fading-up {
     }
 }
 
-// @media screen and (max-width: $bp-sm) {
-//     #preloader > .icon {
-//         width: 75%;
-//     }
-// }
+@media screen and (max-width: $bp-sm) {
+    #preloader > .icon {
+        width: 200px;
+    }
+}

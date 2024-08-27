@@ -297,24 +297,15 @@
 @media screen and (max-width: 1200px) {
   .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next {
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
+      width: 48px;
+      height: 48px;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
   .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next {
-      width: 35px;
-      height: 35px;
-      font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next {
-      padding: 10px 0;
+      width: 36px;
+      height: 36px;
   }
 }
