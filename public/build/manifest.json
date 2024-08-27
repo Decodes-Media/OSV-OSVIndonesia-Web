@@ -16,6 +16,10 @@
     "file": "assets/AAK_4059-1fbab5bb.jpg",
     "src": "public/img/AAK_4059.jpg"
   },
+  "public/img/bg-cta.png": {
+    "file": "assets/bg-cta-0081c4b8.png",
+    "src": "public/img/bg-cta.png"
+  },
   "public/js/button.js": {
     "file": "assets/button-60f460c6.js",
     "isEntry": true,
@@ -57,7 +61,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-84b054b0.css",
+    "file": "assets/app-396e0aa9.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

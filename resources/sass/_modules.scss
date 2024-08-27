@@ -68,6 +68,7 @@ section {
 
     &.highlights {
         z-index: -1;
+        padding-bottom: 0;
 
         video {
             position: fixed;
@@ -263,10 +264,43 @@ section {
     }
 
     &.clients {
+        background-color: $white;
+
         h2 {
             color: $secondary-color;
         }
     }
+
+    &.cta {
+        background-color: $white;
+        background-image: url('/public/img/bg-cta.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 120px 0;
+
+        h2 {
+            color: $white;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            font-size: 2rem;
+            color: $white;
+        }
+    }
+}
+
+@media screen and (max-width: $bp-lg) {
+
+}
+
+@media screen and (max-width: $bp-md) {
+
+}
+
+@media screen and (max-width: $bp-sm) {
+
 }
 
 
@@ -349,6 +383,18 @@ section {
     }
 }
 
+@media screen and (max-width: $bp-lg) {
+
+}
+
+@media screen and (max-width: $bp-md) {
+
+}
+
+@media screen and (max-width: $bp-sm) {
+
+}
+
 
 
 // Animation
@@ -400,7 +446,7 @@ section {
         color: $white;
         cursor: pointer;
         outline: none;
-        box-shadow: 0 10px 30px rgba(255,255,255, 0.5);
+        // box-shadow: 0 10px 30px rgba(255,255,255, 0.5);
         transition: transform .1s linear,
             color .1s linear,
             background .15s linear;
@@ -418,6 +464,13 @@ section {
             border: 0;
             color: $white;
             background-color: $primary-color;
+        }
+
+        &:hover,
+        &:focus {
+            &.fill {
+                background-color: $secondary-color;
+            }
         }
     }
 
@@ -448,6 +501,14 @@ section {
             border-color: #fff;
         }
     }
+}
+
+@media screen and (max-width: $bp-md) {
+
+}
+
+@media screen and (max-width: $bp-sm) {
+
 }
 
 
@@ -578,6 +639,34 @@ section {
     }
 }
 
+@media screen and (max-width: $bp-md) {
+
+}
+
+@media screen and (max-width: $bp-sm) {
+
+}
+
+
+
+// Tiles
+.tile {
+    &--client-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+
+        img {
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
 
 
 // Reveal Animtation
@@ -655,18 +744,16 @@ body:not(.no-js) .fading-up {
     cursor: pointer;
 }
 
+@media screen and (max-width: $bp-lg) {
 
+}
 
-// Tiles
-.tile {
-    &--client-logo {
-        img {
-            object-fit: cover;
-            object-position: center;
-            width: 100%;
-            height: 100%;
-        }
-    }
+@media screen and (max-width: $bp-md) {
+
+}
+
+@media screen and (max-width: $bp-sm) {
+
 }
 
 
@@ -693,7 +780,7 @@ body:not(.no-js) .fading-up {
 
 #preloader > .icon {
     position: absolute;
-    width: 200px;
+    width: 300px;
     // -webkit-animation: wink 1s ease-in-out infinite alternate;
     //         animation: wink 1s ease-in-out infinite alternate;
 }

@@ -155,15 +155,15 @@ p {
 }
   
 ::-webkit-scrollbar-track {
-	background: $dark-grey;
+	background: $white;
 }
   
 ::-webkit-scrollbar-thumb {
-  	background: $secondary-color;
+  	background: $dark-grey;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-  	background: $primary-color;
+  	background: $secondary-color;
 }
 
 

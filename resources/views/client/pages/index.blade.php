@@ -5,4 +5,5 @@
     <x-home.section-intro />
     <x-home.section-highlights />
     <x-global.section-clients />
+    <x-global.section-cta />
 </x-layouts.app>
