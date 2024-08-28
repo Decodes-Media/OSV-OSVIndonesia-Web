@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <a href="#">
-                    <img src="{{ asset('img/logo-black.png') }}" class="img-fluid header-logo" alt="Ava" loading="lazy">
+                    <img src="{{ asset('img/logo-black.png') }}" class="img-fluid header-logo" alt="Logo" loading="lazy">
                 </a>
 
                 <div id="toggle-btn" class="btn">

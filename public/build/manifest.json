@@ -31,12 +31,12 @@
     "src": "public/js/cursor.js"
   },
   "public/js/global.js": {
-    "file": "assets/global-be857005.js",
+    "file": "assets/global-6e477e90.js",
     "isEntry": true,
     "src": "public/js/global.js"
   },
   "public/js/navbar.js": {
-    "file": "assets/navbar-2f6f267c.js",
+    "file": "assets/navbar-49de14d0.js",
     "isEntry": true,
     "src": "public/js/navbar.js"
   },
@@ -51,7 +51,7 @@
     "src": "public/js/preloader.js"
   },
   "resources/css/filament-base-theme.css": {
-    "file": "assets/filament-base-theme-6ed2e005.css",
+    "file": "assets/filament-base-theme-4ae33989.css",
     "isEntry": true,
     "src": "resources/css/filament-base-theme.css"
   },
@@ -61,7 +61,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-dfcf20ee.css",
+    "file": "assets/app-8c08f626.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

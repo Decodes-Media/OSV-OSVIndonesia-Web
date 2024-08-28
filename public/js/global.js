@@ -64,16 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Text Reveal
-let listItems = [...document.querySelectorAll('li')];
+let listItems = [...document.querySelectorAll('.tagline li')];
 
 let options = { rootMargin: '-5%', threshold: 0.0 };
 
 let observer = new IntersectionObserver(showItem, options);
 
+
 function showItem(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting){
-            let letters = [...entry.target.querySelectorAll('span')];
+            let letters = [...entry.target.querySelectorAll('.tagline span')];
             letters.forEach((letter, idx) => {
                 setTimeout(() => {
                     letter.classList.add('active')

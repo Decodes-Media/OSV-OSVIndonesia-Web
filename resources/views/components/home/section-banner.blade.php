@@ -40,10 +40,10 @@
                 <div class="content">
                     <div class="tagline">
                         <ul>
-                            <li><span>Custom,</span></li>
-                            <li><span>Outdoor,</span></li>
-                            <li><span>Bespoke<span></li>
-                            <li><span>Furniture<span></li>
+                            <li><span class="title">Custom,</span></li>
+                            <li><span class="title">Outdoor,</span></li>
+                            <li><span class="title">Bespoke<span></li>
+                            <li><span class="title">Furniture<span></li>
                         </ul>
                         <h4>Brought to life here!</h4>
                     </div>

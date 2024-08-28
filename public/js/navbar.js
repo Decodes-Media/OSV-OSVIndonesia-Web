@@ -58,8 +58,8 @@ function revealMenuItems() {
         1.25, {
             x: -40,
             y: 40,
-            width: "140px",
-            height: "140px",
+            width: "60px",
+            height: "60px",
             border: "1px solid #563627",
             ease: power2
         },

@@ -135,6 +135,7 @@ svg path {
     margin-inline: 0;
     display: flex;
     z-index: 99;
+    background-color: $tertiary-color;
 }
 
 .menu>div {
@@ -225,4 +226,190 @@ svg path {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+@media screen and (max-width: $bp-md) {
+    img.header-logo {
+        width: 175px;
+    }
+
+    #toggle-btn {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .btn-outline {
+        width: 100px;
+        height: 100px;
+    }
+
+    .primary-menu,
+    .secondary-menu {
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 30px;
+    }
+
+    .primary-menu {
+        flex: 2;
+    }
+
+    .primary-menu .menu-container .wrapper {
+        gap: 30px; 
+    }
+
+    .primary-menu a {
+        font-size: 2.5rem;
+    }
+
+    .secondary-menu {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    img.header-logo {
+        width: 150px;
+        top: 30px;
+        left: 15px;
+    }
+
+    #toggle-btn {
+        width: 70px;
+        height: 70px;
+        margin: 15px;
+    }
+    
+    .btn-outline {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .primary-menu,
+    .secondary-menu {
+        align-items: flex-start;
+    }
+
+    .primary-menu a {
+        font-size: 1.5rem;
+    }
+
+    .secondary-menu {
+        justify-content: flex-start;
+    }
+
+    .btn-download {
+        font-size: 1.25rem !important;
+    }
+}
+
+
+
+// Footer
+footer {
+    .footer-top {
+        background-color: $white;
+        padding: 20px 0;
+
+        .footer-logo {
+            width: 250px;
+        }
+
+        .company-location {
+            &__left {
+                padding: 8px 16px;
+                border-right: 1px solid $tertiary-color;
+                text-align: right;
+            }
+
+            &__right {
+                padding: 8px 16px;
+                text-align: left;
+            }
+
+            h5 {
+                font-size: 1rem;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                a {
+                    color: $font-color;
+                    font-weight: $font-weight-light;
+
+                    i {
+                        color: $font-color;
+                    }
+
+                    svg path {
+                        fill: $font-color !important;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $primary-color;
+                        transform: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: $secondary-color;
+        padding: 20px 0;
+
+        h6 {
+            color: $white;
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+
+            li {
+                display: inline;
+                padding-left: 8px;
+
+                &:not(:last-child) {
+                    border-right: 1px solid $tertiary-color;
+                }
+
+                a {
+                    font-size: 1rem;
+                    color: $white;
+
+                    &:hover,
+                    &:focus {
+                        color: $primary-color;
+                        transform: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    footer {
+        .footer-top {
+            .footer-logo {
+                width: 200px;
+            }
+        }
+    }
 }
