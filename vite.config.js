@@ -15,6 +15,7 @@ export default defineConfig({
         'public/js/navbar.js',
         'public/js/button.js',
         'public/js/preloader.js',
+        'public/js/cookies.js',
       ],
       refresh: [
         ...refreshPaths,

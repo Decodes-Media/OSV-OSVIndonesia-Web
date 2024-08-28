@@ -25,6 +25,11 @@
     "isEntry": true,
     "src": "public/js/button.js"
   },
+  "public/js/cookies.js": {
+    "file": "assets/cookies-3190da14.js",
+    "isEntry": true,
+    "src": "public/js/cookies.js"
+  },
   "public/js/cursor.js": {
     "file": "assets/cursor-4e51b4d0.js",
     "isEntry": true,
@@ -61,7 +66,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-8c08f626.css",
+    "file": "assets/app-2f5da2ab.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

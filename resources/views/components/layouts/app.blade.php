@@ -66,6 +66,15 @@
         <x-layouts.navbars.navbar />
         {{ $slot }}
         <x-layouts.footers.footer />
+
+        <div class="cookie-container hide">
+            <p class="cookie-text">
+                We use cookies and similar technologies that are necessary to operate the website. Additional cookies are used to perform analysis of website usage. By continuing to use our website, consent to our use of cookies. For more information, please read our <a href="#"> Privacy Policy.</a>
+            </p>
+            <div class="agree">
+                <button>Yes, agree!</button>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -85,6 +94,7 @@
     @vite('public/js/owl-carousel-settings.js')
     @vite('public/js/button.js')
     @vite('public/js/preloader.js')
+    @vite('public/js/cookies.js')
 
     @stack('pageScripts')
     @livewireScripts

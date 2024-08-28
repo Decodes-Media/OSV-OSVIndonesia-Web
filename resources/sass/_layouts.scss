@@ -413,3 +413,63 @@ footer {
         }
     }
 }
+
+
+
+// Cookies
+.cookie-container {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	padding: 16px 24px;
+	background: $primary-color;
+	color: $white;
+	position: fixed;
+	bottom:0;
+	gap: 2rem;
+	opacity: 1;
+	visibility: visible;
+	flex-wrap: wrap;
+    z-index: 9999;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+.cookie-container.hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.cookie-container a {
+	color: $white;
+}
+
+.cookie-container a:hover {
+	color: $tertiary-color;
+}
+
+.cookie-container .cookie-text {
+	flex: 8 768px;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+.cookie-container .agree {
+	flex: 1 150px;
+	text-align: center;
+}
+
+.agree button {
+	background: $white;
+	color: $primary-color;
+	border: none;
+	padding: 12px 32px;
+	cursor: pointer;
+	border-radius: 50px;
+	font-size: 1rem;
+}
+
+.agree button:hover {
+	background: $tertiary-color;
+    transition: 0.3s;
+}
