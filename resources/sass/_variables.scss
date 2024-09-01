@@ -13,17 +13,21 @@ $link-color: #563627 !default;
 
 // Typography
 @font-face {
-    font-family: "Sentient";
-    src: url("/public/fonts/Sentient-Regular.otf") format("otf")
-}
-
-@font-face {
     font-family: "Switzer";
+    font-weight: normal;
+    font-style: normal;
     src: url("/public/fonts/Switzer-Variable.ttf") format("ttf")
 }
 
-$font-family-head: 'Sentient', sans-serif;
+@font-face {
+    font-family: "Sentient";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/public/fonts/Sentient-Regular.otf") format("otf")
+}
+
 $font-family: 'Switzer', sans-serif;
+$font-family-second: 'Sentient', sans-serif;
 $font-weight-extrabold: 800 !default;
 $font-weight-bold: 700 !default;
 $font-weight-medium: 500 !default;

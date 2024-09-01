@@ -1,4 +1,4 @@
-<header>
+<header id="navbar">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
@@ -7,8 +7,8 @@
                 </a>
 
                 <div id="toggle-btn" class="btn">
-                    <div class="btn-outline btn-outline-1"></div>
-                    <div class="btn-outline btn-outline-2"></div>
+                    <!-- <div class="btn-outline btn-outline-1"></div>
+                    <div class="btn-outline btn-outline-2"></div> -->
                     <div id="hamburger">
                         <span class="line line-1"></span>
                         <span class="line line-2"></span>

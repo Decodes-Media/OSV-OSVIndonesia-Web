@@ -7,7 +7,7 @@ section {
     z-index: 98;
 
     &.banner {
-        padding-top: 0;
+        padding-top: 100px;
 
         a {
             font-size: 2.5rem;
@@ -43,8 +43,12 @@ section {
         }
 
         h3 {
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-reg;
             max-width: 85%;
+        }
+
+        h4 {
+            font-family: $font-family-second;
         }
     }
 
@@ -61,12 +65,14 @@ section {
     }
 
     &.introduction {
+        background-color: $tertiary-color;
+
         h2 {
             color: $secondary-color;
         }
 
         img {
-            border-radius: 24px;
+            border-radius: 6px;
         }
     }
 
@@ -534,7 +540,7 @@ section {
 
     &__thumb {
         overflow: hidden;
-        border-radius: 24px;
+        border-radius: 6px;
         height: 600px;
 
         img {
@@ -542,7 +548,7 @@ section {
             height: 100%;
             object-fit: cover;
             object-position: center;
-            border-radius: 24px;
+            border-radius: 6px;
         }
     }
 
@@ -640,7 +646,7 @@ section {
         position: relative;
         border: 0;
         padding: 12px 32px;
-        border-radius: 50px;
+        border-radius: 6px;
         border: none;
         font-size: 1.25rem;
         font-weight: $font-weight-light;
@@ -681,7 +687,7 @@ section {
         font-weight: $font-weight-light;
         color: $white;
         padding: 12px 32px;
-        border-radius: 50px;
+        border-radius: 6px;
         border: none;
 
         &:hover,
@@ -731,7 +737,7 @@ section {
     background: $primary-color;
     text-align: center;
     cursor: pointer;
-    border-radius: 24px;
+    border-radius: 6px;
 }
 
 .card-animate img {
@@ -742,7 +748,7 @@ section {
     opacity: 0.75;
     object-fit: cover;
     object-position: center;
-    border-radius: 24px;
+    border-radius: 6px;
 }
 
 .card-animate figcaption {
@@ -785,7 +791,7 @@ section {
 
 .card-animate p {
     font-weight: $font-weight-light;
-    border-radius: 24px;
+    border-radius: 6px;
 }
 
 .card-animate.card--service {
