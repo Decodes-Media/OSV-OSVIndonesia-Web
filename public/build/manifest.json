@@ -20,6 +20,10 @@
     "file": "assets/bg-cta-0081c4b8.png",
     "src": "public/img/bg-cta.png"
   },
+  "public/img/vector-2.png": {
+    "file": "assets/vector-2-75b72a55.png",
+    "src": "public/img/vector-2.png"
+  },
   "public/js/button.js": {
     "file": "assets/button-60f460c6.js",
     "isEntry": true,
@@ -66,7 +70,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-e709de18.css",
+    "file": "assets/app-869ffd7c.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

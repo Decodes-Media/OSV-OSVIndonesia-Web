@@ -94,6 +94,10 @@ svg path {
     justify-content: center;
     align-items: center;
     z-index: 99;
+    background-image: url('/public/img/vector-2.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #hamburger .line-1 {
