@@ -6,8 +6,8 @@
                 <p>
                     Having started as a client ourselves, we do understand the expectations. We craft high-quality furniture and ensure timely delivery with the expertise of our team.
                 </p>
-                <a href="#" class="btn btn-magnetic btn--primary fill mt-4" cursor="link">
-                    <span>Know More</span>
+                <a href="#" class="btn btn-magnetic btn--outline-dark fill mt-4" cursor="link">
+                    Know More
                 </a>
             </div>
             <div class="col-12 col-lg-7">

@@ -50,3 +50,5 @@
         </div>
     </div>
 </section>
+
+<x-modals.modal-user-data />

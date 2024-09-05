@@ -6,7 +6,7 @@
             </div>
             <div class="col-12 col-md-6">
                 <p>Drop us your contact details and our representative will be in touch to arrange a visit to our facility.</p>
-                <a href="#" class="btn btn-magnetic btn--primary fill mt-4" cursor="link">Contact Us</a>
+                <a href="#" class="btn btn-magnetic btn--outline-light fill mt-4" cursor="link">Contact Us</a>
             </div>
         </div>
     </div>

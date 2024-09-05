@@ -65,10 +65,13 @@ svg path {
     font-size: 1.5rem !important;
     text-decoration: underline !important;
     text-underline-position: under !important;
+    padding: 0;
 }
 
-.btn-download:hover {
+.btn-download:hover,
+.btn-download:focus {
     color: $secondary-color !important;
+    box-shadow: none;
 }
 
 @keyframes morph {

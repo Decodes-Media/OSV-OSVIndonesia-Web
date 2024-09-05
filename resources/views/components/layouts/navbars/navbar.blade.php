@@ -54,7 +54,7 @@
                                 </div>
 
                                 <div class="menu-item mt-5">
-                                    <a href="#" class="btn-download">Download Company Profile</a>
+                                    <button data-toggle="modal" data-target="#modalUserData" class="btn btn-download">Download Company Profile</button>
                                 </div>
                             </div>
                         </div>
@@ -90,3 +90,5 @@
         </div>
     </div>
 </header>
+
+<x-modals.modal-user-data />
