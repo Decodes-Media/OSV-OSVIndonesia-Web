@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="" class="form form-user-data">
+                <form method="POST" onsubmit="return validateForm()" class="form form-user-data">
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <input id="fullName" type="text" class="form-control" name="fullName" placeholder="Full Name" required>
@@ -27,11 +27,29 @@
                             <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Email Address" required>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn btn--secondary d-flex align-items-center justify-content-center">
+                            Submit & Download File
+                            <ion-icon name="send-outline" class="ml-2"></ion-icon>
+                        </button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer d-flex align-items-center justify-content-center">
-                <button type="submit" class="btn btn--secondary btn-magnetic">Submit & Download File</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function validateForm() {
+        let fields = ["fullName", "phone", "email", "companyName", "companyEmail"];
+        for (let i = 0; i < fields.length; i++) {
+            let input = document.getElementById(fields[i]);
+            if (input.value.trim() === "") {
+                alert(input.placeholder + " is required.");
+                input.focus();
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
