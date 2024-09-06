@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col-12">
-                <h2 class="text-center" data-aos="fade-in">Successful Projects</h2>
+                <h2 class="text-center" data-aos="fade-in">CLIENTS WE'VE WORKED WITH</h2>
             </div>
         </div>
         <div class="row">

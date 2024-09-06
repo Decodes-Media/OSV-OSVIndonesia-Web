@@ -8,6 +8,7 @@ section {
 
     &.banner {
         padding-top: 0;
+        margin-top: -10px;
 
         a {
             font-size: 2.5rem;
@@ -42,13 +43,21 @@ section {
             }
         }
 
-        h3 {
-            font-weight: $font-weight-reg;
-            max-width: 85%;
+        h2 {
+            font-weight: $font-weight-extrabold;
+            text-transform: uppercase;
         }
 
         h4 {
             font-family: $font-family-second;
+        }
+
+        .owl-stage {
+            .owl-item {
+                .item {
+                    padding: 0;
+                }
+            }
         }
     }
 
@@ -67,6 +76,7 @@ section {
     &.introduction {
         h2 {
             color: $secondary-color;
+            font-weight: $font-weight-extrabold;
         }
 
         img {
@@ -89,7 +99,7 @@ section {
             opacity: 0;
             animation: fade-in both linear, fade-out both linear;
             animation-timeline: --section;
-            animation-range: entry 10% entry 15%, exit 10% exit 15%;
+            animation-range: entry 100% entry 105%, exit 100% exit 105%;
             z-index: -1;
         }
         
@@ -155,6 +165,7 @@ section {
             opacity: 0.15;
             animation: highlight both ease-in-out;
             animation-timeline: view();
+            font-size: 2.5rem;
             font-family: $font-family;
         }
         
@@ -204,6 +215,7 @@ section {
         
         h2 {
             font-size: clamp(2rem, 5vw + 1rem, 4rem);
+            font-weight: $font-weight-extrabold;
             text-align: center;
             color: $font-color;
         }
@@ -285,6 +297,7 @@ section {
         background-repeat: no-repeat;
         background-attachment: fixed;
         padding: 120px 0;
+        margin-top: 80px;
 
         h2 {
             color: $white;
@@ -540,7 +553,7 @@ section {
 
     &__thumb {
         overflow: hidden;
-        border-radius: 6px;
+        border-radius: 0;
         height: 600px;
 
         img {
@@ -548,7 +561,7 @@ section {
             height: 100%;
             object-fit: cover;
             object-position: center;
-            border-radius: 6px;
+            border-radius: 0;
         }
     }
 
@@ -979,8 +992,19 @@ section {
 }
 
 .card {
+    &--service {
+        &__content {
+            h3 {
+                font-weight: $font-weight-extrabold;
+                color: $font-color;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    
     &--product {
         position: relative;
+        margin-bottom: 30px;
 
         &__thumb {
             overflow: hidden;
@@ -997,17 +1021,21 @@ section {
         }
     
         &__content {
-            position: absolute;
-            content: '';
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 40px;
+            // position: absolute;
+            // content: '';
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // padding: 40px;
             text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
     
-            h4 {
-                color: $white;
-                font-weight: $font-weight-bold;
+            h3 {
+                color: $font-color;
+                font-weight: $font-weight-extrabold;
+                text-align: left;
+                max-width: 75%;
             }
         }
     }

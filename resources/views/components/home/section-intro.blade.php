@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-5 pl-lg-4 mb-4">
-                <h2 class="mb-4">Our Furniture Manufacturing Factory</h2>
+                <h2 class="mb-4" data-aos="fade-up">Our Furniture Manufacturing Factory</h2>
                 <p>
                     Having started as a client ourselves, we do understand the expectations. We craft high-quality furniture and ensure timely delivery with the expertise of our team.
                 </p>

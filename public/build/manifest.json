@@ -56,7 +56,7 @@
     "src": "public/js/preloader.js"
   },
   "resources/css/filament-base-theme.css": {
-    "file": "assets/filament-base-theme-1f75f6d5.css",
+    "file": "assets/filament-base-theme-4d322aaf.css",
     "isEntry": true,
     "src": "resources/css/filament-base-theme.css"
   },
@@ -66,7 +66,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-f79798c2.css",
+    "file": "assets/app-d17f0a6c.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

@@ -6,7 +6,7 @@
                     <div class="item">
                         <div class="banner">
                             <div class="banner__thumb">
-                                <img src="{{ asset('img/AAK_3537.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/banner/banner-1.jpeg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                             <!-- <div class="banner__content">
                                 <h3>An Indonesian Furniture Factory, Crafted to Every Designs</h3>
@@ -16,14 +16,28 @@
                     <div class="item">
                         <div class="banner">
                             <div class="banner__thumb">
-                                <img src="{{ asset('img/AAK_4059.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/banner/banner-2.png') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="banner">
                             <div class="banner__thumb">
-                                <img src="{{ asset('img/AAK_4052.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/banner/banner-3.png') }}" class="img-fluid" alt="Banner" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="banner">
+                            <div class="banner__thumb">
+                                <img src="{{ asset('img/banner/banner-4.png') }}" class="img-fluid" alt="Banner" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="banner">
+                            <div class="banner__thumb">
+                                <img src="{{ asset('img/banner/banner-5.png') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -33,16 +47,20 @@
             <div class="col-12 col-lg-4 d-flex align-items-center justify-center pl-lg-3">
                 <div class="content">
                     <div class="tagline">
-                        <ul>
+                        <!-- <ul>
                             <li><span class="title">Custom,</span></li>
                             <li><span class="title">Outdoor,</span></li>
                             <li><span class="title">Bespoke<span></li>
                             <li><span class="title">Furniture<span></li>
-                        </ul>
-                        <h4>Brought to life here!</h4>
+                        </ul> -->
+                        <h2>Bespoke Furniture Factory</h2>
+                        <p>
+                            Tailored to perfection, <br/>
+                            brought to life with us.
+                        </p>
                     </div>
-                    <a href="#" class="d-flex align-items-center mt-5">
-                        Let's Talk
+                    <a href="#" class="mt-5">
+                        Speak to Us
                     </a>
                 </div>
             </div>

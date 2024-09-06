@@ -5,31 +5,41 @@
                 <div class="owl-carousel owl-carousel-2 owl-theme" data-aos="fade-up">
                     <div class="item">
                         <div class="card--product">
-                            <div class="card--product__thumb">
-                                <img src="{{ asset('img/AAK_4414.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
                             <div class="card--product__content">
-                                <h4>Custom Designs, Crafter with Precision.</h4>
+                                <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
+                            </div>
+                            <div class="card--product__thumb">
+                                <img src="{{ asset('img/product/product-1.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="card--product">
-                            <div class="card--product__thumb">
-                                <img src="{{ asset('img/AAK_4059.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
                             <div class="card--product__content">
-                                <h4>Custom Designs, Crafter with Precision.</h4>
+                                <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
+                            </div>
+                            <div class="card--product__thumb">
+                                <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="card--product">
-                            <div class="card--product__thumb">
-                                <img src="{{ asset('img/AAK_4392.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
                             <div class="card--product__content">
-                                <h4>Custom Designs, Crafter with Precision.</h4>
+                                <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
+                            </div>
+                            <div class="card--product__thumb">
+                                <img src="{{ asset('img/product/product-3.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card--product">
+                            <div class="card--product__content">
+                                <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
+                            </div>
+                            <div class="card--product__thumb">
+                                <img src="{{ asset('img/product/product-4.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
