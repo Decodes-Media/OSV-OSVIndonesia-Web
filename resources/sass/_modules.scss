@@ -43,8 +43,12 @@ section {
         }
 
         h3 {
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-reg;
             max-width: 85%;
+        }
+
+        h4 {
+            font-family: $font-family-second;
         }
     }
 
@@ -66,7 +70,7 @@ section {
         }
 
         img {
-            border-radius: 24px;
+            border-radius: 6px;
         }
     }
 
@@ -151,6 +155,7 @@ section {
             opacity: 0.15;
             animation: highlight both ease-in-out;
             animation-timeline: view();
+            font-family: $font-family;
         }
         
         p span:nth-of-type(1) {
@@ -268,19 +273,17 @@ section {
     }
 
     &.clients {
-        background-color: $white;
-
         h2 {
             color: $secondary-color;
         }
     }
 
     &.cta {
-        background-color: $white;
         background-image: url('/public/img/bg-cta.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         padding: 120px 0;
 
         h2 {
@@ -289,9 +292,12 @@ section {
         }
 
         p {
-            font-size: 2rem;
             color: $white;
         }
+    }
+
+    &.product-showcase {
+        
     }
 }
 
@@ -534,7 +540,7 @@ section {
 
     &__thumb {
         overflow: hidden;
-        border-radius: 24px;
+        border-radius: 6px;
         height: 600px;
 
         img {
@@ -542,7 +548,7 @@ section {
             height: 100%;
             object-fit: cover;
             object-position: center;
-            border-radius: 24px;
+            border-radius: 6px;
         }
     }
 
@@ -640,7 +646,7 @@ section {
         position: relative;
         border: 0;
         padding: 12px 32px;
-        border-radius: 50px;
+        border-radius: 6px;
         border: none;
         font-size: 1.25rem;
         font-weight: $font-weight-light;
@@ -671,6 +677,8 @@ section {
         &:focus {
             &.fill {
                 background-color: $secondary-color;
+                color: $white;
+                box-shadow: none;
             }
         }
     }
@@ -681,13 +689,85 @@ section {
         font-weight: $font-weight-light;
         color: $white;
         padding: 12px 32px;
-        border-radius: 50px;
+        border-radius: 6px;
         border: none;
 
         &:hover,
         &:focus {
             background-color: $primary-color;
+            color: $white;
             transition: 0.3s;
+            box-shadow: none;
+        }
+    }
+
+    &--outline-dark {
+        font-size: 1.5rem;
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+        color: $secondary-color;
+        position: relative;
+        padding: 0;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            transition: 0.3s;
+            box-shadow: none;
+
+            &::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            border-radius: 5px;
+            height: 0.05em;
+            bottom: 0;
+            left: 0;
+            background: currentcolor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+    }
+
+    &--outline-light {
+        font-size: 1.5rem;
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+        color: $white;
+        position: relative;
+        padding: 0;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            transition: 0.3s;
+            box-shadow: none;
+
+            &::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            border-radius: 5px;
+            height: 0.05em;
+            bottom: 0;
+            left: 0;
+            background: currentcolor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
         }
     }
 }
@@ -715,6 +795,20 @@ section {
             padding: 8px 24px;
             font-size: 1rem;
         }
+
+        &--outline-dark,
+        &--outline-light {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: $bp-xs) {
+    .btn {
+        &--outline-dark,
+        &--outline-light {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -731,7 +825,7 @@ section {
     background: $primary-color;
     text-align: center;
     cursor: pointer;
-    border-radius: 24px;
+    border-radius: 6px;
 }
 
 .card-animate img {
@@ -742,7 +836,7 @@ section {
     opacity: 0.75;
     object-fit: cover;
     object-position: center;
-    border-radius: 24px;
+    border-radius: 6px;
 }
 
 .card-animate figcaption {
@@ -785,7 +879,7 @@ section {
 
 .card-animate p {
     font-weight: $font-weight-light;
-    border-radius: 24px;
+    border-radius: 6px;
 }
 
 .card-animate.card--service {
@@ -881,6 +975,83 @@ section {
 
     .card-animate p {
         font-size: 0.75rem;
+    }
+}
+
+.card {
+    &--product {
+        position: relative;
+
+        &__thumb {
+            overflow: hidden;
+            border-radius: 6px;
+            height: 600px;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 6px;
+            }
+        }
+    
+        &__content {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 40px;
+            text-align: center;
+    
+            h4 {
+                color: $white;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-lg) {
+    .card {
+        &--product {
+            &__thumb {
+                height: 500px;
+            }
+        
+            &__content {
+                padding: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-md) {
+    .card {
+        &--product {
+            &__thumb {
+                height: 400px;
+            }
+        
+            &__content {
+                padding: 40px 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    .card {
+        &--product {
+            &__thumb {
+                height: 280px;
+            }
+        
+            &__content {
+                padding: 20px 15px;
+            }
+        }
     }
 }
 
@@ -1101,5 +1272,56 @@ body:not(.no-js) .fading-up {
 @media screen and (max-width: $bp-sm) {
     #preloader > .icon {
         width: 200px;
+    }
+}
+
+
+// modals
+.modal {
+    z-index: 10000;
+
+    .modal-content {
+        border-radius: 12px;
+
+        .modal-header {
+            border-bottom: none;
+
+            h4 {
+                font-weight: $font-weight-reg;
+                color: $primary-color;
+            }
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+    }
+}
+
+
+
+// Forms
+.form {
+    input {
+        padding: 8px 0;
+        border: none;
+        border-bottom: 1px solid $tertiary-color;
+        border-radius: 0;
+        font-size: 1rem;
+        font-weight: $font-weight-reg;
+        color: $font-color;
+        margin-bottom: 20px;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom: 1px solid $primary-color;
+            transition: 0.2s;
+        }
+    }
+
+    .btn {
+        font-size: 1rem;
     }
 }

@@ -1,9 +1,10 @@
-<header>
+<header id="navbar">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
-                <a href="#">
-                    <img src="{{ asset('img/logo-black.png') }}" class="img-fluid header-logo" alt="Logo" loading="lazy">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('img/logo-white.png') }}" class="img-fluid header-logo logo-light" alt="Logo" loading="lazy">
+                    <img src="{{ asset('img/logo-black.png') }}" class="img-fluid header-logo logo-dark" alt="Logo" loading="lazy">
                 </a>
 
                 <div id="toggle-btn" class="btn">
@@ -54,7 +55,7 @@
                                 </div>
 
                                 <div class="menu-item mt-5">
-                                    <a href="#" class="btn-download">Download Company Profile</a>
+                                    <button data-toggle="modal" data-target="#modalUserData" class="btn btn-download">Download Company Profile</button>
                                 </div>
                             </div>
                         </div>
@@ -90,3 +91,5 @@
         </div>
     </div>
 </header>
+
+<x-modals.modal-user-data />

@@ -8,9 +8,9 @@
                             <div class="banner__thumb">
                                 <img src="{{ asset('img/AAK_3537.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
-                            <div class="banner__content">
+                            <!-- <div class="banner__content">
                                 <h3>An Indonesian Furniture Factory, Crafted to Every Designs</h3>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="item">
@@ -18,18 +18,12 @@
                             <div class="banner__thumb">
                                 <img src="{{ asset('img/AAK_4059.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
-                            <div class="banner__content">
-                                <h3>An Indonesian Furniture Factory, Crafted to Every Designs</h3>
-                            </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="banner">
                             <div class="banner__thumb">
                                 <img src="{{ asset('img/AAK_4052.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
-                            <div class="banner__content">
-                                <h3>An Indonesian Furniture Factory, Crafted to Every Designs</h3>
                             </div>
                         </div>
                     </div>
@@ -47,12 +41,13 @@
                         </ul>
                         <h4>Brought to life here!</h4>
                     </div>
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="#" class="d-flex align-items-center mt-5">
                         Let's Talk
-                        <ion-icon name="mail-unread-outline" class="ml-2"></ion-icon>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<x-modals.modal-user-data />

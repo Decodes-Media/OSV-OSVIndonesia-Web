@@ -11,9 +11,9 @@
                     <div class='reveal'>
                         <div class="image-wrap">
                             <div class="card-animate card--service" data-aos="slide-up">
-                                <img src="{{ asset('img/AAK_4414.jpg') }}" alt="Service" />
+                                <img src="{{ asset('img/AAK_3545.jpg') }}" alt="Service" />
                                 <figcaption>
-                                    <h3>White Label, ODM Products</h3>
+                                    <h3>Hospitality Project</h3>
                                     <p>Benefit from our extensive manufacturing capabilities and global reach, delivering exceptional products that enhance your brand identity.</p>
                                 </figcaption>			
                             </div>
@@ -41,9 +41,9 @@
                     <div class='reveal'>
                         <div class="image-wrap">
                             <div class="card-animate card--service" data-aos="slide-up">
-                                <img src="{{ asset('img/AAK_3545.jpg') }}" alt="Service" />
+                                <img src="{{ asset('img/AAK_4414.jpg') }}" alt="Service" />
                                 <figcaption>
-                                    <h3>Hospitality Project</h3>
+                                    <h3>White Label, ODM Products</h3>
                                     <p>Benefit from our extensive manufacturing capabilities and global reach, delivering exceptional products that enhance your brand identity.</p>
                                 </figcaption>			
                             </div>
