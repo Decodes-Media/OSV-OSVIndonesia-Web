@@ -23,11 +23,11 @@ $link-color: #563627 !default;
     font-family: "Sentient";
     font-weight: normal;
     font-style: normal;
-    src: url("/public/fonts/Sentient-Regular.otf") format("otf")
+    src: url("/public/fonts/Sentient-Variable.ttf") format("ttf")
 }
 
 $font-family: 'Switzer', sans-serif;
-$font-family-second: 'Sentient', sans-serif;
+$font-family-second: 'Sentient';
 $font-weight-extrabold: 800 !default;
 $font-weight-bold: 700 !default;
 $font-weight-medium: 500 !default;

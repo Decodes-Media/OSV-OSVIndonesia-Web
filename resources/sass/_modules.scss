@@ -7,7 +7,7 @@ section {
     z-index: 98;
 
     &.banner {
-        padding-top: 100px;
+        padding-top: 0;
 
         a {
             font-size: 2.5rem;
@@ -65,8 +65,6 @@ section {
     }
 
     &.introduction {
-        background-color: $tertiary-color;
-
         h2 {
             color: $secondary-color;
         }
@@ -157,6 +155,7 @@ section {
             opacity: 0.15;
             animation: highlight both ease-in-out;
             animation-timeline: view();
+            font-family: $font-family;
         }
         
         p span:nth-of-type(1) {
@@ -274,19 +273,17 @@ section {
     }
 
     &.clients {
-        background-color: $white;
-
         h2 {
             color: $secondary-color;
         }
     }
 
     &.cta {
-        background-color: $white;
         background-image: url('/public/img/bg-cta.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         padding: 120px 0;
 
         h2 {
@@ -295,9 +292,12 @@ section {
         }
 
         p {
-            font-size: 2rem;
             color: $white;
         }
+    }
+
+    &.product-showcase {
+        
     }
 }
 
@@ -702,7 +702,7 @@ section {
     }
 
     &--outline-dark {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         font-weight: $font-weight-light;
         text-transform: uppercase;
         color: $secondary-color;
@@ -737,7 +737,7 @@ section {
     }
 
     &--outline-light {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         font-weight: $font-weight-light;
         text-transform: uppercase;
         color: $white;
@@ -798,7 +798,7 @@ section {
 
         &--outline-dark,
         &--outline-light {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
     }
 }
@@ -975,6 +975,83 @@ section {
 
     .card-animate p {
         font-size: 0.75rem;
+    }
+}
+
+.card {
+    &--product {
+        position: relative;
+
+        &__thumb {
+            overflow: hidden;
+            border-radius: 6px;
+            height: 600px;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 6px;
+            }
+        }
+    
+        &__content {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 40px;
+            text-align: center;
+    
+            h4 {
+                color: $white;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-lg) {
+    .card {
+        &--product {
+            &__thumb {
+                height: 500px;
+            }
+        
+            &__content {
+                padding: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-md) {
+    .card {
+        &--product {
+            &__thumb {
+                height: 400px;
+            }
+        
+            &__content {
+                padding: 40px 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    .card {
+        &--product {
+            &__thumb {
+                height: 280px;
+            }
+        
+            &__content {
+                padding: 20px 15px;
+            }
+        }
     }
 }
 

@@ -41,9 +41,8 @@
                         </ul>
                         <h4>Brought to life here!</h4>
                     </div>
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="#" class="d-flex align-items-center mt-5">
                         Let's Talk
-                        <ion-icon name="mail-unread-outline" class="ml-2"></ion-icon>
                     </a>
                 </div>
             </div>
