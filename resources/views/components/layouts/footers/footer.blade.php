@@ -2,13 +2,13 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-3 text-center text-md-left mb-4 mb-md-0 d-flex align-items-end justify-content-center justify-content-md-start">
+                <div class="col-12 col-lg-3 text-center text-md-left mb-4 mb-md-0 d-flex align-items-end justify-content-center justify-content-lg-start">
                     <a href="#">
                         <img src="{{ asset('img/logo-black.png') }}" class="img-fluid footer-logo" alt="Logo" loading="lazy">
                     </a>
                 </div>
 
-                <div class="col-12 col-lg-6 text-center  mb-4 mb-md-0 d-flex align-items-end justify-content-center">
+                <div class="col-12 col-lg-6 text-center mb-4 mb-md-0 d-flex align-items-end justify-content-center">
                     <div class="company-location d-flex justify-content-center">
                         <div class="company-location__left pb-0">
                             <h5>Furniture Factory</h5>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-3 text-center text-md-right d-flex align-items-end justify-content-center justify-content-md-end">
+                <div class="col-12 col-lg-3 text-center text-md-right d-flex align-items-end justify-content-center justify-content-lg-end">
                     <ul class="social-media mb-0">
                         <li>
                             <a href="#" target="_blank">

@@ -309,8 +309,49 @@ section {
         }
     }
 
-    &.product-showcase {
+    &.stories {
+        padding-top: 0;
+
+        .banner {
+            margin-bottom: 60px;
+            background-image: url('/public/img/AAK_4362.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            padding: 120px 0;
         
+            h1 {
+                color: $white;
+                font-weight: $font-weight-extrabold;
+            }
+
+            // &::before {
+            //     position: absolute;
+            //     content: '';
+            //     left: 0;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            // }
+        }
+
+        h2 {
+            font-weight: $font-weight-extrabold;
+        }
+    }
+
+    &.values {
+        h2 {
+            font-weight: $font-weight-extrabold;
+        }
+    }
+
+    &.about {
+        img {
+            border-radius: 6px;
+        }
     }
 }
 
@@ -361,7 +402,7 @@ section {
 @media screen and (max-width: $bp-md) {
     section {
         &.banner {
-            padding-top: 120px;
+            // padding-top: 120px;
 
             a {
                 font-size: 2rem;
@@ -429,7 +470,7 @@ section {
         padding: 40px 0;
 
         &.banner {
-            padding-top: 80px;
+            // padding-top: 80px;
 
             a {
                 font-size: 1.5rem;
@@ -895,52 +936,110 @@ section {
     border-radius: 6px;
 }
 
-.card-animate.card--service {
-    background: -webkit-linear-gradient(-45deg, #C99165 0%, #563627 100%);
-    background: linear-gradient(-45deg, #C99165 0%, #563627 100%);
+.card-animate {
+    &.card--service {
+        background: -webkit-linear-gradient(-45deg, #C99165 0%, #563627 100%);
+        background: linear-gradient(-45deg, #C99165 0%, #563627 100%);
+        margin-bottom: 30px;
 
-    img,
-    p {
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
+        img,
+        p {
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+
+        &:hover img {
+            opacity: 0.3;
+            -webkit-transform: scale3d(1.5, 1.5, 1);
+            transform: scale3d(1.5, 1.5, 1);
+        }
+
+        h3 {
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+
+        p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 20px;
+            padding: 30px;
+            border: 2px solid $white;
+            text-transform: none;
+            font-size: 1rem;
+            opacity: 0;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            -webkit-transform-origin: 50% -100%;
+            transform-origin: 50% -100%;
+        }
+
+        &:hover h3,
+        &:hover p {
+            opacity: 1;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
     }
 
-    &:hover img {
-        opacity: 0.3;
-        -webkit-transform: scale3d(1.5, 1.5, 1);
-        transform: scale3d(1.5, 1.5, 1);
-    }
+    &.card--values {
+        background: -webkit-linear-gradient(-45deg, #000 0%, #563627 100%);
+        background: linear-gradient(-45deg, #000 0%, #563627 100%);
+        margin-bottom: 30px;
 
-    h3 {
-        -webkit-transition: -webkit-transform 0.35s;
-        transition: transform 0.35s;
-        -webkit-transform: scale3d(0.8, 0.8, 1);
-        transform: scale3d(0.8, 0.8, 1);
-        -webkit-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
-    }
-
-    p {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        margin: 20px;
-        padding: 30px;
-        border: 2px solid $white;
-        text-transform: none;
-        font-size: 1rem;
-        opacity: 0;
-        -webkit-transform: scale3d(0.8, 0.8, 1);
-        transform: scale3d(0.8, 0.8, 1);
-        -webkit-transform-origin: 50% -100%;
-        transform-origin: 50% -100%;
-    }
-
-    &:hover h3,
-    &:hover p {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
+        img,
+        p {
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+    
+        &:hover img {
+            opacity: 0.3;
+            -webkit-transform: scale3d(1.5, 1.5, 1);
+            transform: scale3d(1.5, 1.5, 1);
+        }
+    
+        h3 {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+    
+        p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px;
+            padding: 30px;
+            border: 2px solid $white;
+            text-transform: none;
+            font-size: 1rem;
+            opacity: 0;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            -webkit-transform-origin: 50% -100%;
+            transform-origin: 50% -100%;
+        }
+    
+        &:hover h3,
+        &:hover p {
+            opacity: 1;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
     }
 }
 
@@ -1077,7 +1176,7 @@ section {
             }
         
             &__content {
-                padding: 20px 15px;
+                padding: 0;
             }
         }
     }
