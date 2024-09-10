@@ -12,7 +12,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 px-4 px-md-0">
                 <h2 class="mb-4">Our Stories</h2>
                 <p>Start the dream in Bali, the founder was a client for the hospitality project in some regions. 20 years more in this furniture 
                     manufacturing industries we really know how prestige this industries should be.</p>

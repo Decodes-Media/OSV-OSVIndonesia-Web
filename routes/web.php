@@ -15,5 +15,8 @@ Route::view('/', 'client.pages.index')
 Route::view('/about-us', 'client.pages.about-us')
     ->name('about-us');
 
+Route::view('/contact-us', 'client.pages.contact-us')
+    ->name('contact-us');
+
 Route::get('halaman/{slug}', [PageController::class, 'view'])
     ->name('page.view');
