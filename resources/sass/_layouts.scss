@@ -240,16 +240,6 @@ svg path {
         width: 175px;
     }
 
-    #toggle-btn {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .btn-outline {
-        width: 100px;
-        height: 100px;
-    }
-
     .primary-menu,
     .secondary-menu {
         align-items: flex-start;
@@ -286,14 +276,8 @@ svg path {
     }
 
     #toggle-btn {
-        width: 70px;
-        height: 70px;
         margin: 15px;
-    }
-    
-    .btn-outline {
-        width: 70px;
-        height: 70px;
+        top: -10px;
     }
     
     .primary-menu,

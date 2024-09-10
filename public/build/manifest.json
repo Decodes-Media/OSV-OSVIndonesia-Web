@@ -1,6 +1,6 @@
 {
   "public/css/owl-carousel-custom.css": {
-    "file": "assets/owl-carousel-custom-9db8b900.css",
+    "file": "assets/owl-carousel-custom-af94ee08.css",
     "isEntry": true,
     "src": "public/css/owl-carousel-custom.css"
   },
@@ -15,6 +15,10 @@
   "public/img/AAK_4059.jpg": {
     "file": "assets/AAK_4059-1fbab5bb.jpg",
     "src": "public/img/AAK_4059.jpg"
+  },
+  "public/img/AAK_4362.jpg": {
+    "file": "assets/AAK_4362-88c3e3ad.jpg",
+    "src": "public/img/AAK_4362.jpg"
   },
   "public/img/bg-cta.png": {
     "file": "assets/bg-cta-0081c4b8.png",
@@ -66,7 +70,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-d17f0a6c.css",
+    "file": "assets/app-ce25b51c.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
