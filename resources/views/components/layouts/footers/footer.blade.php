@@ -11,7 +11,7 @@
                 <div class="col-12 col-lg-6 text-center mb-4 mb-md-0 d-flex align-items-end justify-content-center">
                     <div class="company-location d-flex justify-content-center">
                         <div class="company-location__left pb-0">
-                            <h5>Furniture Factory</h5>
+                            <h5>Factory</h5>
                             <p>Jepara - Indonesia</p>
                         </div>
                         <div class="company-location__right pb-0">
@@ -44,7 +44,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 text-center text-md-left order-2 order-md-1 d-flex align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-left order-2 order-md-1 d-flex align-items-center justify-content-center">
                     <h6>©Copyright PT OSV Maju Bersama Furniture | All rights reserved.</h6>
                 </div>
 

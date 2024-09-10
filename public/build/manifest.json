@@ -1,6 +1,6 @@
 {
   "public/css/owl-carousel-custom.css": {
-    "file": "assets/owl-carousel-custom-af94ee08.css",
+    "file": "assets/owl-carousel-custom-4f681c74.css",
     "isEntry": true,
     "src": "public/css/owl-carousel-custom.css"
   },
@@ -40,7 +40,7 @@
     "src": "public/js/cursor.js"
   },
   "public/js/global.js": {
-    "file": "assets/global-6e477e90.js",
+    "file": "assets/global-e3110660.js",
     "isEntry": true,
     "src": "public/js/global.js"
   },
@@ -70,7 +70,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-ce25b51c.css",
+    "file": "assets/app-9683cfa1.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

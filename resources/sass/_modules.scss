@@ -7,7 +7,7 @@ section {
     z-index: 98;
 
     &.banner {
-        padding-top: 0;
+        padding: 0;
         margin-top: -10px;
 
         a {
@@ -52,6 +52,10 @@ section {
             font-family: $font-family-second;
         }
 
+        p {
+            font-size: 1rem;
+        }
+
         .owl-stage {
             .owl-item {
                 .item {
@@ -74,7 +78,7 @@ section {
     }
 
     &.introduction {
-        h2 {
+        h3 {
             color: $secondary-color;
             font-weight: $font-weight-extrabold;
         }
@@ -112,15 +116,15 @@ section {
         }
         
         section:nth-of-type(1) {
-            height: 60vh;
+            height: 100vh;
         }
         
         section:nth-of-type(2) {
-            height: 120vh;
+            height: 10vh;
         }
         
         section:nth-of-type(3) {
-            height: 30vh;
+            height: 20vh;
             position: relative;
             background-image: url('/public/img/AAK_4059.jpg');
             background-size: cover;
@@ -153,11 +157,11 @@ section {
             font-size: clamp(2.5rem, 7vw + 1rem, 10rem);
             text-align: center;
             line-height: 1;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            margin: 0;
-            translate: -50% -50%;
+            // position: fixed;
+            // top: 50%;
+            // left: 50%;
+            // margin: 0;
+            // translate: -50% -50%;
             width: 100%;
         }
         
@@ -199,7 +203,7 @@ section {
         h1 span:last-of-type {
             display: inline-block;
             animation: scale-up both cubic-bezier(.1,.7,.9,1.3), fade-away both linear;
-            animation-timeline: --section;
+            animation-timeline: 2s;
             animation-range: exit 0% exit 100%, exit 50% exit 90%;	
         }
 
@@ -208,9 +212,9 @@ section {
         }
         
         h2 {
-            animation: grow both ease-in, fade-away both linear;
+            animation: grow both ease-in;
             animation-timeline: --section;
-            animation-range: exit-crossing -10% exit-crossing 10%, exit 0% exit 50%;
+            animation-range: exit-crossing -100% exit-crossing 0%, exit 0% exit 10%;
         }
         
         h2 {
@@ -285,8 +289,9 @@ section {
     }
 
     &.clients {
-        h2 {
+        h3 {
             color: $secondary-color;
+            font-weight: $font-weight-extrabold;
         }
     }
 
@@ -298,6 +303,7 @@ section {
         background-attachment: fixed;
         padding: 120px 0;
         margin-top: 80px;
+        margin-bottom: 60px;
 
         h2 {
             color: $white;
@@ -467,7 +473,7 @@ section {
 
 @media screen and (max-width: $bp-sm) {
     section {
-        padding: 40px 0;
+        padding: 40px 15px;
 
         &.banner {
             // padding-top: 80px;
@@ -489,20 +495,28 @@ section {
             }
             
             h2 {
-                font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+                font-size: clamp(1.5rem, 5vw + 1rem, 2.5rem);
             }
             
             p {
-                font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem);
+                font-size: clamp(1rem, 3vw + 1rem, 2rem);
+            }
+
+            p span {
+                font-size: 1.5rem;
             }
 
             section {
                 position: relative;
-                min-height: 30vh;
+                min-height: 20vh;
+            }
+
+            section:nth-of-type(1) {
+                height: 60vh;
             }
 
             section:nth-of-type(2) {
-                height: 60vh;
+                height: 40vh;
             }
 
             section:nth-of-type(3) {
@@ -595,7 +609,7 @@ section {
     &__thumb {
         overflow: hidden;
         border-radius: 0;
-        height: 600px;
+        height: 720px;
 
         img {
             width: 100%;
@@ -695,6 +709,8 @@ section {
 
 // Buttons
 .btn {
+    padding: 0;
+
     &--primary {
         background-color: $primary-color;
         position: relative;

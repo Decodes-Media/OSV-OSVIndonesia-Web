@@ -44,8 +44,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-4 d-flex align-items-center justify-center pl-lg-3">
-                <div class="content">
+            <div class="col-12 col-lg-4 d-flex align-items-center justify-center pl-lg-5">
+                <div class="content px-4">
                     <div class="tagline">
                         <!-- <ul>
                             <li><span class="title">Custom,</span></li>
@@ -59,7 +59,7 @@
                             brought to life with us.
                         </p>
                     </div>
-                    <a href="#" class="mt-5">
+                    <a href="#" class="mt-5 btn btn-magnetic">
                         Speak to Us
                     </a>
                 </div>

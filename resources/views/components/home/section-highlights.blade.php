@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-12 px-0">
                 <section>
-                    <video src="https://assets.codepen.io/605876/seoul-21116.mp4" autoplay playsinline muted loop></video>
-                        <div class="section__content">
+                    <video src="https://assets.codepen.io/605876/seoul-21116.mp4" autoplay playsinline muted loop preload="auto"></video>
+                    <div class="section__content">
                         <p data-splitting>
                             <span>Indonesian Heritage, Worldwide Vison.</span><br/>
                             <span>20 Years of Furniture Industry Experience.</span><br/>

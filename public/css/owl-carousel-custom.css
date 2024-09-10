@@ -4,7 +4,7 @@
 .owl-item {
     -webkit-tap-highlight-color: transparent;
     position: relative;
-    padding: 0;;
+    padding: 0;
 }
 .owl-carousel {
     display: block;
@@ -61,6 +61,13 @@
 .owl-carousel, .owl-carousel
 .owl-item .item {
   padding: 10px;
+}
+
+@media screen and (max-width: 575px) {
+  .owl-carousel, .owl-carousel
+  .owl-item .item {
+    padding: 0;
+  }
 }
 
 .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
