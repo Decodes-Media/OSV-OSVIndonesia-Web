@@ -1,28 +1,38 @@
 // VARIABLES
 
 // Colors
-$primary-color: #FF0000 !default;
-$secondary-color: #1D1F1C !default;
-$tertiary-color: #A20000 !default;
+$primary-color: #C99165 !default;
+$secondary-color: #563627 !default;
+$tertiary-color: #E5E4E2 !default;
 $white: #FFF !default;
-$black: #1D1F1C !default;
+$black: #181B20 !default;
 $grey: #ECECEC !default;
 $dark-grey: #C4C4C4 !default;
-$font-color: #1D1F1C !default;
-$link-color: #A20000 !default;
+$font-color: #181B20 !default;
+$link-color: #563627 !default;
 
 // Typography
 @font-face {
-    font-family: "Guthen Bloots Personal Use";
-    src: url("/public/fonts/Guthen Bloots Personal Use.woff") format("woff")
+    font-family: "Switzer";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/public/fonts/Switzer-Variable.ttf") format("ttf")
 }
 
-$font-family-head: 'Guthen Bloots Personal Use', sans-serif;
-$font-family: 'Plus Jakarta Sans', sans-serif;
+@font-face {
+    font-family: "Sentient";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/public/fonts/Sentient-Variable.ttf") format("ttf")
+}
+
+$font-family: 'Switzer', sans-serif;
+$font-family-second: 'Sentient';
 $font-weight-extrabold: 800 !default;
 $font-weight-bold: 700 !default;
 $font-weight-medium: 500 !default;
 $font-weight-reg: 400 !default;
+$font-weight-light: 300 !default;
 
 // Breakpoints
 $bp-xxs: 375px !default;

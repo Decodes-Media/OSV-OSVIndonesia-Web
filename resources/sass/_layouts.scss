@@ -1,1 +1,498 @@
 // LAYOUTS
+
+// Navbar
+:root {
+    --clr-bg: #181B20;
+    --clr-overlay-bg: #E5E4E2;
+    --clr-link: #563627;
+}
+
+img.header-logo {
+    width: 200px;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    z-index: 99;
+}
+
+svg path {
+    fill: $white !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    pointer-events: none;
+}
+
+#toggle-btn {
+    z-index: 98;
+    position: fixed;
+    top: -35px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    z-index: 9999;
+}
+
+.btn-outline {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--clr-bg);
+    z-index: 9999;
+}
+
+.btn-outline-1 {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 2s linear infinite;
+}
+
+.btn-outline-2 {
+    border-radius: 53% 47% 43% 58% / 51% 39% 61% 49%;
+}
+
+.btn-download {
+    color: $primary-color !important;
+    font-size: 1.5rem !important;
+    text-decoration: underline !important;
+    text-underline-position: under !important;
+    padding: 0;
+}
+
+.btn-download:hover,
+.btn-download:focus {
+    color: $secondary-color !important;
+    box-shadow: none;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+#hamburger {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    // background-image: url('/public/img/vector-2.png');
+    // background-size: 100%;
+    // background-position: center;
+    // background-repeat: no-repeat;
+}
+
+#hamburger .line-1 {
+    position: relative;
+    width: 20px;
+    transform: translate(14px, -2.5px);
+    height: 1.25px;
+    background: var(--clr-bg);
+    transition: transform 0.25s;
+}
+
+#hamburger .line-2 {
+    position: relative;
+    width: 24px;
+    height: 1.25px;
+    right: 0;
+    transform: translate(-6px, 2.5px);
+    background: var(--clr-bg);
+    transition: transform 0.25s;
+}
+
+#hamburger.active .line-1 {
+    left: 12px;
+    width: 24px;
+    transform: rotate(45deg);
+}
+
+#hamburger.active .line-2 {
+    right: 12px;
+    transform: rotate(-45deg);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-inline: 0;
+    display: flex;
+    z-index: 99;
+    background-color: $tertiary-color;
+}
+
+.menu>div {
+    height: 100%;
+    display: flex;
+}
+
+.menu a {
+    position: relative;
+    top: 100vh;
+    line-height: 50%;
+    text-decoration: none;
+    color: var(--clr-link);
+}
+
+.menu a span {
+    font-size: 1rem;
+    margin-right: 30px;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.meu-container {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.primary-menu {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-menu .menu-container .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.primary-menu a {
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-size: 3.5rem;
+    font-weight: $font-weight-light;
+}
+
+.primary-menu a:hover {
+    color: $primary-color;
+    transition: 0.3s;
+}
+
+.secondary-menu {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.secondary-menu .menu-item a {
+    font-family: $font-family;
+    font-size: 1.25rem;
+    font-weight: $font-weight-light;
+}
+
+.secondary-menu .menu-item a svg path {
+    fill: var(--clr-link) !important;
+}
+
+.secondary-menu .menu-item a:hover {
+    color: $primary-color;
+    transition: 0.3s;
+}
+
+.secondary-menu .menu-container .wrapper:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media screen and (max-width: $bp-md) {
+    img.header-logo {
+        width: 175px;
+    }
+
+    .primary-menu,
+    .secondary-menu {
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 30px;
+    }
+
+    .primary-menu {
+        flex: 2;
+    }
+
+    .primary-menu .menu-container .wrapper {
+        gap: 30px; 
+    }
+
+    .primary-menu a {
+        font-size: 2.5rem;
+    }
+
+    .secondary-menu {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    img.header-logo {
+        width: 150px;
+        top: 20px;
+        left: 15px;
+    }
+
+    #toggle-btn {
+        margin: 15px;
+        top: -20px;
+    }
+    
+    .primary-menu,
+    .secondary-menu {
+        align-items: flex-start;
+    }
+
+    .primary-menu a {
+        font-size: 1.5rem;
+    }
+
+    .secondary-menu {
+        justify-content: flex-start;
+    }
+
+    .btn-download {
+        font-size: 1.25rem !important;
+    }
+}
+
+#navbar {
+    // background-color: rgba(255,255,255,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    z-index: 9999;
+
+    .logo-dark {
+        display: none;
+    }
+
+    .logo-white {
+        display: block;
+    }
+
+    &.scrolled {
+        background-color: $white;
+        box-shadow: 0px 4px 7px $grey;
+
+        .logo-dark {
+            display: block;
+        }
+
+        .logo-white {
+            display: none;
+        }
+    }
+}
+
+
+
+// Footer
+footer {
+    .footer-top {
+        background-color: $white;
+        padding: 20px 0;
+
+        .footer-logo {
+            width: 200px;
+        }
+
+        .company-location {
+            &__left {
+                padding: 8px 16px;
+                border-right: 1px solid $tertiary-color;
+                text-align: right;
+            }
+
+            &__right {
+                padding: 8px 16px;
+                text-align: left;
+            }
+
+            h5 {
+                font-size: 1rem;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                a {
+                    color: $font-color;
+                    font-weight: $font-weight-light;
+
+                    i {
+                        color: $font-color;
+                    }
+
+                    svg path {
+                        fill: $font-color !important;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $primary-color;
+                        transform: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: $secondary-color;
+        padding: 10px 0;
+
+        h6 {
+            font-size: 0.75rem;
+            color: $white;
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+
+            li {
+                display: inline;
+                padding: 0 8px;
+
+                &:not(:last-child) {
+                    border-right: 1px solid $tertiary-color;
+                }
+
+                a {
+                    font-size: 0.75rem;
+                    color: $white;
+
+                    &:hover,
+                    &:focus {
+                        color: $primary-color;
+                        transform: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    footer {
+        .footer-top {
+            .footer-logo {
+                width: 200px;
+            }
+        }
+    }
+}
+
+
+
+// Cookies
+.cookie-container {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	padding: 16px 24px;
+	background: $primary-color;
+	color: $white;
+	position: fixed;
+	bottom:0;
+	gap: 2rem;
+	opacity: 1;
+	visibility: visible;
+	flex-wrap: wrap;
+    z-index: 9999;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.cookie-container.hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.cookie-container a {
+	color: $white;
+}
+
+.cookie-container a:hover {
+	color: $tertiary-color;
+}
+
+.cookie-container .cookie-text {
+	flex: 8 768px;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+.cookie-container .agree {
+	flex: 1 150px;
+	text-align: center;
+}
+
+.agree button {
+	background: $white;
+	color: $primary-color;
+	border: none;
+	padding: 12px 32px;
+	cursor: pointer;
+	border-radius: 6px;
+	font-size: 1rem;
+}
+
+.agree button:hover {
+	background: $tertiary-color;
+    transition: 0.3s;
+}

@@ -3,15 +3,15 @@
 html {
     width: 100%;
     height: auto;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 body {
     background-color: $white;
-    font-family: $font-family;
     color: $font-color;
-    height: 100vh;
+    position: relative;
 }
 
 
@@ -22,6 +22,7 @@ a {
 
     &:hover,
     &:focus {
+        color: $primary-color;
         text-decoration: none;
     }
 }
@@ -37,7 +38,7 @@ h4,
 h5,
 h6 {
     font-family: $font-family;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-light;
 }
 
 h1 {
@@ -45,15 +46,15 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.25rem;
 }
 
 h3 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
 }
 
 h4 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 h5 {
@@ -66,7 +67,7 @@ h6 {
 
 @media screen and (max-width: $bp-lg) {
     h1 {
-        font-size: 3.0rem;
+        font-size: 3.5rem;
     }
 
     h2 {
@@ -80,19 +81,15 @@ h6 {
 
 @media screen and (max-width: $bp-md) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 
     h3 {
         font-size: 1.75rem;
-    }
-
-    h4 {
-        font-size: 1.5rem;
     }
 }
 
@@ -115,8 +112,9 @@ h6 {
 }
 
 p {
-    font-size: 1rem;
-    font-weight: $font-weight-reg;
+    font-family: $font-family-second;
+    font-size: 1.25rem;
+    font-weight: $font-weight-light;
 }
 
 
@@ -153,15 +151,15 @@ p {
 }
   
 ::-webkit-scrollbar-track {
-	background: $dark-grey;
+	background: $white;
 }
   
 ::-webkit-scrollbar-thumb {
-  	background: $secondary-color;
+  	background: $dark-grey;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-  	background: $primary-color;
+  	background: $secondary-color;
 }
 
 

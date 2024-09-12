@@ -1,40 +1,66 @@
 {
   "public/css/owl-carousel-custom.css": {
-    "file": "assets/owl-carousel-custom-7808260e.css",
+    "file": "assets/owl-carousel-custom-4f681c74.css",
     "isEntry": true,
     "src": "public/css/owl-carousel-custom.css"
   },
-  "public/fonts/Guthen Bloots Personal Use.woff": {
-    "file": "assets/Guthen Bloots Personal Use-e9404b4a.woff",
-    "src": "public/fonts/Guthen Bloots Personal Use.woff"
+  "public/fonts/Sentient-Variable.ttf": {
+    "file": "assets/Sentient-Variable-e57342c5.ttf",
+    "src": "public/fonts/Sentient-Variable.ttf"
+  },
+  "public/fonts/Switzer-Variable.ttf": {
+    "file": "assets/Switzer-Variable-373c2d2a.ttf",
+    "src": "public/fonts/Switzer-Variable.ttf"
+  },
+  "public/img/AAK_4059.jpg": {
+    "file": "assets/AAK_4059-1fbab5bb.jpg",
+    "src": "public/img/AAK_4059.jpg"
+  },
+  "public/img/AAK_4362.jpg": {
+    "file": "assets/AAK_4362-88c3e3ad.jpg",
+    "src": "public/img/AAK_4362.jpg"
+  },
+  "public/img/bg-cta.png": {
+    "file": "assets/bg-cta-0081c4b8.png",
+    "src": "public/img/bg-cta.png"
+  },
+  "public/js/button.js": {
+    "file": "assets/button-60f460c6.js",
+    "isEntry": true,
+    "src": "public/js/button.js"
+  },
+  "public/js/cookies.js": {
+    "file": "assets/cookies-3190da14.js",
+    "isEntry": true,
+    "src": "public/js/cookies.js"
+  },
+  "public/js/cursor.js": {
+    "file": "assets/cursor-4e51b4d0.js",
+    "isEntry": true,
+    "src": "public/js/cursor.js"
   },
   "public/js/global.js": {
-    "file": "assets/global-d5840024.js",
+    "file": "assets/global-e3110660.js",
     "isEntry": true,
     "src": "public/js/global.js"
   },
+  "public/js/navbar.js": {
+    "file": "assets/navbar-a5446f29.js",
+    "isEntry": true,
+    "src": "public/js/navbar.js"
+  },
   "public/js/owl-carousel-settings.js": {
-    "file": "assets/owl-carousel-settings-c1127568.js",
+    "file": "assets/owl-carousel-settings-b70b71ad.js",
     "isEntry": true,
     "src": "public/js/owl-carousel-settings.js"
   },
-  "public/js/parallax.js": {
-    "file": "assets/parallax-b4e5b9f4.js",
-    "isEntry": true,
-    "src": "public/js/parallax.js"
-  },
   "public/js/preloader.js": {
-    "file": "assets/preloader-93f12713.js",
+    "file": "assets/preloader-094f8521.js",
     "isEntry": true,
     "src": "public/js/preloader.js"
   },
-  "resources/css/app-tailwind.css": {
-    "file": "assets/app-tailwind-49274f64.css",
-    "isEntry": true,
-    "src": "resources/css/app-tailwind.css"
-  },
   "resources/css/filament-base-theme.css": {
-    "file": "assets/filament-base-theme-cd6cf17c.css",
+    "file": "assets/filament-base-theme-4d322aaf.css",
     "isEntry": true,
     "src": "resources/css/filament-base-theme.css"
   },
@@ -44,7 +70,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-d3a3fc41.css",
+    "file": "assets/app-9683cfa1.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
