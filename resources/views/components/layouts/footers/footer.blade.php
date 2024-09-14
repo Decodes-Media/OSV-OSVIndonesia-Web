@@ -44,7 +44,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 text-center text-md-left order-2 order-md-1 d-flex align-items-center justify-content-center">
+                <div class="col-12 col-md-6 text-center text-md-left order-2 order-md-1 d-flex align-items-center justify-content-center justify-content-md-start">
                     <h6>©Copyright PT OSV Maju Bersama Furniture | All rights reserved.</h6>
                 </div>
 
