@@ -4,35 +4,43 @@
             <div class="col-12 px-0">
                 <div class="banner">
                     <h1 class="text-center">
-                        Get in Touch with OSV
+                        Contact Us
                     </h1>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+
+    <div class="container px-4 px-lg-0">
         <div class="row">
             <div class="col-12 col-md-6 mb-5 mb-md-0">
-                <h3 class="mb-4">Contact Us</h3>
+                <h3 class="mb-4">Get in Touch</h3>
                 <form method="POST" onsubmit="" class="form mb-5">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="Full Name" required>
+                            <label>Full Name<span class="text-danger">*</span></label>
+                            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="eg. John Doe" required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number" required>
+                            <label>Phone Number<span class="text-danger">*</span></label>
+                            <input id="phone" type="number" class="form-control" name="phone" placeholder="eg. 081234567890" required>
                         </div>
                         <div class="col-12">
-                            <input id="email" type="email" class="form-control" name="email" placeholder="Email Address" required>
+                            <label>Country<span class="text-danger">*</span></label>
+                            <input id="country" type="text" class="form-control" name="country" placeholder="eg. Indonesia" required>
                         </div>
                         <div class="col-12">
-                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="Company Name" required>
-                        </div>
-                        <div class="col-12">
-                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Email Address" required>
+                            <label>Company Name<span class="text-danger">*</span></label>
+                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="eg. ABC Company" required>
                         </div>
                         <div class="col-12">
                             <textarea id="message" class="form-control" name="message" rows="5" placeholder="Write your message.." required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                By sending your data, you agree to the Privacy Policy. <br/>
+                                We will process your details and contact you.
+                            </p>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
@@ -42,7 +50,7 @@
                     </div>
                 </form>
 
-                <h5>Follow OSV Indonesia</h5>
+                <!-- <h5>Follow OSV Indonesia</h5>
                 <ul class="social-media">
                     <li>
                         <a href="#" target="_blank">
@@ -54,10 +62,13 @@
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
-            <div class="col-12 col-md-6 pl-lg-5">
-                <div class="tab-area">
+
+            <div class="col-12 col-md-6 pl-lg-5 text-md-right">
+                <img src="{{ asset('img/AAK_4059.jpg') }}" class="w-100 img-fluid mb-3" alt="Compro" />
+                <a href="#" class="btn btn--outline-dark btn-magnetic fill" target="_blank" download>Download here</a>
+                <!-- <div class="tab-area">
                     <ul class="nav nav-tabs" id="Tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="factory-tab" data-toggle="tab" href="#factory" role="tab" aria-controls="factory" aria-selected="false">Factory</a>
@@ -83,7 +94,7 @@
                             <p>Map or information about the office location will go here.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

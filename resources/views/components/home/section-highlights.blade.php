@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 px-0">
                 <section>
-                    <video src="https://assets.codepen.io/605876/seoul-21116.mp4" autoplay playsinline muted loop preload="auto"></video>
+                    <video src="{{ asset('img/videoplayback.mp4') }}" autoplay playsinline muted loop preload="auto"></video>
                     <div class="section__content">
                         <p data-splitting>
                             <span>Indonesian Heritage, Worldwide Vison.</span><br/>

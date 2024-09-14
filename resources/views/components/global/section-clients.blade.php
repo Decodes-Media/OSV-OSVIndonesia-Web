@@ -5,7 +5,7 @@
                 <h3 class="text-center" data-aos="fade-in">CLIENTS WE'VE WORKED WITH</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-4 col-md-3 col-lg-2 d-flex align-items-center">
                 <div class="tile--client-logo">
                     <img src="{{ asset('img/client-1.png') }}" alt="Client Logo" />

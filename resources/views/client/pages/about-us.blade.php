@@ -4,5 +4,5 @@
     <x-about.section-stories />
     <x-about.section-values />
     <x-about.section-about />
-    <x-global.section-cta />
+    <x-about.section-whats-next />
 </x-layouts.app>

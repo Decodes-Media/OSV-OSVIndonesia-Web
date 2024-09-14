@@ -12,19 +12,20 @@
                 <form method="POST" onsubmit="return validateForm()" class="form form-user-data">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="Full Name" required>
+                            <label>Full Name<span class="text-danger">*</span></label>
+                            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="eg. John Doe" required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number" required>
+                            <label>Phone Number<span class="text-danger">*</span></label>
+                            <input id="phone" type="number" class="form-control" name="phone" placeholder="eg. 081234567890" required>
                         </div>
                         <div class="col-12">
-                            <input id="email" type="email" class="form-control" name="email" placeholder="Email Address" required>
+                            <label>Company Name<span class="text-danger">*</span></label>
+                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="eg. ABC Company" required>
                         </div>
                         <div class="col-12">
-                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="Company Name" required>
-                        </div>
-                        <div class="col-12">
-                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Email Address" required>
+                            <label>Company Email<span class="text-danger">*</span></label>
+                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="eg. john@abc.com" required>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
