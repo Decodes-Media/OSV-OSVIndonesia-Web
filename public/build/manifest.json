@@ -12,13 +12,13 @@
     "file": "assets/Switzer-Variable-373c2d2a.ttf",
     "src": "public/fonts/Switzer-Variable.ttf"
   },
-  "public/img/AAK_4059.jpg": {
-    "file": "assets/AAK_4059-1fbab5bb.jpg",
-    "src": "public/img/AAK_4059.jpg"
-  },
   "public/img/AAK_4362.jpg": {
     "file": "assets/AAK_4362-88c3e3ad.jpg",
     "src": "public/img/AAK_4362.jpg"
+  },
+  "public/img/AAK_5650.jpg": {
+    "file": "assets/AAK_5650-ac77b943.jpg",
+    "src": "public/img/AAK_5650.jpg"
   },
   "public/img/bg-cta.png": {
     "file": "assets/bg-cta-0081c4b8.png",
@@ -40,7 +40,7 @@
     "src": "public/js/cursor.js"
   },
   "public/js/global.js": {
-    "file": "assets/global-e3110660.js",
+    "file": "assets/global-727c5402.js",
     "isEntry": true,
     "src": "public/js/global.js"
   },
@@ -60,7 +60,7 @@
     "src": "public/js/preloader.js"
   },
   "resources/css/filament-base-theme.css": {
-    "file": "assets/filament-base-theme-4d322aaf.css",
+    "file": "assets/filament-base-theme-dfdd45bc.css",
     "isEntry": true,
     "src": "resources/css/filament-base-theme.css"
   },
@@ -70,7 +70,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-9683cfa1.css",
+    "file": "assets/app-5ccaaeae.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

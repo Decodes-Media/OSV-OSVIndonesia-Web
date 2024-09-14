@@ -1,8 +1,8 @@
 // AOS
 window.onload = function () {
 	AOS.init({
-		duration: 700,
-		once: true
+		duration: 1500,
+		once: false
 	});
 }
 
