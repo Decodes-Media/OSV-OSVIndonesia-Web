@@ -1,6 +1,6 @@
 {
   "public/css/owl-carousel-custom.css": {
-    "file": "assets/owl-carousel-custom-4f681c74.css",
+    "file": "assets/owl-carousel-custom-ff406d99.css",
     "isEntry": true,
     "src": "public/css/owl-carousel-custom.css"
   },
@@ -11,6 +11,10 @@
   "public/fonts/Switzer-Variable.ttf": {
     "file": "assets/Switzer-Variable-373c2d2a.ttf",
     "src": "public/fonts/Switzer-Variable.ttf"
+  },
+  "public/img/AAK_4061.jpg": {
+    "file": "assets/AAK_4061-34c66480.jpg",
+    "src": "public/img/AAK_4061.jpg"
   },
   "public/img/AAK_4362.jpg": {
     "file": "assets/AAK_4362-88c3e3ad.jpg",
@@ -50,7 +54,7 @@
     "src": "public/js/navbar.js"
   },
   "public/js/owl-carousel-settings.js": {
-    "file": "assets/owl-carousel-settings-b70b71ad.js",
+    "file": "assets/owl-carousel-settings-42de9fb7.js",
     "isEntry": true,
     "src": "public/js/owl-carousel-settings.js"
   },
@@ -70,7 +74,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-5ccaaeae.css",
+    "file": "assets/app-77797c23.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
