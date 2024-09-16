@@ -74,7 +74,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-77797c23.css",
+    "file": "assets/app-dcfd0d80.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
