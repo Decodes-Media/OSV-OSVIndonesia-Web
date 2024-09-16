@@ -27,7 +27,7 @@
                         <div class="menu-container">
                             <div class="wrapper">
                                 <div class="menu-item">
-                                    <a href="#" target="_blank">
+                                    <a href="mailto:info@osvindonesia.com" target="_blank">
                                         <i class="far fa-envelope mr-1"></i>
                                         info@osvindonesia.com
                                     </a>
@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="#" target="_blank">
+                                    <a href="https://www.instagram.com/osvindonesia" target="_blank">
                                         <i class="fab fa-instagram mr-1"></i>
                                         @osvindonesia
                                     </a>
@@ -65,23 +65,23 @@
                         <div class="menu-container">
                             <div class="wrapper">
                                 <div class="menu-item">
-                                    <a href="#"><span>I</span>Specialities</a>
+                                    <a href="{{ url('specialities') }}"><span>I</span>Specialities</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="#"><span>II</span>Factory</a>
+                                    <a href="{{ url('factory') }}"><span>II</span>Factory</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="#"><span>III</span>About Us</a>
+                                    <a href="{{ url('about-us') }}"><span>III</span>About Us</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="#"><span>IV</span>Projects</a>
+                                    <a href="{{ url('projects') }}"><span>IV</span>Projects</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="#"><span>V</span>Contact Us</a>
+                                    <a href="{{ url('contact-us') }}"><span>V</span>Contact Us</a>
                                 </div>
                             </div>
                         </div>
