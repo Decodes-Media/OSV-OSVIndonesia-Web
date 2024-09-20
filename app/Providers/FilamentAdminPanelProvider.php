@@ -63,13 +63,13 @@ class FilamentAdminPanelProvider extends PanelProvider
             ->plugins([
                 \Awcodes\Overlook\OverlookPlugin::make()
                     ->includes([
-                        \App\FilamentAdmin\Resources\ProfileResource::class,
-                        \App\FilamentAdmin\Resources\RegisPersonalResource::class,
-                        \App\FilamentAdmin\Resources\RegisRecommendResource::class,
+                        // \App\FilamentAdmin\Resources\ProfileResource::class,
+                        // \App\FilamentAdmin\Resources\RegisPersonalResource::class,
+                        // \App\FilamentAdmin\Resources\RegisRecommendResource::class,
                         // \App\FilamentAdmin\Resources\AspirationResource::class,
                         // \App\FilamentAdmin\Resources\DonationResource::class,
                         \App\FilamentAdmin\Resources\ContactResource::class,
-                        \App\FilamentAdmin\Resources\MailingListResource::class,
+                        // \App\FilamentAdmin\Resources\MailingListResource::class,
                         // \App\FilamentAdmin\Resources\NewsResource::class,
                         // \App\FilamentAdmin\Resources\PageResource::class,
                         \App\FilamentAdmin\Resources\AdminResource::class,
@@ -85,9 +85,9 @@ class FilamentAdminPanelProvider extends PanelProvider
             \Filament\Navigation\NavigationGroup::make()
                 ->label(__('Membership')),
             \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Growth')),
+                ->label(__('Contact Us')),
             \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Content')),
+                ->label(__('About Us')),
             \Filament\Navigation\NavigationGroup::make()
                 ->label(__('Access')),
             \Filament\Navigation\NavigationGroup::make()
