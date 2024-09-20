@@ -6,36 +6,57 @@
             </div>
         </div> -->
         <div class="row">
-            <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0">
-                <a href="#">
-                    <div class="card-animate card--service mb-3" data-aos="fade-up">
-                        <img src="{{ asset('img/service/service-1.png') }}" alt="Service" />
+            <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
+                <a href="">
+                    <div class="card-animation">
+                        <img src="{{ asset('img/service/service-1.png') }}" class="card-animation__image" alt="" />
+                        <div class="card-animation__overlay">
+                            <div class="card-animation__header">
+                                <div class="card-animation__header-text">
+                                    <h4 class="card-animation__title">Hospitality Project</h4>
+                                    <p class="card-animation__description">Create unforgettable guest experiences with our bespoke furniture solutions. Benefit from our extensive experience in crafting premium furniture that complements your hospitality projects, anywhere in the world.</p>            
+                                </div>
+                            </div>
+                            <span class="card-animation__link pb-4">
+                                Learn More
+                            </span>
+                        </div>
                     </div>
-                    <div class="card--service__content">
-                        <h3>Hospitality Project</h3>
-                        <p>Create unforgettable guest experiences with our bespoke furniture solutions. Benefit from our extensive experience in crafting premium furniture that complements your hospitality projects, anywhere in the world.</p>	
+                </a> 
+            </div>
+            <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
+                <a href="">
+                    <div class="card-animation">
+                        <img src="{{ asset('img/service/service-2.jpg') }}" class="card-animation__image" alt="" />
+                        <div class="card-animation__overlay">
+                            <div class="card-animation__header">
+                                <div class="card-animation__header-text">
+                                    <h4 class="card-animation__title">OEM Manufacturer</h4>
+                                    <p class="card-animation__description">Experience the power of OEM manufacturing with our commitment to delivering exceptional quality and unparalleled customization.</p>            
+                                </div>
+                            </div>
+                            <span class="card-animation__link pb-4">
+                                Learn More
+                            </span>
+                        </div>
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0">
-                <a href="#">
-                    <div class="card-animate card--service mb-3" data-aos="fade-up">
-                        <img src="{{ asset('img/service/service-2.jpg') }}" alt="Service" />
-                    </div>
-                    <div class="card--service__content">
-                        <h3>OEM Manufacturer</h3>
-                        <p>Experience the power of OEM manufacturing with our commitment to delivering exceptional quality and unparalleled customization.</p>	
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0">
-                <a href="#">
-                    <div class="card-animate card--service mb-3" data-aos="fade-up">
-                        <img src="{{ asset('img/service/service-3.png') }}" alt="Service" />
-                    </div>
-                    <div class="card--service__content">
-                        <h3>White Label, ODM Products</h3>
-                        <p>Benefit from our extensive manufacturing capabilities and global reach, delivering exceptional products that enhance your brand identity.</p>
+            <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
+                <a href="">
+                    <div class="card-animation">
+                        <img src="{{ asset('img/service/service-3.png') }}" class="card-animation__image" alt="" />
+                        <div class="card-animation__overlay">
+                            <div class="card-animation__header">
+                                <div class="card-animation__header-text">
+                                    <h4 class="card-animation__title">White Label, ODM Products</h4>
+                                    <p class="card-animation__description">Benefit from our extensive manufacturing capabilities and global reach, delivering exceptional products that enhance your brand identity</p>            
+                                </div>
+                            </div>
+                            <span class="card-animation__link pb-4">
+                                Learn More
+                            </span>
+                        </div>
                     </div>
                 </a>
             </div>

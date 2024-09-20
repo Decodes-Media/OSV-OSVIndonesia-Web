@@ -206,7 +206,7 @@ svg path {
 
 .secondary-menu {
     position: relative;
-    flex: 2;
+    flex: 2.4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,7 +277,7 @@ svg path {
 
     #toggle-btn {
         margin: 15px;
-        top: -20px;
+        top: -15px;
     }
     
     .primary-menu,
@@ -405,11 +405,11 @@ footer {
             margin-bottom: 0;
 
             li {
-                display: inline;
-                padding: 0 8px;
+                display: inline-flex;
 
                 &:not(:last-child) {
                     border-right: 1px solid $tertiary-color;
+                    padding-right: 8px;
                 }
 
                 a {

@@ -44,12 +44,12 @@
     "src": "public/js/cursor.js"
   },
   "public/js/global.js": {
-    "file": "assets/global-727c5402.js",
+    "file": "assets/global-b4acad65.js",
     "isEntry": true,
     "src": "public/js/global.js"
   },
   "public/js/navbar.js": {
-    "file": "assets/navbar-a5446f29.js",
+    "file": "assets/navbar-3fd76962.js",
     "isEntry": true,
     "src": "public/js/navbar.js"
   },
@@ -74,7 +74,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-dcfd0d80.css",
+    "file": "assets/app-fa035c2e.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
