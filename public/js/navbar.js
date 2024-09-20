@@ -32,8 +32,8 @@ function revealMenuItems() {
 
     tl.to("#hamburger", 1.25, {
         marginTop: "-5px",
-        x: -40,
-        y: 40,
+        x: -15,
+        y: 15,
         ease: power2
     });
     tl.to(
@@ -56,8 +56,8 @@ function revealMenuItems() {
     tl.to(
         ".btn .btn-outline",
         1.25, {
-            x: -40,
-            y: 40,
+            x: -15,
+            y: 15,
             width: "60px",
             height: "60px",
             border: "1px solid #563627",

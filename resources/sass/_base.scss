@@ -3,7 +3,6 @@
 html {
     width: 100%;
     height: auto;
-    overflow-x: hidden;
     scroll-behavior: smooth;
     user-select: none;
 }
@@ -12,6 +11,12 @@ body {
     background-color: $white;
     color: $font-color;
     position: relative;
+}
+
+@media screen and (max-width: $bp-md) {
+    html {
+        overflow-x: hidden;
+    }
 }
 
 

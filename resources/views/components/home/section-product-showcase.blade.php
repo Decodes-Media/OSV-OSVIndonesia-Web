@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                <div class="owl-carousel owl-carousel-2 owl-theme" data-aos="fade-up">
+                <div class="owl-carousel owl-carousel-2 owl-theme" data-aos="fade-in">
                     <div class="item">
                         <div class="card--product">
                             <div class="card--product__content">

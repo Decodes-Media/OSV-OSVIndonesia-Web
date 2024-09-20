@@ -13,7 +13,7 @@
 
     <div class="container px-4 px-lg-0">
         <div class="row">
-            <div class="col-12 col-md-6 mb-5 mb-md-0">
+            <div class="col-12 col-md-6 col-lg-8 mb-5 mb-md-0">
                 <h3 class="mb-4">Get in Touch</h3>
                 <form method="POST" onsubmit="" class="form mb-5">
                     <div class="row">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
-                        <button type="submit" class="btn btn--secondary d-flex align-items-center justify-content-center w-100">
+                        <button type="submit" class="btn btn--outline-dark btn-magnetic fill d-flex align-items-center justify-content-center w-100">
                             Send Message
                         </button>
                     </div>
@@ -65,7 +65,7 @@
                 </ul> -->
             </div>
 
-            <div class="col-12 col-md-6 pl-lg-5 text-md-right">
+            <div class="col-12 col-md-6 col-lg-4 pl-lg-4 text-md-right">
                 <img src="{{ asset('img/AAK_4059.jpg') }}" class="w-100 img-fluid mb-3" alt="Compro" />
                 <a href="#" class="btn btn--outline-dark btn-magnetic fill" target="_blank" download>Download here</a>
                 <!-- <div class="tab-area">
