@@ -153,62 +153,62 @@ class SiteSettingPage extends Page implements HasForms
                                         ->activeUrl(),
                                 ]),
                             ]),
-                            FC\Tabs\Tab::make('Global: Donation')->columns(2)->schema([
-                                FC\RichEditor::make('section_donate_title')
-                                    ->label('Judul')
-                                    ->disabled($this->disableForm)
-                                    ->maxLength(256)
-                                    ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                    ->extraInputAttributes(['style' => 'min-height:0px'])
-                                    ->required(),
-                                FC\Fieldset::make('Opsi Nominal')->schema([
-                                    FC\Repeater::make('section_donate_options')
-                                        ->columnSpanFull()
-                                        ->grid(2)
-                                        ->columns(2)
-                                        ->hiddenLabel()
-                                        ->addActionLabel('Tambah Opsi')
-                                        ->disabled($this->disableForm)
-                                        ->schema([
-                                            FC\TextInput::make('amount')
-                                                ->label('Jumlah')
-                                                ->numeric()
-                                                ->integer()
-                                                ->minValue(-1)
-                                                ->required(),
-                                            FC\TextInput::make('label')
-                                                ->label('Nominal')
-                                                ->maxLength(64)
-                                                ->required(),
-                                        ]),
-                                ]),
-                            ]),
-                            FC\Tabs\Tab::make('Global: Mailing List')->columns(2)->schema([
-                                FC\RichEditor::make('section_mailing_title')
-                                    ->label('Judul')
-                                    ->columnSpanFull()
-                                    ->disabled($this->disableForm)
-                                    ->maxLength(256)
-                                    ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                    ->extraInputAttributes(['style' => 'min-height:0px'])
-                                    ->required(),
-                                FC\RichEditor::make('section_mailing_subtitle')
-                                    ->label('Sub-judul')
-                                    ->columnSpanFull()
-                                    ->disabled($this->disableForm)
-                                    ->maxLength(256)
-                                    ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                    ->extraInputAttributes(['style' => 'min-height:0px'])
-                                    ->required(),
-                                FC\RichEditor::make('section_mailing_terms')
-                                    ->label('Syarat Ketentuan')
-                                    ->columnSpanFull()
-                                    ->disabled($this->disableForm)
-                                    ->maxLength(256)
-                                    ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                    ->extraInputAttributes(['style' => 'min-height:0px'])
-                                    ->required(),
-                            ]),
+                            // FC\Tabs\Tab::make('Global: Donation')->columns(2)->schema([
+                            //     FC\RichEditor::make('section_donate_title')
+                            //         ->label('Judul')
+                            //         ->disabled($this->disableForm)
+                            //         ->maxLength(256)
+                            //         ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
+                            //         ->extraInputAttributes(['style' => 'min-height:0px'])
+                            //         ->required(),
+                            //     FC\Fieldset::make('Opsi Nominal')->schema([
+                            //         FC\Repeater::make('section_donate_options')
+                            //             ->columnSpanFull()
+                            //             ->grid(2)
+                            //             ->columns(2)
+                            //             ->hiddenLabel()
+                            //             ->addActionLabel('Tambah Opsi')
+                            //             ->disabled($this->disableForm)
+                            //             ->schema([
+                            //                 FC\TextInput::make('amount')
+                            //                     ->label('Jumlah')
+                            //                     ->numeric()
+                            //                     ->integer()
+                            //                     ->minValue(-1)
+                            //                     ->required(),
+                            //                 FC\TextInput::make('label')
+                            //                     ->label('Nominal')
+                            //                     ->maxLength(64)
+                            //                     ->required(),
+                            //             ]),
+                            //     ]),
+                            // ]),
+                            // FC\Tabs\Tab::make('Global: Mailing List')->columns(2)->schema([
+                            //     FC\RichEditor::make('section_mailing_title')
+                            //         ->label('Judul')
+                            //         ->columnSpanFull()
+                            //         ->disabled($this->disableForm)
+                            //         ->maxLength(256)
+                            //         ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
+                            //         ->extraInputAttributes(['style' => 'min-height:0px'])
+                            //         ->required(),
+                            //     FC\RichEditor::make('section_mailing_subtitle')
+                            //         ->label('Sub-judul')
+                            //         ->columnSpanFull()
+                            //         ->disabled($this->disableForm)
+                            //         ->maxLength(256)
+                            //         ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
+                            //         ->extraInputAttributes(['style' => 'min-height:0px'])
+                            //         ->required(),
+                            //     FC\RichEditor::make('section_mailing_terms')
+                            //         ->label('Syarat Ketentuan')
+                            //         ->columnSpanFull()
+                            //         ->disabled($this->disableForm)
+                            //         ->maxLength(256)
+                            //         ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
+                            //         ->extraInputAttributes(['style' => 'min-height:0px'])
+                            //         ->required(),
+                            // ]),
                             FC\Tabs\Tab::make('Default SEO')->columns(2)->schema([
                                 FC\FileUpload::make('seo_default.cover_path')
                                     ->label('Cover')
@@ -429,113 +429,7 @@ class SiteSettingPage extends Page implements HasForms
                                         ->required(),
                                 ]),
                             ]),
-                            FC\Tabs\Tab::make('Page: Profil Caleg')->columns(2)->schema([
-                                FC\RichEditor::make('profile_title')
-                                    ->label('Judul')
-                                    ->columnSpanFull()
-                                    ->disabled($this->disableForm)
-                                    ->maxLength(512)
-                                    ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                    ->extraInputAttributes(['style' => 'min-height:0px'])
-                                    ->required(),
-                                FC\Select::make('profile_featured_ids')
-                                    ->label('Profile Pilihan')
-                                    // ->options(Category::active()->pluck('name', 'id'))
-                                    ->options(fn () => //
-                                        Profile::published()->get()->map(fn ($profile) => [
-                                            'id' => $profile->id,
-                                            'text' => '
-                                                <div class="flex flex-row">
-                                                    <div><img style="max-width:32px;margin:6px" src="'.($profile->photo_url).'" /></div>
-                                                    <div style="margin:6px"><b>'.$profile->name.'</b><br/>'.$profile->title.'</div>
-                                                </div>
-                                            ',
-                                        ])
-                                            ->pluck('text', 'id'),
-                                    )
-                                    ->allowHtml()
-                                    ->multiple()
-                                    ->preload()
-                                    ->maxItems(4)
-                                    ->columnSpanFull()
-                                    ->disabled($this->disableForm),
-                            ]),
-                            FC\Tabs\Tab::make('Page: Program')->columns(2)->schema([
-                                FC\Fieldset::make('Section: Registrasi')->schema([
-                                    FC\RichEditor::make('program_register_title')
-                                        ->label('Judul')
-                                        ->disabled($this->disableForm)
-                                        ->maxLength(256)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                    FC\RichEditor::make('program_register_subtitle')
-                                        ->label('Sub-judul')
-                                        ->disabled($this->disableForm)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                    FC\RichEditor::make('program_register_btn_left')
-                                        ->label('Sub-judul')
-                                        ->disabled($this->disableForm)
-                                        ->maxLength(256)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                    FC\RichEditor::make('program_register_btn_right')
-                                        ->label('Sub-judul')
-                                        ->disabled($this->disableForm)
-                                        ->maxLength(256)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                ]),
-                            ]),
-                            FC\Tabs\Tab::make('Page: Partnership')->columns(2)->schema([
-                                FC\Fieldset::make('Section: Main')->schema([
-                                    FC\RichEditor::make('partner_main_title')
-                                        ->label('Judul')
-                                        ->disabled($this->disableForm)
-                                        ->maxLength(256)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                    FC\RichEditor::make('partner_main_subtitle')
-                                        ->label('Sub-judul')
-                                        ->disabled($this->disableForm)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline', 'link'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                ]),
-                            ]),
-                            FC\Tabs\Tab::make('Page: Donation')->columns(2)->schema([
-                                FC\Fieldset::make('Section: Main')->schema([
-                                    FC\RichEditor::make('donation_main_title')
-                                        ->label('Judul')
-                                        ->disabled($this->disableForm)
-                                        ->maxLength(256)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                    FC\RichEditor::make('donation_main_subtitle')
-                                        ->label('Sub-judul')
-                                        ->disabled($this->disableForm)
-                                        ->toolbarButtons(['bold', 'italic', 'strike', 'underline'])
-                                        ->extraInputAttributes(['style' => 'min-height:0px'])
-                                        ->required(),
-                                ]),
-                            ]),
-                            FC\Tabs\Tab::make('Page: Artikel')->columns(2)->schema([
-                                FC\TextInput::make('article_perpage')
-                                    ->label('Jml. Per halaman')
-                                    ->columnSpanFull()
-                                    ->disabled($this->disableForm)
-                                    ->numeric()
-                                    ->integer(true)
-                                    ->minValue(3)
-                                    ->maxValue(20)
-                                    ->required(),
-                            ]),
+       
                         ]),
                     ]),
                 ]),
