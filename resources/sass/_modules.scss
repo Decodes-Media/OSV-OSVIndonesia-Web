@@ -499,6 +499,32 @@ section {
             margin-bottom: 30px;
         }
     }
+
+    &.projects-header {
+        padding: 0;
+        margin-top: -10px;
+
+        .banner {
+            margin-bottom: 60px;
+            background-image: url('/public/img/AAK_4061.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            padding: 120px 0;
+        
+            h1 {
+                color: $white;
+                font-weight: $font-weight-extrabold;
+            }
+        }
+
+        h2 {
+            color: $secondary-color;
+            font-weight: $font-weight-extrabold;
+        }
+    }
 }
 
 @media screen and (max-width: $bp-lg) {
@@ -1305,6 +1331,42 @@ section {
             }
         }
     }
+
+    &--projects {
+        transition: all 0.5s;
+
+        &__thumb {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 6px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__title {
+            margin-top: 15px;
+            
+            h4 {
+                font-weight: $font-weight-bold;
+                color: $secondary-color;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .card--media-news__thumb {
+                &::before {
+                    background-color: rgba(194,34,40,.75) !important;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $bp-lg) {
@@ -1581,8 +1643,8 @@ body:not(.no-js) .fading-up {
             border-bottom: none;
 
             h4 {
-                font-weight: $font-weight-reg;
-                color: $primary-color;
+                font-weight: $font-weight-bold;
+                color: $secondary-color;
             }
         }
 
@@ -1625,3 +1687,94 @@ body:not(.no-js) .fading-up {
         font-weight: $font-weight-bold;
     }
 }
+
+
+
+// Grid Container
+.grid-container-projects {
+	height: auto;
+	display: grid;
+	grid-auto-columns: 1fr;
+	gap: 10px;
+	grid-template-areas:
+	  'one one two'
+	  'one one three'
+      'four four four'
+    ;
+    margin-bottom: 100px;
+
+    .projects-title {
+        margin-top: 15px;
+            
+        h3 {
+            font-weight: $font-weight-bold;
+            color: $secondary-color;
+        }
+    }
+
+    &:nth-child(even) {
+        .projects-title {
+            text-align: right;
+        }
+    }
+}
+
+.grid-item-projects {
+	border-radius: 0;
+	display: block;
+    position: relative;
+}
+
+.grid-item-projects:nth-child(1) {
+	grid-area: one;
+
+    .card--projects {
+        &__thumb {
+            height: 410px;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.grid-item-projects:nth-child(2) {
+	grid-area: two;
+}
+
+.grid-item-projects:nth-child(3) {
+	grid-area: three;
+}
+
+.grid-item-projects:nth-child(4) {
+	grid-area: four;
+}
+
+// .grid-item-projects:nth-child(5) {
+// 	grid-area: five;
+// }
+
+@media screen and (max-width: $bp-sm) {
+    .grid-container-projects {
+        height: unset;
+        grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        // 'five'
+    }
+
+    .grid-item-projects:nth-child(1) {
+        .card--projects {
+            &__thumb {
+                height: 200px;
+            }
+        }
+    }
+}
+

@@ -41,7 +41,7 @@
 
 <script>
     function validateForm() {
-        let fields = ["fullName", "phone", "email", "companyName", "companyEmail"];
+        let fields = ["fullName", "phone", "companyName", "companyEmail"];
         for (let i = 0; i < fields.length; i++) {
             let input = document.getElementById(fields[i]);
             if (input.value.trim() === "") {
