@@ -525,6 +525,59 @@ section {
             font-weight: $font-weight-extrabold;
         }
     }
+
+    &.factories-header {
+        padding: 0;
+        margin-top: -10px;
+
+        .banner {
+            margin-bottom: 60px;
+            background-image: url('/public/img/AAK_4061.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            padding: 120px 0;
+            height: 600px;
+        
+            h1 {
+                color: $white;
+                font-weight: $font-weight-extrabold;
+            }
+        }
+
+        h2 {
+            color: $secondary-color;
+            font-weight: $font-weight-extrabold;
+        }
+    }
+
+    &.factories {
+        padding-top: 0px;
+
+        h2 {
+            color: $secondary-color;
+            font-weight: $font-weight-bold;
+        }
+
+        h3 {
+            color: $secondary-color;
+            font-weight: $font-weight-bold;
+            margin-bottom: 30px;
+        }
+
+        img {
+            border-radius: 6px;
+        }
+    }
+
+    &.certificate {
+        h2 {
+            color: $secondary-color;
+            font-weight: $font-weight-bold;
+        }
+    }
 }
 
 @media screen and (max-width: $bp-lg) {
@@ -1413,7 +1466,7 @@ section {
 
 
 
-// Tiles
+// Tilesp
 .tile {
     &--client-logo {
         display: flex;
@@ -1428,8 +1481,21 @@ section {
             height: auto;
         }
     }
-}
 
+    &--features {
+        margin-bottom: 50px;
+        text-align: center;;
+        
+        h3 {
+            font-weight: $font-weight-bold;
+            margin-bottom: 15px;
+        }
+
+        img {
+            margin-bottom: 30px;
+        }
+    }
+}
 
 
 

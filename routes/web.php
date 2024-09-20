@@ -20,3 +20,6 @@ Route::view('/contact-us', 'client.pages.contact-us')
 
 Route::view('/projects', 'client.pages.projects')
     ->name('projects');
+
+Route::view('/factory', 'client.pages.factory')
+    ->name('factory');
