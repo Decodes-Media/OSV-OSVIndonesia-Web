@@ -49,7 +49,7 @@
     "src": "public/js/global.js"
   },
   "public/js/navbar.js": {
-    "file": "assets/navbar-3fd76962.js",
+    "file": "assets/navbar-ebe8fd60.js",
     "isEntry": true,
     "src": "public/js/navbar.js"
   },
@@ -64,7 +64,7 @@
     "src": "public/js/preloader.js"
   },
   "resources/css/filament-base-theme.css": {
-    "file": "assets/filament-base-theme-dfdd45bc.css",
+    "file": "assets/filament-base-theme-3cd19a15.css",
     "isEntry": true,
     "src": "resources/css/filament-base-theme.css"
   },
@@ -74,7 +74,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-dc6fc44b.css",
+    "file": "assets/app-f22bbcec.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
