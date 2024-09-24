@@ -279,6 +279,23 @@ svg path {
         margin: 15px;
         top: -25px;
     }
+
+    .primary-menu {
+        display: block;
+    }
+    
+    .primary-menu .menu-container .wrapper {
+        display: block;
+        gap: 0;
+    }
+
+    .primary-menu .menu-container {
+        margin-top: 100px;
+    }
+    
+    .primary-menu .menu-item {
+        margin-bottom: 20px;
+    }
     
     .primary-menu,
     .secondary-menu {

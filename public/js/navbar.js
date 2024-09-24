@@ -97,7 +97,7 @@ function revealMenuItems() {
         ".menu-item>a",
         0.5, {
             top: 0,
-            // ease: "power3.in",
+            ease: "power3.in",
             stagger: {
                 amount: 0
             }

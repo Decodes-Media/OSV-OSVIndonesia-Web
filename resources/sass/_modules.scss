@@ -1422,6 +1422,15 @@ section {
     // .card-animation__image {
     //     height: 350px;
     // }
+
+    .card-animation__header {
+        height: 220px;
+        padding: 16px 0;
+    }
+
+    .card-animation__description {
+        font-size: 1rem;
+    }
 }
 
 .card {
