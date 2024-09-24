@@ -210,7 +210,7 @@ svg path {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     flex-direction: column;
 }
 
@@ -232,7 +232,7 @@ svg path {
 .secondary-menu .menu-container .wrapper:nth-child(1) {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 @media screen and (max-width: $bp-md) {
@@ -252,11 +252,11 @@ svg path {
     }
 
     .primary-menu {
-        flex: 2;
+        flex: 3;
     }
 
     .primary-menu .menu-container .wrapper {
-        gap: 30px; 
+        gap: 20px; 
     }
 
     .primary-menu a {
@@ -277,7 +277,7 @@ svg path {
 
     #toggle-btn {
         margin: 15px;
-        top: -15px;
+        top: -25px;
     }
     
     .primary-menu,
@@ -291,6 +291,10 @@ svg path {
 
     .secondary-menu {
         justify-content: flex-start;
+    }
+
+    .secondary-menu .menu-item a {
+        font-size: 1rem;
     }
 
     .btn-download {
