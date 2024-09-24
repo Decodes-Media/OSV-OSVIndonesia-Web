@@ -224,7 +224,7 @@ section {
         h2 {
             animation: grow both ease-in;
             animation-timeline: --section;
-            animation-range: exit-crossing -200% exit-crossing -50%, exit 10% exit 0%;
+            animation-range: exit-crossing -200% exit-crossing -10%, exit 10% exit 0%;
         }
         
         h2 {
@@ -721,6 +721,12 @@ section {
             
             h2 {
                 font-size: clamp(1.5rem, 5vw + 1rem, 2.5rem);
+            }
+            
+
+            p span {
+                opacity: 1;
+                animation: highlight both ease-in-out;
             }
             
             p {
