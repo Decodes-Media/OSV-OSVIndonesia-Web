@@ -65,23 +65,23 @@
                         <div class="menu-container">
                             <div class="wrapper">
                                 <div class="menu-item">
-                                    <a href="{{ url('specialities') }}"><span>I</span>Specialities</a>
+                                    <a href="{{ url('specialities') }}"><span>•</span>Specialities</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="{{ url('factory') }}"><span>II</span>Factory</a>
+                                    <a href="{{ url('factory') }}"><span>•</span>Factory</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="{{ url('about-us') }}"><span>III</span>About Us</a>
+                                    <a href="{{ url('about-us') }}"><span>•</span>About Us</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="{{ url('projects') }}"><span>IV</span>Projects</a>
+                                    <a href="{{ url('projects') }}"><span>•</span>Projects</a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="{{ url('contact-us') }}"><span>V</span>Contact Us</a>
+                                    <a href="{{ url('contact-us') }}"><span>•</span>Contact Us</a>
                                 </div>
                             </div>
                         </div>

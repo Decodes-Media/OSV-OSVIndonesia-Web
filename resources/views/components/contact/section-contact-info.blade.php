@@ -1,16 +1,4 @@
 <section class="contact-info">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 px-0">
-                <div class="banner">
-                    <h1 class="text-center">
-                        Contact Us
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container px-4 px-lg-0">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-8 mb-5 mb-md-0">
@@ -38,13 +26,13 @@
                         </div>
                         <div class="col-12">
                             <p>
-                                By sending your data, you agree to the Privacy Policy. <br/>
+                                By sending your data, you agree to the <a href="#">Privacy Policy.</a><br/>
                                 We will process your details and contact you.
                             </p>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center mt-2">
-                        <button type="submit" class="btn btn--outline-dark btn-magnetic fill d-flex align-items-center justify-content-center w-100">
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn--outline-dark btn-magnetic fill">
                             Send Message
                         </button>
                     </div>
@@ -67,7 +55,7 @@
 
             <div class="col-12 col-md-6 col-lg-4 pl-lg-4 text-md-right">
                 <img src="{{ asset('img/AAK_4059.jpg') }}" class="w-100 img-fluid mb-3" alt="Compro" />
-                <a href="#" class="btn btn--outline-dark btn-magnetic fill" target="_blank" download>Download here</a>
+                <button class="btn btn--outline-dark btn-magnetic fill" data-toggle="modal" data-target="#modalUserData">Download here</button>
                 <!-- <div class="tab-area">
                     <ul class="nav nav-tabs" id="Tab" role="tablist">
                         <li class="nav-item">
@@ -99,3 +87,5 @@
         </div>
     </div>
 </section>
+
+<x-modals.modal-user-data />

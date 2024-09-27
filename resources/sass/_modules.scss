@@ -44,17 +44,17 @@ section {
         }
 
         h2 {
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
             text-transform: uppercase;
         }
 
         h4 {
-            font-family: $font-family-second;
+            font-family: $font-family;
         }
 
-        p {
-            font-size: 1.25rem;
-        }
+        // p {
+        //     font-size: 1.25rem;
+        // }
 
         .owl-stage {
             .owl-item {
@@ -84,7 +84,7 @@ section {
 
         h3 {
             color: $secondary-color;
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
         }
 
         img {
@@ -126,10 +126,11 @@ section {
         section:nth-of-type(2) {
             height: 20vh;
             position: -webkit-sticky;
+            background-color: $white;
             
             .section__content {
                 position: sticky;
-                top: 100px;
+                top: 150px;
             }
         }
         
@@ -229,7 +230,7 @@ section {
         
         h2 {
             font-size: clamp(2rem, 5vw + 1rem, 4rem);
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
             text-align: center;
             color: $font-color;
         }
@@ -301,7 +302,7 @@ section {
     &.clients {
         h3 {
             color: $secondary-color;
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
         }
     }
 
@@ -317,7 +318,7 @@ section {
 
         h2 {
             color: $white;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-light;
         }
 
         p {
@@ -341,7 +342,7 @@ section {
         
             h1 {
                 color: $white;
-                font-weight: $font-weight-extrabold;
+                font-weight: $font-weight-light;
             }
 
             // &::before {
@@ -356,7 +357,7 @@ section {
 
         h2 {
             color: $secondary-color;
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
         }
     }
 
@@ -364,8 +365,35 @@ section {
         padding-top: 120px;
 
         h2 {
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
             color: $secondary-color;
+        }
+    }
+
+    &.about-header {
+        padding: 0;
+        margin-top: -10px;
+
+        .banner {
+            margin-bottom: 60px;
+            background-image: url('/public/img/AAK_5650.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            padding: 120px 0;
+            height: 600px;
+        
+            h1 {
+                color: $white;
+                font-weight: $font-weight-light;
+            }
+        }
+
+        h2 {
+            color: $secondary-color;
+            font-weight: $font-weight-light;
         }
     }
 
@@ -376,7 +404,34 @@ section {
 
         h3 {
             color: $secondary-color;
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
+        }
+    }
+
+    &.contact-header {
+        padding: 0;
+        margin-top: -10px;
+
+        .banner {
+            margin-bottom: 60px;
+            background-image: url('/public/img/AAK_4362.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            padding: 120px 0;
+            height: 600px;
+        
+            h1 {
+                color: $white;
+                font-weight: $font-weight-light;
+            }
+        }
+
+        h2 {
+            color: $secondary-color;
+            font-weight: $font-weight-light;
         }
     }
 
@@ -396,18 +451,18 @@ section {
         
             h1 {
                 color: $white;
-                font-weight: $font-weight-extrabold;
+                font-weight: $font-weight-light;
             }
         }
 
         h3 {
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
             text-transform: uppercase;
             color: $primary-color;
         }
 
         h5 {
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
         }
 
         a {
@@ -460,7 +515,7 @@ section {
 
                     a {
                         font-size: 1rem;
-                        font-weight: $font-weight-bold;
+                        font-weight: $font-weight-light;
                         padding: 12px 24px;
                         color: $secondary-color;
                         border-radius: 6px;
@@ -478,7 +533,7 @@ section {
                 padding: 20px 0;
 
                 h4 {
-                    font-weight: $font-weight-extrabold;
+                    font-weight: $font-weight-light;
                     margin-bottom: 15px;
                 }
 
@@ -495,7 +550,7 @@ section {
 
         h3 {
             color: $secondary-color;
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
         }
 
         iframe {
@@ -519,16 +574,17 @@ section {
             background-attachment: fixed;
             position: relative;
             padding: 120px 0;
+            height: 600px;
         
             h1 {
                 color: $white;
-                font-weight: $font-weight-extrabold;
+                font-weight: $font-weight-light;
             }
         }
 
         h2 {
             color: $secondary-color;
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
         }
     }
 
@@ -549,13 +605,13 @@ section {
         
             h1 {
                 color: $white;
-                font-weight: $font-weight-extrabold;
+                font-weight: $font-weight-light;
             }
         }
 
         h2 {
             color: $secondary-color;
-            font-weight: $font-weight-extrabold;
+            font-weight: $font-weight-light;
         }
     }
 
@@ -564,12 +620,12 @@ section {
 
         h2 {
             color: $secondary-color;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-light;
         }
 
         h3 {
             color: $secondary-color;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-light;
             margin-bottom: 30px;
         }
 
@@ -581,7 +637,7 @@ section {
     &.certificate {
         h2 {
             color: $secondary-color;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-light;
         }
     }
 }
@@ -704,7 +760,7 @@ section {
             // padding-top: 80px;
 
             a {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
         }
 
@@ -773,7 +829,7 @@ section {
         }
 
         &.cta {
-            padding: 80px 0;
+            padding: 80px 15px;
     
             p {
                 font-size: 1rem;
@@ -864,7 +920,7 @@ section {
 
         h3 {
             color: $white;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-light;
         }
     }
 }
@@ -884,7 +940,7 @@ section {
 @media screen and (max-width: $bp-md) {
     .banner {
         &__thumb {
-            height: 400px;
+            height: 680px;
         }
     
         &__content {
@@ -896,7 +952,7 @@ section {
 @media screen and (max-width: $bp-sm) {
     .banner {
         &__thumb {
-            height: 360px;
+            height: 600px;
         }
     
         &__content {
@@ -1007,7 +1063,7 @@ section {
     }
 
     &--outline-dark {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: $font-weight-light;
         text-transform: uppercase;
         color: $secondary-color;
@@ -1042,7 +1098,7 @@ section {
     }
 
     &--outline-light {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: $font-weight-light;
         text-transform: uppercase;
         color: $white;
@@ -1103,7 +1159,7 @@ section {
 
         &--outline-dark,
         &--outline-light {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
     }
 }
@@ -1351,7 +1407,7 @@ section {
 }
   
 .card-animation__title {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-light;
     color: $secondary-color;
     margin-bottom: 15px;
 }
@@ -1365,17 +1421,21 @@ section {
     // overflow: hidden;
 }
 
-.card-animation__link {
-    padding: 0 16px 16px 16px;
+.values .card-animation .card-animation__header {
+    height: 150px;
 }
 
-@media screen and (max-width: $bp-md) {
-    // .card-animate {
-    //     display: inline-block;
-    //     float: none;
-    //     margin: 10px auto;
-    //     width: 100%;
-    // }
+.values .card-animation .card-animation__description {
+    opacity: 0;
+}
+
+.values .card-animation:hover .card-animation__description {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.card-animation__link {
+    padding: 0 16px 16px 16px;
 }
 
 @media screen and (max-width: $bp-md) {
@@ -1431,6 +1491,15 @@ section {
     .card-animation__description {
         font-size: 1rem;
     }
+
+    .card-animation__link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .values .card-animation .card-animation__description {
+        opacity: 1;
+    }
 }
 
 .card {
@@ -1439,7 +1508,7 @@ section {
         &__content {
             h3 {
                 font-size: 1.75rem;
-                font-weight: $font-weight-extrabold;
+                font-weight: $font-weight-light;
                 color: $font-color;
                 margin-bottom: 15px;
             }
@@ -1481,7 +1550,7 @@ section {
     
             h3 {
                 color: $secondary-color;
-                font-weight: $font-weight-extrabold;
+                font-weight: $font-weight-light;
                 text-align: left;
                 max-width: 75%;
             }
@@ -1493,7 +1562,7 @@ section {
 
         &__thumb {
             position: relative;
-            height: 200px;
+            height: 295px;
             overflow: hidden;
             border-radius: 6px;
 
@@ -1508,7 +1577,7 @@ section {
             margin-top: 15px;
             
             h4 {
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-light;
                 color: $secondary-color;
             }
         }
@@ -1590,7 +1659,7 @@ section {
         text-align: center;;
         
         h3 {
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-light;
             margin-bottom: 15px;
         }
 
@@ -1808,11 +1877,28 @@ body:not(.no-js) .fading-up {
     .modal-content {
         border-radius: 12px;
 
+        .modal-title {
+            padding: 0 10px;
+
+            span {
+                font-size: 1rem;
+                color: $secondary-color;
+
+                i {
+                    color: $secondary-color;
+                }
+
+                svg path {
+                    fill: $font-color !important;
+                }
+            }
+        }
+
         .modal-header {
             border-bottom: none;
 
             h4 {
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-light;
                 color: $secondary-color;
             }
         }
@@ -1833,9 +1919,9 @@ body:not(.no-js) .fading-up {
         border: none;
         border-bottom: 1px solid $tertiary-color;
         border-radius: 0;
-        font-family: $font-family-second;
+        font-family: $font-family;
         font-size: 1rem;
-        font-weight: $font-weight-reg;
+        font-weight: $font-weight-light;
         color: $font-color;
         margin-bottom: 20px;
 
@@ -1849,7 +1935,7 @@ body:not(.no-js) .fading-up {
     }
 
     label {
-        font-family: $font-family-second;
+        font-family: $font-family;
     }
 
     // .btn {
@@ -1858,7 +1944,17 @@ body:not(.no-js) .fading-up {
 
     p {
         font-size: 0.875rem;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-light;
+
+        a {
+            font-size: 0.875rem;
+            font-weight: $font-weight-light;
+            color: $secondary-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
     }
 }
 
@@ -1881,7 +1977,7 @@ body:not(.no-js) .fading-up {
         margin-top: 15px;
             
         h3 {
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-light;
             color: $secondary-color;
         }
 
@@ -1912,7 +2008,7 @@ body:not(.no-js) .fading-up {
 
     .card--projects {
         &__thumb {
-            height: 410px;
+            height: 600px;
             overflow: hidden;
 
             img {
@@ -1954,7 +2050,7 @@ body:not(.no-js) .fading-up {
     .grid-item-projects:nth-child(1) {
         .card--projects {
             &__thumb {
-                height: 200px;
+                height: 300px;
             }
         }
     }
@@ -1985,7 +2081,7 @@ body:not(.no-js) .fading-up {
     white-space: nowrap;
     text-transform: uppercase;
     font-size: 10rem;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-light;
     color: $grey;
     flex-shrink: 0;
     padding: 0 10px;
@@ -2017,14 +2113,15 @@ body:not(.no-js) .fading-up {
     text-transform: uppercase;
     color: $secondary-color;
     font-size: 3.5rem;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-light;
     flex-shrink: 0;
     padding: 0;
     width: max-content;
     display: flex;
     align-items: center;
+    justify-content: center;
     transform: translateX(0);
-    animation: b-text-scroll 35s linear infinite;
+    // animation: b-text-scroll 35s linear infinite;
 }
 
 @keyframes b-text-scroll {

@@ -10,10 +10,9 @@
                         </div>
                     </section>
 
-                    <section class="b-section">
+                    <section class="b-section d-flex justify-content-center">
                         <div class="b-section-marquee-box">
-                            <h2 class="marquee-text">Crafting, Bespoked, Excellence •</h2>
-                            <h2 class="marquee-text">Crafting, Bespoked, Excellence •</h2>
+                            <h2 class="marquee-text">Crafting, Bespoked, Excellence</h2>
                         </div>
                     </section>
                 </div>
