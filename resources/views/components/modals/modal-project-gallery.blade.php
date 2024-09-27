@@ -1,8 +1,15 @@
 <div class="modal modal-project-gallery fade" id="project_1" tabindex="-1" role="dialog" aria-labelledby="modalProjectGalleryTitle"  aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Velaa Private Island Maldives</h4>
+                <h4 class="modal-title">
+                    Velaa Private Island
+                    <br/>
+                    <span>
+                        <i class="fa fa-map-pin mr-1"></i>
+                        Maldives
+                    </span>
+                </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

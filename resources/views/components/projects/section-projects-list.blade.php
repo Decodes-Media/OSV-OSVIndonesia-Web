@@ -1,4 +1,18 @@
-<section class="projects-list">
+<section class="projects-list pt-0">
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12 col-lg-5 px-4 px-md-0 mb-4 mb-lg-0">
+                <h2>Background Behind OSV</h2>
+            </div>
+            <div class="col-12 col-lg-7 px-4 px-md-0">
+                <p>Start the dream in Bali, the founder was a client for the hospitality project in some regions. 20 years more in this furniture 
+                    manufacturing industries we really know how prestige this industries should be.</p>
+                <p>Looking the real potential to bring all the ideas come alive there, we want to have the Indonesian furniture factory that having world class 
+                    standard with perfectionist team that can direct all the unique designs becomes real.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -32,9 +46,12 @@
                     </div>
                     <div class="grid-item-projects projects-title">
                         <h3>
-                            <i class="fa fa-map-marker-alt mr-1"></i>
                             Velaa Private Island Maldives
                         </h3>
+                        <p>
+                            <i class="fa fa-map-pin mr-1"></i>
+                            Maldives
+                        </p>
                     </div>
                 </div>
 
@@ -68,9 +85,12 @@
                     </div>
                     <div class="grid-item-projects projects-title">
                         <h3>
-                            <i class="fa fa-map-marker-alt mr-1"></i>
-                            The 305 at West Palm Beach Dubai
+                            The 305 at West Palm Beach
                         </h3>
+                        <p>
+                            <i class="fa fa-map-pin mr-1"></i>
+                            Dubai
+                        </p>
                     </div>
                 </div>
 
@@ -104,9 +124,12 @@
                     </div>
                     <div class="grid-item-projects projects-title">
                         <h3>
-                            <i class="fa fa-map-marker-alt mr-1"></i>
-                            Huvafen Fushi Maldives
+                            Huvafen Fushi
                         </h3>
+                        <p>
+                            <i class="fa fa-map-pin mr-1"></i>
+                            Maldives
+                        </p>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<section class="maps">
+<section class="maps pb-5">
     <div class="container px-4 px-lg-0">
         <div class="row">
             <div class="col-12 col-lg-8 pl-0">

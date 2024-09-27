@@ -1,11 +1,4 @@
 <section class="stories">
-    <div class="container-fluid mb-5">
-        <div class="row">
-            <div class="col-12 px-0">
-                <img src="{{ asset('img/AAK_5650.jpg') }}" class="w-100 img-fluid" alt="About" />
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-5 px-4 px-md-0 mb-4 mb-lg-0">

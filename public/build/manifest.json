@@ -1,16 +1,8 @@
 {
   "public/css/owl-carousel-custom.css": {
-    "file": "assets/owl-carousel-custom-ff406d99.css",
+    "file": "assets/owl-carousel-custom-a3373c06.css",
     "isEntry": true,
     "src": "public/css/owl-carousel-custom.css"
-  },
-  "public/fonts/Sentient-Variable.ttf": {
-    "file": "assets/Sentient-Variable-e57342c5.ttf",
-    "src": "public/fonts/Sentient-Variable.ttf"
-  },
-  "public/fonts/Switzer-Variable.ttf": {
-    "file": "assets/Switzer-Variable-373c2d2a.ttf",
-    "src": "public/fonts/Switzer-Variable.ttf"
   },
   "public/img/AAK_4061.jpg": {
     "file": "assets/AAK_4061-34c66480.jpg",
@@ -49,7 +41,7 @@
     "src": "public/js/global.js"
   },
   "public/js/navbar.js": {
-    "file": "assets/navbar-7e6bdd24.js",
+    "file": "assets/navbar-a5446f29.js",
     "isEntry": true,
     "src": "public/js/navbar.js"
   },
@@ -64,7 +56,7 @@
     "src": "public/js/preloader.js"
   },
   "resources/css/filament-base-theme.css": {
-    "file": "assets/filament-base-theme-3cd19a15.css",
+    "file": "assets/filament-base-theme-9fd32376.css",
     "isEntry": true,
     "src": "resources/css/filament-base-theme.css"
   },
@@ -74,7 +66,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-e9b79729.css",
+    "file": "assets/app-cd49ea6d.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
