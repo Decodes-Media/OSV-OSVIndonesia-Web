@@ -16,13 +16,13 @@ use FilamentTiptapEditor\TiptapEditor;
 /**
  * @property \Filament\Forms\ComponentContainer $form
  */
-class ContactUsSettingPage extends Page implements HasForms
+class ProjectSettingPage extends Page implements HasForms
 {
     use InteractsWithForms;
 
-    protected static ?string $slug = 'contact-us/settings';
+    protected static ?string $slug = 'project/settings';
 
-    protected static string $view = 'filament.pages.contactus-settings-page';
+    protected static string $view = 'filament.pages.project-settings-page';
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 

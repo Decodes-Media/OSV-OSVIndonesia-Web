@@ -43,6 +43,8 @@ return [
         \App\Models\Page::class => 'Page',
         \App\Models\Admin::class => 'Admin',
         \App\Models\Role::class => 'Role',
+        \App\Models\Client::class => 'Client',
+        \App\Models\Project::class => 'Project',
         // SUPPORTING MODELS 🔽
         \App\Models\User::class => 'User',
         \App\Models\ActivityLog::class => 'Activity Log',

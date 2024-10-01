@@ -7,6 +7,7 @@ return new class extends SettingsMigration
     public function up(): void
     {
         $this->migrator->add('contactUs.catalog_cover', '/img/AAK_4059.jpg');
+        $this->migrator->add('contactUs.company_document', '/img/AAK_4059.jpg');
         $this->migrator->add('contactUs.maps_title', 'OSV Indonesia Factory');
         $this->migrator->add('contactUs.maps_desc', '<p>Jalan Drago RT 08, RW 02,<br>
                 Desa/Kelurahan Sinanggul, Kecamatan Mlonggo<br>
