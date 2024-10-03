@@ -1,31 +1,41 @@
 <section class="hospitality">
     <div class="container">
-        <div class="row align-items-center mb-4">
+        <div class="row align-items-center mb-4" data-aos="fade-in">
             <div class="col-12 col-lg-6">
                 <h2>Bespoke Hospitality Project</h2>
             </div>
-            <div class="col-12 col-lg-6">
-                
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="row gap-3">
+                    <div class="col-4">
+                        <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
+                    </div>
+                    <div class="col-4">
+                        <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
+                    </div>
+                    <div class="col-4">
+                        <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" data-aos="fade-in">
             <div class="col-12 col-lg-6">
                 <div class="row gap-3">
                     <div class="col-12 col-sm-6 mb-3">
-
+                        <img src="{{ asset('img/product/product-1.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
                     </div>
                     <div class="col-12 col-sm-6 mb-3">
-                        
+                        <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
                     </div>
                     <div class="col-12 col-sm-6 mb-3">
-                        
+                        <img src="{{ asset('img/product/product-1.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
                     </div>
                     <div class="col-12 col-sm-6 mb-3">
-                        
+                        <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
                     </div>
                     <div class="col-12 mb-3">
-                        
+                    <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid w-100" alt="Product" loading="lazy">
                     </div>
                 </div>
             </div>

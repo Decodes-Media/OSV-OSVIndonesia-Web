@@ -1,6 +1,6 @@
 <section class="specialities">
     <div class="container">
-        <div class="row">
+        <div class="row" data-aos="fade-in">
             <div class="col-12 col-lg-9 mb-4 mb-lg-0">
                 <h2 class="mb-4">White Label or <br/> ODM Products</h2>
                 <div class="row gap-3 mb-4">

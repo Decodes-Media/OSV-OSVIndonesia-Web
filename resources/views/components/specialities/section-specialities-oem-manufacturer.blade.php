@@ -1,6 +1,6 @@
 <section class="oem-manufacturer">
     <div class="container">
-        <div class="row">
+        <div class="row" data-aos="fade-in">
             <div class="col-12 col-lg-4 mb-3 mb-md-0">
                 <div class="row">
                     <div class="col-12 mb-3">

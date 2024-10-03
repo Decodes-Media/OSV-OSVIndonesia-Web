@@ -9,20 +9,20 @@
             </div>
             <div class="col-12 col-md-5 col-lg-4" data-aos="fade-in">
                 <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-12 col-sm-6">
-                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-100 d-block mx-auto img-fluid" alt="SVLK" />
+                    <div class="col-12">
+                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-50 d-block mx-auto img-fluid" alt="SVLK" />
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-100 d-block mx-auto img-fluid" alt="SVLK" />
+                    <div class="col-12">
+                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-50 d-block mx-auto img-fluid" alt="SVLK" />
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-100 d-block mx-auto img-fluid" alt="SVLK" />
+                    <div class="col-12">
+                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-50 d-block mx-auto img-fluid" alt="SVLK" />
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-100 d-block mx-auto img-fluid" alt="SVLK" />
+                    <div class="col-12">
+                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-50 d-block mx-auto img-fluid" alt="SVLK" />
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-100 d-block mx-auto img-fluid" alt="SVLK" />
+                    <div class="col-12">
+                        <img src="{{ asset('img/logo-svlk.png') }}" class="w-50 d-block mx-auto img-fluid" alt="SVLK" />
                     </div>
                 </div>
             </div>
