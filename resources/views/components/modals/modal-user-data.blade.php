@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
-                        <button type="submit" class="btn btn--secondary d-flex align-items-center justify-content-center">
+                        <button type="submit" class="btn btn--outline-dark btn-magnetic fill d-flex align-items-center justify-content-center">
                             Submit & Download File
                         </button>
                     </div>

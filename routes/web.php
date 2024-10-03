@@ -23,3 +23,6 @@ Route::view('/projects', 'client.pages.projects')
 
 Route::view('/factory', 'client.pages.factory')
     ->name('factory');
+
+Route::view('/specialities', 'client.pages.specialities')
+    ->name('specialities');

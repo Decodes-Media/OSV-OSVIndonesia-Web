@@ -33,12 +33,12 @@
                                     </a>
                                 </div>
 
-                                <div class="menu-item">
+                                <!-- <div class="menu-item">
                                     <a href="#" target="_blank">
                                         <i class="fa fa-phone mr-1"></i>
                                         +62 857 5917 1919
                                     </a>
-                                </div>
+                                </div> -->
 
                                 <div class="menu-item">
                                     <a href="https://www.instagram.com/osvindonesia" target="_blank">

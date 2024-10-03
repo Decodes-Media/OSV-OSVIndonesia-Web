@@ -11,6 +11,15 @@
         <div class="row mb-6">
             <div class="col-12 col-lg-6">
                 <img src="{{ asset('img/AAK_4052.jpg') }}" class="w-100 img-fluid mb-4" alt="Factory" data-aos="fade-in" />
+                <!-- <iframe src="https://www.youtube.com/embed/1EFT-pEC3ko?list=PL0e7kO0oB1xqrph6uRLjYwIBCfnAYCIc5&autoplay=1&loop=1&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay;" 
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen 
+                    muted
+                    class="youtube"
+                    data-aos="fade-in" >
+                </iframe> -->
             </div>
             <div class="col-12 col-lg-6 d-flex align-items-center">
                 <div class="content">
@@ -20,14 +29,23 @@
             </div>
         </div>
         <div class="row mb-6">
-            <div class="col-12 col-lg-6 d-flex align-items-center order-2 order-lg-1">
+            <div class="col-12 col-lg-6">
+                <img src="{{ asset('img/AAK_4362.jpg') }}" class="w-100 img-fluid mb-4" alt="Factory" data-aos="fade-in" />
+                <!-- <iframe src="https://www.youtube.com/embed/1EFT-pEC3ko?list=PL0e7kO0oB1xqrph6uRLjYwIBCfnAYCIc5&autoplay=1&loop=1&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay;" 
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen 
+                    muted
+                    class="youtube"
+                    data-aos="fade-in" >
+                </iframe> -->
+            </div>
+            <div class="col-12 col-lg-6 d-flex align-items-center">
                 <div class="content">
                     <h3>Quality Control</h3>
                     <p>OSV always keep in mind that all products furnished is qualified the global standard and make sure to to it's product is save without any repairs needed.</p>
                 </div>
-            </div>
-            <div class="col-12 col-lg-6 order-1 order-lg-2">
-                <img src="{{ asset('img/AAK_4362.jpg') }}" class="w-100 img-fluid mb-4" alt="Factory" data-aos="fade-in" />
             </div>
         </div>
     </div>
