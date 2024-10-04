@@ -1539,10 +1539,10 @@ section {
 .card-animation__description {
     margin: 0;
     color: $font-color;   
-    // display: -webkit-box;
-    // -webkit-box-orient: vertical;
-    // -webkit-line-clamp: 3;
-    // overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .values .card-animation .card-animation__header {
