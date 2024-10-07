@@ -860,9 +860,24 @@ section {
 
         &.cta {
             padding: 100px 0;
+            background-size: contain;
+            background-repeat: repeat;
     
             p {
                 font-size: 1.5rem;
+            }
+        }
+
+        &.stories,
+        &.contact-header,
+        &.about-header,
+        &.projects-header,
+        &.factories-header,
+        &.specialities-header {
+            .banner {
+                background-size: contain;
+                background-position: top;
+                height: 450px;
             }
         }
     }
@@ -957,6 +972,19 @@ section {
     
             p {
                 font-size: 1rem;
+            }
+        }
+
+        &.stories,
+        &.contact-header,
+        &.about-header,
+        &.projects-header,
+        &.factories-header,
+        &.specialities-header {
+            .banner {
+                background-size: contain;
+                background-position: top;
+                height: 200px;
             }
         }
     }
