@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
                 <a href="">
-                    <div class="card-animation">
+                    <div class="card-animation" data-aos="fade-in">
                         <img src="{{ asset('img/service/service-1.png') }}" class="card-animation__image" alt="" />
                         <div class="card-animation__overlay">
                             <div class="card-animation__header">
@@ -26,7 +26,7 @@
             </div>
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
                 <a href="">
-                    <div class="card-animation">
+                    <div class="card-animation" data-aos="fade-in">
                         <img src="{{ asset('img/service/service-2.jpg') }}" class="card-animation__image" alt="" />
                         <div class="card-animation__overlay">
                             <div class="card-animation__header">
@@ -44,7 +44,7 @@
             </div>
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
                 <a href="">
-                    <div class="card-animation">
+                    <div class="card-animation" data-aos="fade-in">
                         <img src="{{ asset('img/service/service-3.png') }}" class="card-animation__image" alt="" />
                         <div class="card-animation__overlay">
                             <div class="card-animation__header">
