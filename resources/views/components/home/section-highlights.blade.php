@@ -22,14 +22,6 @@
                         </h2>
                     </div>
                 </section>
-                <!-- <section>
-                    <div class="section__content">
-                        <footer>
-                            <span>Custom Designs, Crafted with Precision.</span>
-                            <span>Let's Talk.</span>
-                        </footer>
-                    </div>
-                </section> -->
             </div>
         </div>
     </div>
