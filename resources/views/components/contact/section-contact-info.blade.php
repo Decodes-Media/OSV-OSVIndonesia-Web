@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-12">
                             <p>
-                                By sending your data, you agree to the <a href="#">Privacy Policy.</a><br/>
+                                By sending your data, you agree to the <a ref="" data-toggle="modal" data-target="#privacy_policy">Privacy Policy.</a><br/>
                                 We will process your details and contact you.
                             </p>
                         </div>
