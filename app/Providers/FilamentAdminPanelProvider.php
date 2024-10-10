@@ -31,8 +31,8 @@ class FilamentAdminPanelProvider extends PanelProvider
             ->databaseNotifications(false)
             ->darkMode(true)
             ->colors([
-                'primary' => '#C52028',
-                'secondary' => '#0B539A',
+                'primary' => '#563627',
+                'secondary' => '#A88D6C',
             ])
             ->discoverResources(
                 in: app_path('FilamentAdmin/Resources'),
