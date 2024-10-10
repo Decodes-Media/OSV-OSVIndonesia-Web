@@ -90,209 +90,210 @@ class AboutUsSettingPage extends Page implements HasForms
         return $form
             ->statePath('data')
             ->schema([
-                FC\FileUpload::make('banner')
-                    ->hiddenLabel()
-                    ->image()
-                    ->imageEditor()
-                    ->imageCropAspectRatio('16:9')
-                    ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
-                    ->directory('public')
-                    ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                    ->openable()
-                    ->downloadable(),
-                FC\Grid::make(['default' => 2])
+                FC\Section::make('Header Section')
                     ->schema([
+                        FC\FileUpload::make('banner')
+                            ->image()
+                            ->imageEditor()
+                            ->imageCropAspectRatio('16:9')
+                            ->imagePreviewHeight('320px')
+                            ->maxSize(2048)
+                            ->directory('public')
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                            ->openable()
+                            ->downloadable(),
                         FC\TextInput::make('banner_title')
                             ->label('Title')
-                            ->columnSpanFull()
                             ->disabled($this->disableForm)
                             ->required()
                             ->afterStateHydrated(function ($set, $livewire) {
                                 $set('banner_title', $livewire->data['banner_title']);
                             }),
+                        TiptapEditor::make('banner_desc')
+                            ->label('Description')
+                            ->columnSpanFull()
+                            ->disk('public')
+                            ->directory('uploads')
+                            ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
+                            ->maxFileSize(2048)
+                            ->extraInputAttributes(['style' => 'min-height: 320px;'])
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('banner_desc', $livewire->data['banner_desc']);
+                            }),
                     ]),
-                    TiptapEditor::make('banner_desc')
-                        ->label('Description')
-                        ->columnSpanFull()
-                        ->disk('public')
-                        ->directory('uploads')
-                        ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                        ->maxFileSize(2048)
-                        ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                        ->required()
-                        ->afterStateHydrated(function ($set, $livewire) {
-                            $set('banner_desc', $livewire->data['banner_desc']);
-                        }),
-                    FC\FileUpload::make('fb_thumbnail1')
-                        ->hiddenLabel()
-                        ->image()
-                        ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                    FC\Grid::make(['default' => 2])
-                        ->schema([
-                            FC\TextInput::make('fb_title1')
-                                ->label('Title')
+                FC\Section::make('Foundational Beliefs Section')
+                    ->schema([
+                        FC\Grid::make(['default' => 2])->schema([
+                            FC\FileUpload::make('fb_thumbnail1')
+                                ->label('Thumbnail 1')
                                 ->columnSpanFull()
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(2048)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->required()
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
+                            FC\TextInput::make('fb_title1')
+                                ->label('Title 1')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_title1', $livewire->data['fb_title1']);
                                 }),
                             FC\TextInput::make('fb_desc1')
-                                ->label('Desc')
-                                ->columnSpanFull()
+                                ->label('Description 1')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_desc1', $livewire->data['fb_desc1']);
                                 }),
-                        ]),
-                    FC\FileUpload::make('fb_thumbnail2')
-                        ->hiddenLabel()
-                        ->image()
-                        ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                    FC\Grid::make(['default' => 2])
-                        ->schema([
-                            FC\TextInput::make('fb_title2')
-                                ->label('Title')
+                            FC\FileUpload::make('fb_thumbnail2')
+                                ->label('Thumbnail 2')
                                 ->columnSpanFull()
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(2048)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->required()
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
+                            FC\TextInput::make('fb_title2')
+                                ->label('Title 2')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_title2', $livewire->data['fb_title2']);
                                 }),
                             FC\TextInput::make('fb_desc2')
-                                ->label('Desc')
-                                ->columnSpanFull()
+                                ->label('Description 2')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_desc2', $livewire->data['fb_desc2']);
                                 }),
-                        ]),
-                    FC\FileUpload::make('fb_thumbnail3')
-                        ->hiddenLabel()
-                        ->image()
-                        ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                    FC\Grid::make(['default' => 2])
-                        ->schema([
-                            FC\TextInput::make('fb_title3')
-                                ->label('Title')
+                            FC\FileUpload::make('fb_thumbnail3')
+                                ->label('Thumbnail 3')
                                 ->columnSpanFull()
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(2048)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->required()
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
+                            FC\TextInput::make('fb_title3')
+                                ->label('Title 3')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_title3', $livewire->data['fb_title3']);
                                 }),
                             FC\TextInput::make('fb_desc3')
-                                ->label('Desc')
-                                ->columnSpanFull()
+                                ->label('Description 3')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_desc3', $livewire->data['fb_desc3']);
-                                }),
-                        ]),
-                    FC\FileUpload::make('fb_thumbnail4')
-                        ->hiddenLabel()
-                        ->image()
-                        ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                    FC\Grid::make(['default' => 2])
-                        ->schema([
-                            FC\TextInput::make('fb_title4')
-                                ->label('Title')
+                                }), 
+                            FC\FileUpload::make('fb_thumbnail4')
+                                ->label('Thumbnail 4')
                                 ->columnSpanFull()
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(2048)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->required()
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
+                            FC\TextInput::make('fb_title4')
+                                ->label('Title 4')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_title4', $livewire->data['fb_title4']);
                                 }),
                             FC\TextInput::make('fb_desc4')
-                                ->label('Desc')
-                                ->columnSpanFull()
+                                ->label('Description 4')
                                 ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('fb_desc4', $livewire->data['fb_desc4']);
                                 }),
                         ]),
-
-                    FC\FileUpload::make('sect1_thumbnail')
-                        ->hiddenLabel()
-                        ->image()
-                        ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                    FC\Grid::make(['default' => 2])
+                    ]),
+                FC\Section::make('Section 1')
+                    ->schema([
+                        FC\FileUpload::make('sect1_thumbnail')
+                            ->label('Thumbnail')
+                            ->image()
+                            ->imageEditor()
+                            ->imageCropAspectRatio('16:9')
+                            ->imagePreviewHeight('320px')
+                            ->maxSize(2048)
+                            ->directory('public')
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                            ->openable()
+                            ->downloadable(),
+                        FC\TextInput::make('sect1_title')
+                            ->label('Title')
+                            ->columnSpanFull()
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('sect1_title', $livewire->data['sect1_title']);
+                            }),
+                        TiptapEditor::make('sect1_desc')
+                            ->label('Description')
+                            ->columnSpanFull()
+                            ->disk('public')
+                            ->directory('uploads')
+                            ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
+                            ->maxFileSize(2048)
+                            ->extraInputAttributes(['style' => 'min-height: 320px;'])
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('sect1_desc', $livewire->data['sect1_desc']);
+                            }),
+                    ]),
+                    FC\Section::make('Section 2')
                         ->schema([
-                            FC\TextInput::make('sect1_title')
-                                ->label('Title')
-                                ->columnSpanFull()
+                            FC\FileUpload::make('sect2_thumbnail')
+                                ->label('Thumbnail')
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(2048)
+                                ->directory('public')
                                 ->disabled($this->disableForm)
                                 ->required()
-                                ->afterStateHydrated(function ($set, $livewire) {
-                                    $set('sect1_title', $livewire->data['sect1_title']);
-                                }),
-                            TiptapEditor::make('sect1_desc')
-                                ->label('Description')
-                                ->columnSpanFull()
-                                ->disk('public')
-                                ->directory('uploads')
-                                ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                                ->maxFileSize(2048)
-                                ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                                ->required()
-                                ->afterStateHydrated(function ($set, $livewire) {
-                                    $set('sect1_desc', $livewire->data['sect1_desc']);
-                                }),
-                        ]),
-
-                    FC\FileUpload::make('sect2_thumbnail')
-                        ->hiddenLabel()
-                        ->image()
-                        ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                    FC\Grid::make(['default' => 2])
-                        ->schema([
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
                             FC\TextInput::make('sect2_title')
                                 ->label('Title')
                                 ->columnSpanFull()
@@ -309,14 +310,12 @@ class AboutUsSettingPage extends Page implements HasForms
                                 ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
                                 ->maxFileSize(2048)
                                 ->extraInputAttributes(['style' => 'min-height: 320px;'])
+                                ->disabled($this->disableForm)
                                 ->required()
                                 ->afterStateHydrated(function ($set, $livewire) {
                                     $set('sect2_desc', $livewire->data['sect2_desc']);
                                 }),
-                        ]),
-                        
-                        
-                        
+                    ]), 
             ]);
     }
 
