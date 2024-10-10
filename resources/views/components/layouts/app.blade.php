@@ -76,6 +76,9 @@
                 <button>Yes, agree!</button>
             </div>
         </div> -->
+
+        <x-modals.modal-privacy-policy />
+        <x-modals.modal-terms-conditions />
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

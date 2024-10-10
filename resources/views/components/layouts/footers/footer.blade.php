@@ -51,10 +51,10 @@
                 <div class="col-12 col-md-6 text-center text-md-right order-1 order-md-2 mb-4 mb-md-0">
                     <ul class="footer-menu">
                         <li>
-                            <a href="#">Privacy Policy</a>
+                            <a href="" data-toggle="modal" data-target="#privacy_policy">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#">Terms & Conditions</a>
+                            <a href="" data-toggle="modal" data-target="#terms_conditions">Terms & Conditions</a>
                         </li>
                     </ul>
                 </div>
