@@ -2308,6 +2308,16 @@ body:not(.no-js) .fading-up {
     }
 }
 
+@media screen and (max-width: $bp-xs) {
+    .a-section-marquee-box h2 {
+        font-size: 2.5rem;
+    }
+
+    .b-section-marquee-box h2 {
+        font-size: 1rem;
+    }
+}
+
 
 
 // Animate
