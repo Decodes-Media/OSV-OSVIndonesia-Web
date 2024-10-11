@@ -55,7 +55,7 @@
                                 </div>
 
                                 <div class="menu-item mt-5">
-                                    <button data-toggle="modal" data-target="#modalUserData" class="btn btn-download">Download Company Profile</button>
+                                    <button data-toggle="modal" data-target="#modalUserData" class="btn btn-download btn-magnetic">Download Company Profile</button>
                                 </div>
                             </div>
                         </div>
@@ -64,6 +64,10 @@
                     <div class="primary-menu">
                         <div class="menu-container">
                             <div class="wrapper">
+                                <div class="menu-item">
+                                    <a href="{{ url('/') }}"><span>•</span>Home</a>
+                                </div>
+
                                 <div class="menu-item">
                                     <a href="{{ url('specialities') }}"><span>•</span>Specialities</a>
                                 </div>

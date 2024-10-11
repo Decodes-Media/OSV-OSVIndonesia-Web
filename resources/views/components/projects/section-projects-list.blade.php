@@ -48,10 +48,12 @@
                         <h3>
                             Velaa Private Island Maldives
                         </h3>
-                        <p>
-                            <i class="fa fa-map-pin mr-1"></i>
-                            Maldives
-                        </p>
+                        <div class="d-flex">
+                            <img src="{{ asset('img/map-icon.png') }}" width="16px" height="16px" class="mt-1" />
+                            <p>
+                                Maldives
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -87,10 +89,12 @@
                         <h3>
                             The 305 at West Palm Beach
                         </h3>
-                        <p>
-                            <i class="fa fa-map-pin mr-1"></i>
-                            Dubai
-                        </p>
+                        <div class="d-flex">
+                            <img src="{{ asset('img/map-icon.png') }}" width="16px" height="16px" class="mt-1" />
+                            <p>
+                                Dubai
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -126,10 +130,12 @@
                         <h3>
                             Huvafen Fushi
                         </h3>
-                        <p>
-                            <i class="fa fa-map-pin mr-1"></i>
-                            Maldives
-                        </p>
+                        <div class="d-flex">
+                            <img src="{{ asset('img/map-icon.png') }}" width="16px" height="16px" class="mt-1" />
+                            <p>
+                                Maldives
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
