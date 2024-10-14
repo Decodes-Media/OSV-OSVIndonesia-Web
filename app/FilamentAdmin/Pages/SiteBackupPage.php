@@ -20,6 +20,8 @@ class SiteBackupPage extends Page
     protected static ?string $navigationIcon = 'heroicon-o-server-stack';
 
     protected static ?int $navigationSort = 4;
+    
+    protected static bool $shouldRegisterNavigation = false;
 
     public function getTitle(): string
     {
@@ -36,10 +38,10 @@ class SiteBackupPage extends Page
         return __('Site Backups');
     }
 
-    public static function shouldRegisterNavigation(): bool
-    {
-        return filament_user_can('system.site_backup');
-    }
+    // public static function shouldRegisterNavigation(): bool
+    // {
+    //     return filament_user_can('system.site_backup');
+    // }
 
     public function mount(): void
     {
