@@ -1,9 +1,9 @@
 <title>OSV Indonesia - Factory</title>
 
 <x-layouts.app>
-    <x-factories.section-factories-header />
-    <x-factories.section-factories-content />
-    <x-factories.section-features />
-    <x-factories.section-certificate />
+    <x-factories.section-factories-header/>
+    <x-factories.section-factories-content :data="$setting"/>
+    <x-factories.section-features :data="$setting->statistic_data"/>
+    <x-factories.section-certificate :data="$setting"/>
     <x-global.section-cta />
 </x-layouts.app>
