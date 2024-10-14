@@ -15,5 +15,6 @@ class Client extends Model
     protected $fillable = [
         'name',
         'logo_path',
+        'order',
     ];
 }
