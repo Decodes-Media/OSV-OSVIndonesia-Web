@@ -12,6 +12,7 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Http\Response;
 use FilamentTiptapEditor\TiptapEditor;
+use Filament\Forms\Get;
 
 /**
  * @property \Filament\Forms\ComponentContainer $form
@@ -105,7 +106,7 @@ class FactorySettingPage extends Page implements HasForms
                             ->disk('public')
                             ->directory('uploads')
                             ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                            ->maxFileSize(2048)
+                            ->maxFileSize(1024)
                             ->extraInputAttributes(['style' => 'min-height: 320px;'])
                             ->disabled($this->disableForm)
                             ->required()
@@ -113,79 +114,72 @@ class FactorySettingPage extends Page implements HasForms
                                 $set('desc', $livewire->data['desc']);
                             }),
                     ]),
-                FC\Section::make('Section 1')
+                FC\Section::make('Content Section')
                     ->schema([
-                        FC\FileUpload::make('sect1_thumbnail')
-                            ->label('Thumbnail')
-                            ->image()
-                            ->imageEditor()
-                            ->imageCropAspectRatio('16:9')
-                            ->imagePreviewHeight('320px')
-                            ->maxSize(2048)
-                            ->directory('public')
-                            ->disabled($this->disableForm)
-                            ->required()
-                            ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                            ->openable()
-                            ->downloadable(),
-                        FC\TextInput::make('sect1_title')
-                            ->label('Title')
-                            ->columnSpanFull()
-                            ->disabled($this->disableForm)
-                            ->required()
-                            ->afterStateHydrated(function ($set, $livewire) {
-                                $set('sect1_title', $livewire->data['sect1_title']);
-                            }),
-                        TiptapEditor::make('sect1_desc')
-                            ->label('Description')
-                            ->columnSpanFull()
-                            ->disk('public')
-                            ->directory('uploads')
-                            ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                            ->maxFileSize(2048)
-                            ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                            ->disabled($this->disableForm)
-                            ->required()
-                            ->afterStateHydrated(function ($set, $livewire) {
-                                $set('sect1_desc', $livewire->data['sect1_desc']);
-                            }),
-                    ]),
-                FC\Section::make('Section 2')
-                        ->schema([
-                            FC\FileUpload::make('sect2_thumbnail')
-                                ->label('Thumbnail')
-                                ->image()
-                                ->imageEditor()
-                                ->imageCropAspectRatio('16:9')
-                                ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
-                                ->directory('public')
-                                ->disabled($this->disableForm)
-                                ->required()
-                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                                ->openable()
-                                ->downloadable(),
-                            FC\TextInput::make('sect2_title')
-                                ->label('Title')
-                                ->columnSpanFull()
-                                ->disabled($this->disableForm)
-                                ->required()
-                                ->afterStateHydrated(function ($set, $livewire) {
-                                    $set('sect2_title', $livewire->data['sect2_title']);
-                                }),
-                            TiptapEditor::make('sect2_desc')
-                                ->label('Description')
-                                ->columnSpanFull()
-                                ->disk('public')
-                                ->directory('uploads')
-                                ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                                ->maxFileSize(2048)
-                                ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                                ->disabled($this->disableForm)
-                                ->required()
-                                ->afterStateHydrated(function ($set, $livewire) {
-                                    $set('sect2_desc', $livewire->data['sect2_desc']);
-                                }),
+                        FC\Repeater::make('content_data')
+                            ->schema([
+                                FC\TextInput::make('content_title')
+                                    ->label('Title')
+                                    ->columnSpanFull()
+                                    ->disabled($this->disableForm)
+                                    ->required(),
+                                TiptapEditor::make('content_desc')
+                                    ->label('Description')
+                                    ->columnSpanFull()
+                                    ->disk('public')
+                                    ->directory('uploads')
+                                    ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
+                                    ->maxFileSize(1024)
+                                    ->extraInputAttributes(['style' => 'min-height: 320px;'])
+                                    ->disabled($this->disableForm)
+                                    ->required(),
+                                FC\Grid::make(['default' => 1])
+                                    ->schema([
+                                        FC\Select::make('content_type')
+                                        ->label('Type')
+                                        ->options([
+                                            'thumbnail' => 'thumbnail',
+                                            'youtube' => 'youtube',
+                                        ])
+                                        ->live()
+                                        ->required()
+                                        ->afterStateUpdated(fn(FC\Select $component) => $component
+                                            ->getContainer()
+                                            ->getComponent('dynamicTypeFields')
+                                            ->getChildComponentContainer()
+                                            ->fill()),
+                                        FC\Grid::make(1)
+                                        ->schema(fn(Get $get): array => match ($get('content_type')) {
+                                            'youtube' => [
+                                                FC\TextInput::make('content_youtube_url')
+                                                    ->label('Youtube URL')
+                                                    ->url()
+                                                    ->activeUrl()
+                                                    ->rule('regex:/^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/')
+                                                    ->required()
+                                                    ->maxLength(255),
+                                            ],
+                                            'thumbnail' => [
+                                                FC\FileUpload::make('content_thumbnail')
+                                                    ->label('Thumbnail')
+                                                    ->columnSpanFull()
+                                                    ->image()
+                                                    ->imageEditor()
+                                                    ->imageCropAspectRatio('16:9')
+                                                    ->imagePreviewHeight('320px')
+                                                    ->maxSize(1024)
+                                                    ->directory('public')
+                                                    ->disabled($this->disableForm)
+                                                    ->required()
+                                                    ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                                    ->openable()
+                                                    ->downloadable(),
+                                            ],
+                                            default => [],
+                                        })->key('dynamicTypeFields'),
+                                    ]),
+                        ])
+                        ->addActionLabel('Add Content Data'),
                     ]),
                 FC\Section::make('Statistic Section')
                     ->schema([
@@ -199,7 +193,7 @@ class FactorySettingPage extends Page implements HasForms
                                     ->imageEditor()
                                     ->imageCropAspectRatio('16:9')
                                     ->imagePreviewHeight('320px')
-                                    ->maxSize(2048)
+                                    ->maxSize(1024)
                                     ->directory('public')
                                     ->disabled($this->disableForm)
                                     ->required()
@@ -215,7 +209,7 @@ class FactorySettingPage extends Page implements HasForms
                                         ->disabled($this->disableForm)
                                         ->required()
                                 ]),
-                        ])->minItems(2)
+                        ])->minItems(3)
                         ->addActionLabel('Add Statistic Data'),
                     ]),
                 FC\Section::make('Certificate Section')
@@ -234,7 +228,7 @@ class FactorySettingPage extends Page implements HasForms
                             ->disk('public')
                             ->directory('uploads')
                             ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                            ->maxFileSize(2048)
+                            ->maxFileSize(1024)
                             ->extraInputAttributes(['style' => 'min-height: 320px;'])
                             ->disabled($this->disableForm)
                             ->required()
@@ -248,7 +242,7 @@ class FactorySettingPage extends Page implements HasForms
                                 ->imageEditor()
                                 ->imageCropAspectRatio('16:9')
                                 ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
+                                ->maxSize(1024)
                                 ->directory('public')
                                 ->disabled($this->disableForm)
                                 ->required()
@@ -261,227 +255,50 @@ class FactorySettingPage extends Page implements HasForms
                                 ->imageEditor()
                                 ->imageCropAspectRatio('16:9')
                                 ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
+                                ->maxSize(1024)
                                 ->directory('public')
                                 ->disabled($this->disableForm)
                                 ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                                 ->openable()
                                 ->downloadable(),
-                            // FC\FileUpload::make('cert_image3')
-                            //     ->label('Image 3')
-                            //     ->image()
-                            //     ->imageEditor()
-                            //     ->imageCropAspectRatio('16:9')
-                            //     ->imagePreviewHeight('320px')
-                            //     ->maxSize(2048)
-                            //     ->directory('public')
-                            //     ->disabled($this->disableForm)
-                            //     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                            //     ->openable()
-                            //     ->downloadable(),
-                            // FC\FileUpload::make('cert_image4')
-                            //     ->label('Image 4')
-                            //     ->image()
-                            //     ->imageEditor()
-                            //     ->imageCropAspectRatio('16:9')
-                            //     ->imagePreviewHeight('320px')
-                            //     ->maxSize(2048)
-                            //     ->directory('public')
-                            //     ->disabled($this->disableForm)
-                            //     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                            //     ->openable()
-                            //     ->downloadable(),
-                            // FC\FileUpload::make('cert_image5')
-                            //     ->label('Image 5')
-                            //     ->image()
-                            //     ->imageEditor()
-                            //     ->imageCropAspectRatio('16:9')
-                            //     ->imagePreviewHeight('320px')
-                            //     ->maxSize(2048)
-                            //     ->directory('public')
-                            //     ->disabled($this->disableForm)
-                            //     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                            //     ->openable()
-                            //     ->downloadable(),
+                            FC\FileUpload::make('cert_image3')
+                                ->label('Image 3')
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(1024)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
+                            FC\FileUpload::make('cert_image4')
+                                ->label('Image 4')
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(1024)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
+                            FC\FileUpload::make('cert_image5')
+                                ->label('Image 5')
+                                ->image()
+                                ->imageEditor()
+                                ->imageCropAspectRatio('16:9')
+                                ->imagePreviewHeight('320px')
+                                ->maxSize(1024)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
                         ]),
                     ]), 
-                // FC\Section::make('Foundational Beliefs Section')
-                //     ->schema([
-                //         FC\Grid::make(['default' => 2])->schema([
-                //             FC\FileUpload::make('fb_thumbnail1')
-                //                 ->label('Thumbnail 1')
-                //                 ->columnSpanFull()
-                //                 ->image()
-                //                 ->imageEditor()
-                //                 ->imageCropAspectRatio('16:9')
-                //                 ->imagePreviewHeight('320px')
-                //                 ->maxSize(2048)
-                //                 ->directory('public')
-                //                 ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                //                 ->openable()
-                //                 ->downloadable(),
-                //             FC\TextInput::make('fb_title1')
-                //                 ->label('Title 1')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_title1', $livewire->data['fb_title1']);
-                //                 }),
-                //             FC\TextInput::make('fb_desc1')
-                //                 ->label('Description 1')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_desc1', $livewire->data['fb_desc1']);
-                //                 }),
-                //             FC\FileUpload::make('fb_thumbnail2')
-                //                 ->label('Thumbnail 2')
-                //                 ->columnSpanFull()
-                //                 ->image()
-                //                 ->imageEditor()
-                //                 ->imageCropAspectRatio('16:9')
-                //                 ->imagePreviewHeight('320px')
-                //                 ->maxSize(2048)
-                //                 ->directory('public')
-                //                 ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                //                 ->openable()
-                //                 ->downloadable(),
-                //             FC\TextInput::make('fb_title2')
-                //                 ->label('Title 2')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_title2', $livewire->data['fb_title2']);
-                //                 }),
-                //             FC\TextInput::make('fb_desc2')
-                //                 ->label('Description 2')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_desc2', $livewire->data['fb_desc2']);
-                //                 }),
-                //             FC\FileUpload::make('fb_thumbnail3')
-                //                 ->label('Thumbnail 3')
-                //                 ->columnSpanFull()
-                //                 ->image()
-                //                 ->imageEditor()
-                //                 ->imageCropAspectRatio('16:9')
-                //                 ->imagePreviewHeight('320px')
-                //                 ->maxSize(2048)
-                //                 ->directory('public')
-                //                 ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                //                 ->openable()
-                //                 ->downloadable(),
-                //             FC\TextInput::make('fb_title3')
-                //                 ->label('Title 3')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_title3', $livewire->data['fb_title3']);
-                //                 }),
-                //             FC\TextInput::make('fb_desc3')
-                //                 ->label('Description 3')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_desc3', $livewire->data['fb_desc3']);
-                //                 }), 
-                //             FC\FileUpload::make('fb_thumbnail4')
-                //                 ->label('Thumbnail 4')
-                //                 ->columnSpanFull()
-                //                 ->image()
-                //                 ->imageEditor()
-                //                 ->imageCropAspectRatio('16:9')
-                //                 ->imagePreviewHeight('320px')
-                //                 ->maxSize(2048)
-                //                 ->directory('public')
-                //                 ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                //                 ->openable()
-                //                 ->downloadable(),
-                //             FC\TextInput::make('fb_title4')
-                //                 ->label('Title 4')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_title4', $livewire->data['fb_title4']);
-                //                 }),
-                //             FC\TextInput::make('fb_desc4')
-                //                 ->label('Description 4')
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('fb_desc4', $livewire->data['fb_desc4']);
-                //                 }),
-                //         ]),
-                //     ]),
-                // FC\Section::make('Section 1')
-                //     ->schema([
-                //         FC\FileUpload::make('sect1_thumbnail')
-                //             ->label('Thumbnail')
-                //             ->image()
-                //             ->imageEditor()
-                //             ->imageCropAspectRatio('16:9')
-                //             ->imagePreviewHeight('320px')
-                //             ->maxSize(2048)
-                //             ->directory('public')
-                //             ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                //             ->openable()
-                //             ->downloadable(),
-                //         FC\TextInput::make('sect1_title')
-                //             ->label('Title')
-                //             ->columnSpanFull()
-                //             ->disabled($this->disableForm)
-                //             ->required()
-                //             ->afterStateHydrated(function ($set, $livewire) {
-                //                 $set('sect1_title', $livewire->data['sect1_title']);
-                //             }),
-                //         TiptapEditor::make('sect1_desc')
-                //             ->label('Description')
-                //             ->columnSpanFull()
-                //             ->disk('public')
-                //             ->directory('uploads')
-                //             ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                //             ->maxFileSize(2048)
-                //             ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                //             ->required()
-                //             ->afterStateHydrated(function ($set, $livewire) {
-                //                 $set('sect1_desc', $livewire->data['sect1_desc']);
-                //             }),
-                //     ]),
-                //     FC\Section::make('Section 2')
-                //         ->schema([
-                //             FC\FileUpload::make('sect2_thumbnail')
-                //                 ->label('Thumbnail')
-                //                 ->image()
-                //                 ->imageEditor()
-                //                 ->imageCropAspectRatio('16:9')
-                //                 ->imagePreviewHeight('320px')
-                //                 ->maxSize(2048)
-                //                 ->directory('public')
-                //                 ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                //                 ->openable()
-                //                 ->downloadable(),
-                //             FC\TextInput::make('sect2_title')
-                //                 ->label('Title')
-                //                 ->columnSpanFull()
-                //                 ->disabled($this->disableForm)
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('sect2_title', $livewire->data['sect2_title']);
-                //                 }),
-                //             TiptapEditor::make('sect2_desc')
-                //                 ->label('Description')
-                //                 ->columnSpanFull()
-                //                 ->disk('public')
-                //                 ->directory('uploads')
-                //                 ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                //                 ->maxFileSize(2048)
-                //                 ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                //                 ->required()
-                //                 ->afterStateHydrated(function ($set, $livewire) {
-                //                     $set('sect2_desc', $livewire->data['sect2_desc']);
-                //                 }),
-                    // ]), 
             ]);
     }
 

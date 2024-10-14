@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FactoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
@@ -21,7 +22,10 @@ Route::view('/contact-us', 'client.pages.contact-us')
 Route::view('/projects', 'client.pages.projects')
     ->name('projects');
 
-Route::view('/factory', 'client.pages.factory')
+// Route::view('/factory', 'client.pages.factory')
+//     ->name('factory');
+
+Route::get('/factory', [FactoryController::class, 'index'])
     ->name('factory');
 
 Route::view('/specialities', 'client.pages.specialities')
