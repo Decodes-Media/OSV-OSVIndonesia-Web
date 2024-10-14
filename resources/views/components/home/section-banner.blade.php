@@ -16,7 +16,7 @@
                     <div class="item">
                         <div class="banner">
                             <div class="banner__thumb">
-                                <img src="{{ asset('img/banner/banner-2.png') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/banner/banner-6.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                     <div class="item">
                         <div class="banner">
                             <div class="banner__thumb">
-                                <img src="{{ asset('img/banner/banner-5.png') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/banner/banner-7.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
