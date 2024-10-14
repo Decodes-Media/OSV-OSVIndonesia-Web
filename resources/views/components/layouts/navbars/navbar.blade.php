@@ -23,9 +23,15 @@
                 </div>
 
                 <div class="menu">
-                    <div class="secondary-menu">
+                    <div class="secondary-menu pt-3 pt-md-5 pt-lg-0">
                         <div class="menu-container">
                             <div class="wrapper">
+                                <div class="menu-item d-none d-lg-block">
+                                    <a href="{{ url('/') }}">
+                                        <img src="{{ asset('img/logo-black.png') }}" class="img-fluid w-75 mb-5" alt="Logo" loading="lazy">
+                                    </a>
+                                </div>
+
                                 <div class="menu-item">
                                     <a href="mailto:info@osvindonesia.com" target="_blank">
                                         <i class="far fa-envelope mr-1"></i>

@@ -233,6 +233,7 @@ svg path {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-left: 100px;
 }
 
 @media screen and (max-width: $bp-md) {
@@ -257,6 +258,11 @@ svg path {
 
     .primary-menu .menu-container .wrapper {
         gap: 40px; 
+        padding-top: 80px;
+    }
+
+    .secondary-menu .menu-container .wrapper:nth-child(1) {
+        padding-left: 0;
     }
 
     .primary-menu a {
@@ -303,7 +309,7 @@ svg path {
     }
 
     .primary-menu a {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .secondary-menu {
