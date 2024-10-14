@@ -15,6 +15,7 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->string('name')->unique();
             $table->text('logo_path');
+            $table->integer('order');
             $table->timestamps();
             $table->softDeletes();
         });

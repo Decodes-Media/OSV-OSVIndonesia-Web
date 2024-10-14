@@ -42,6 +42,14 @@ class ClientResource extends Resource
                     ->afterStateHydrated(function ($set, $livewire) {
                         $set('name', $livewire->data['name']);
                     }),
+                FC\TextInput::make('order')
+                    ->columnSpanFull()
+                    ->numeric()
+                    ->label('Order')
+                    ->required()
+                    ->afterStateHydrated(function ($set, $livewire) {
+                        $set('order', $livewire->data['order']);
+                    }),
             ]);
     }
 

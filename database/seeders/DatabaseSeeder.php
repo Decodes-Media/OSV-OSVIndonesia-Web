@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(IndonesiaDatabaseSeeder::class);
         $this->call(BaseDatabaseSeeder::class);
         $this->call(MasterDatabaseSeeder::class);
+        $this->call(ClientSeeder::class);
 
         activity()->enableLogging();
 
