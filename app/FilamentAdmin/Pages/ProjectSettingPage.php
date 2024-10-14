@@ -2,7 +2,7 @@
 
 namespace App\FilamentAdmin\Pages;
 
-use App\Settings\ContactUsSetting;
+use App\Settings\ProjectSetting;
 use Filament\Actions;
 use Filament\Forms\Components as FC;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -20,7 +20,7 @@ class ProjectSettingPage extends Page implements HasForms
 {
     use InteractsWithForms;
 
-    protected static ?string $slug = 'project/settings';
+    protected static ?string $slug = 'projects/settings';
 
     protected static string $view = 'filament.pages.project-settings-page';
 
@@ -28,7 +28,7 @@ class ProjectSettingPage extends Page implements HasForms
 
     protected static ?int $navigationSort = 1;
 
-    protected ContactUsSetting $setting;
+    protected ProjectSetting $setting;
 
     public bool $disableForm;
 
@@ -40,7 +40,7 @@ class ProjectSettingPage extends Page implements HasForms
 
     public static function getNavigationGroup(): ?string
     {
-        return __('Contact Us');
+        return __('Projects');
     }
 
     public static function shouldRegisterNavigation(): bool
@@ -50,13 +50,13 @@ class ProjectSettingPage extends Page implements HasForms
 
     public function getBreadcrumbs(): array
     {
-        return [__('Contact Us'), __('Setting')];
+        return [__('Projects'), __('Setting')];
     }
 
     public function boot(): void
     {
-        /** @var ContactUsSetting $setting */
-        $setting = app(ContactUsSetting::class);
+        /** @var ProjectSetting $setting */
+        $setting = app(ProjectSetting::class);
         $this->setting = $setting;
     }
 
@@ -91,42 +91,14 @@ class ProjectSettingPage extends Page implements HasForms
             ->statePath('data')
             ->schema([
                 FC\Section::make('Header Section')->schema([
-                    FC\FileUpload::make('catalog_cover')
-                        ->image()
-                        ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                    FC\FileUpload::make('company_document')
-                        ->acceptedFileTypes(['application/pdf'])
-                        ->maxSize(2048)
-                        ->directory('public')
-                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                        ->openable()
-                        ->downloadable(),
-                ]),
-                FC\Section::make('Factory Section')->schema([
-                    FC\Grid::make(['default' => 2])->schema([
-                        FC\TextInput::make('maps_title')
+                    FC\TextInput::make('title')
                             ->label('Title')
                             ->disabled($this->disableForm)
                             ->required()
                             ->afterStateHydrated(function ($set, $livewire) {
-                                $set('maps_title', $livewire->data['maps_title']);
+                                $set('title', $livewire->data['title']);
                             }),
-                        FC\TextInput::make('maps_link')
-                            ->label('Maps Link')
-                            ->disabled($this->disableForm)
-                            ->required()
-                            ->activeUrl()
-                            ->afterStateHydrated(function ($set, $livewire) {
-                                $set('maps_link', $livewire->data['maps_link']);
-                            }),
-                        TiptapEditor::make('maps_desc')
+                        TiptapEditor::make('desc')
                             ->label('Description')
                             ->columnSpanFull()
                             ->disk('public')
@@ -134,12 +106,12 @@ class ProjectSettingPage extends Page implements HasForms
                             ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
                             ->maxFileSize(2048)
                             ->extraInputAttributes(['style' => 'min-height: 320px;'])
+                            ->disabled($this->disableForm)
                             ->required()
                             ->afterStateHydrated(function ($set, $livewire) {
-                                $set('maps_desc', $livewire->data['maps_desc']);
+                                $set('desc', $livewire->data['desc']);
                             }),
                     ]),
-                ]),
             ]);
     }
 

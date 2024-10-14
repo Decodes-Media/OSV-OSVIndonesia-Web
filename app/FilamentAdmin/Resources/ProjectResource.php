@@ -21,6 +21,11 @@ class ProjectResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return __('Projects');
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -37,7 +42,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->required()
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
@@ -49,7 +54,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->required()
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
@@ -61,7 +66,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->required()
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
@@ -73,7 +78,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                     ->openable()
@@ -84,7 +89,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                     ->openable()
@@ -95,7 +100,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                     ->openable()
@@ -106,7 +111,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                     ->openable()
@@ -117,7 +122,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                     ->openable()
@@ -128,7 +133,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                     ->openable()
@@ -139,7 +144,7 @@ class ProjectResource extends Resource
                     ->imageEditor()
                     ->imageCropAspectRatio('16:9')
                     ->imagePreviewHeight('320px')
-                    ->maxSize(2048)
+                    ->maxSize(1024)
                     ->directory('public')
                     ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                     ->openable()

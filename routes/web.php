@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FactoryController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
@@ -19,12 +20,11 @@ Route::view('/about-us', 'client.pages.about-us')
 Route::view('/contact-us', 'client.pages.contact-us')
     ->name('contact-us');
 
-Route::view('/projects', 'client.pages.projects')
+//Project Page
+Route::get('/projects', [ProjectController::class, 'index'])
     ->name('projects');
 
-// Route::view('/factory', 'client.pages.factory')
-//     ->name('factory');
-
+//Factory Page
 Route::get('/factory', [FactoryController::class, 'index'])
     ->name('factory');
 
