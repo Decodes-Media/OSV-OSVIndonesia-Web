@@ -16,9 +16,9 @@
     "file": "assets/AAK_5650-ac77b943.jpg",
     "src": "public/img/AAK_5650.jpg"
   },
-  "public/img/bg-cta.png": {
-    "file": "assets/bg-cta-0081c4b8.png",
-    "src": "public/img/bg-cta.png"
+  "public/img/CTA-banner-visit-factory.jpg": {
+    "file": "assets/CTA-banner-visit-factory-d9e9ed57.jpg",
+    "src": "public/img/CTA-banner-visit-factory.jpg"
   },
   "public/js/button.js": {
     "file": "assets/button-60f460c6.js",
@@ -66,7 +66,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-f9fb28a6.css",
+    "file": "assets/app-07da7289.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

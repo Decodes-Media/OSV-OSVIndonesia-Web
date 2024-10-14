@@ -9,7 +9,7 @@
                                 <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
                             </div>
                             <div class="card--product__thumb">
-                                <img src="{{ asset('img/product/product-1.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/product/chair-wood.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -19,7 +19,7 @@
                                 <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
                             </div>
                             <div class="card--product__thumb">
-                                <img src="{{ asset('img/product/product-2.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/product/dining-chair-outdoor.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                                 <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
                             </div>
                             <div class="card--product__thumb">
-                                <img src="{{ asset('img/product/product-3.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/product/dining-chair-rattan.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,37 @@
                                 <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
                             </div>
                             <div class="card--product__thumb">
-                                <img src="{{ asset('img/product/product-4.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                                <img src="{{ asset('img/product/outdoor-sofa-mix.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card--product">
+                            <div class="card--product__content">
+                                <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
+                            </div>
+                            <div class="card--product__thumb">
+                                <img src="{{ asset('img/product/round-table-stone.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card--product">
+                            <div class="card--product__content">
+                                <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
+                            </div>
+                            <div class="card--product__thumb">
+                                <img src="{{ asset('img/product/round-table-wood.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card--product">
+                            <div class="card--product__content">
+                                <h3>SUPPORT <br/> FURNITURE BRANDS <br/> WORLDWIDE</h3>
+                            </div>
+                            <div class="card--product__thumb">
+                                <img src="{{ asset('img/product/side-table-wood.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
                             </div>
                         </div>
                     </div>

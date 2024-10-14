@@ -11,7 +11,7 @@
                 </a>
             </div>
             <div class="col-12 col-lg-7">
-                <img src="{{ asset('img/AAK_4383.jpg') }}" class="w-100 img-fluid" alt="Intro" data-aos="fade-in" />
+                <img src="{{ asset('img/section-furniture-factory.png') }}" class="w-100 img-fluid" alt="Intro" data-aos="fade-in" />
             </div>
         </div>
     </div>
