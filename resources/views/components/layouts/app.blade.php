@@ -81,7 +81,7 @@
         <x-modals.modal-terms-conditions />
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
@@ -99,6 +99,7 @@
     @vite('public/js/button.js')
     @vite('public/js/preloader.js')
     @vite('public/js/cookies.js')
+    @vite('public/js/projects.js')
 
     @stack('pageScripts')
     @livewireScripts
