@@ -54,7 +54,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4 pl-lg-4 text-md-right">
-                <img src="{{ asset('img/AAK_4059.jpg') }}" class="w-100 img-fluid mb-3" alt="Compro" />
+                <img src="{{ asset('img/cover-compro.jpg') }}" class="w-100 img-fluid mb-3" alt="Compro" />
                 <button class="btn btn--outline-dark btn-magnetic fill" data-toggle="modal" data-target="#modalUserData">Download here</button>
                 <!-- <div class="tab-area">
                     <ul class="nav nav-tabs" id="Tab" role="tablist">
