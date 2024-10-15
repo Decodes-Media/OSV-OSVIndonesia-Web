@@ -55,6 +55,11 @@
     "isEntry": true,
     "src": "public/js/preloader.js"
   },
+  "public/js/projects.js": {
+    "file": "assets/projects-78e26277.js",
+    "isEntry": true,
+    "src": "public/js/projects.js"
+  },
   "resources/css/filament-base-theme.css": {
     "file": "assets/filament-base-theme-93ea26a1.css",
     "isEntry": true,
