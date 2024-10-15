@@ -4,8 +4,11 @@
         @if (! $this->disableForm)
             <div class="flex flex-wrap items-center gap-4 justify-start">
                 <x-filament::button type="submit">
-                    Simpan
-                </x-filament::button>
+                    {{ __('Save') }}
+                  </x-filament::button>
+                  <x-filament::button type="button" color="secondary" tag="a" :href="$this->cancel_button_url">
+                    {{ __('Cancel') }}
+                  </x-filament::button>
             </div>
         @endif
     </form>

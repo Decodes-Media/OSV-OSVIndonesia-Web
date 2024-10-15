@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row mb-6 mb-lg-8">
             <div class="col-12 col-lg-7 mb-4 mb-lg-0">
-                <h2>{{$data->title}}</h2>
+                <h2>{{@$data->title}}</h2>
             </div>
             <div class="col-12 col-lg-5">
-                {!! $data->desc !!}
+                {!! @$data->desc !!}
             </div>
         </div>
-        @if(!empty($data->content_data))
-            @foreach($data->content_data as $content)
+        @if(!empty(@$data->content_data))
+            @foreach(@$data->content_data as $content)
                 <div class="row mb-6">
                     <div class="col-12 col-lg-6">
                         @if($content['content_type'] == 'thumbnail')

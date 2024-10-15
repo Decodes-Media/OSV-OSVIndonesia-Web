@@ -23,7 +23,7 @@ class FactorySettingPage extends Page implements HasForms
 
     protected static ?string $slug = 'factory/settings';
 
-    protected static string $view = 'filament.pages.factory-settings-page';
+    protected static string $view = 'filament.pages.content-settings-page';
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
@@ -143,6 +143,7 @@ class FactorySettingPage extends Page implements HasForms
                                         ])
                                         ->live()
                                         ->required()
+                                        ->disabled($this->disableForm)
                                         ->afterStateUpdated(fn(FC\Select $component) => $component
                                             ->getContainer()
                                             ->getComponent('dynamicTypeFields')
