@@ -16,6 +16,7 @@ export default defineConfig({
         'public/js/button.js',
         'public/js/preloader.js',
         'public/js/cookies.js',
+        'public/js/projects.js',
       ],
       refresh: [
         ...refreshPaths,
