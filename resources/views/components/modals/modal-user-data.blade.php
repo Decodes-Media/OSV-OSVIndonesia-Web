@@ -41,15 +41,17 @@
 
 <script>
     function validateForm() {
-        let fields = ["fullName", "phone", "companyName", "companyEmail"];
-        for (let i = 0; i < fields.length; i++) {
-            let input = document.getElementById(fields[i]);
-            if (input.value.trim() === "") {
-                alert(input.placeholder + " is required.");
-                input.focus();
-                return false;
-            }
+        var fullName = document.getElementById("fullName").value.trim();
+        var phone = document.getElementById("phone").value.trim();
+        var companyName = document.getElementById("companyName").value.trim();
+        var companyEmail = document.getElementById("companyEmail").value.trim();
+
+        if (fullName === "" || phone === "" || companyName === "" || companyEmail === "") {
+            alert("All fields are required!");
+            return false;
         }
-        return true;
+
+        window.location.href = "/files/OSV Company Profile-2024 (Digital).pdf";
+        return false;
     }
 </script>

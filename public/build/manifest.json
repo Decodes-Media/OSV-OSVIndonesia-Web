@@ -20,6 +20,10 @@
     "file": "assets/CTA-banner-visit-factory-d9e9ed57.jpg",
     "src": "public/img/CTA-banner-visit-factory.jpg"
   },
+  "public/img/header-contact.jpg": {
+    "file": "assets/header-contact-4936cff0.jpg",
+    "src": "public/img/header-contact.jpg"
+  },
   "public/js/button.js": {
     "file": "assets/button-60f460c6.js",
     "isEntry": true,
@@ -71,7 +75,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-ff541e37.css",
+    "file": "assets/app-b3236981.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
