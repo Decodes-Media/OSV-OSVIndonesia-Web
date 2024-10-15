@@ -22,7 +22,7 @@ class ProjectSettingPage extends Page implements HasForms
 
     protected static ?string $slug = 'projects/settings';
 
-    protected static string $view = 'filament.pages.project-settings-page';
+    protected static string $view = 'filament.pages.content-settings-page';
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 

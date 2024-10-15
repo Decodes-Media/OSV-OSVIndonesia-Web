@@ -12,6 +12,7 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Http\Response;
 use FilamentTiptapEditor\TiptapEditor;
+use Filament\Forms\Get;
 
 /**
  * @property \Filament\Forms\ComponentContainer $form
@@ -22,7 +23,7 @@ class AboutUsSettingPage extends Page implements HasForms
 
     protected static ?string $slug = 'about-us/settings';
 
-    protected static string $view = 'filament.pages.aboutus-settings-page';
+    protected static string $view = 'filament.pages.content-settings-page';
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
@@ -97,7 +98,7 @@ class AboutUsSettingPage extends Page implements HasForms
                             ->imageEditor()
                             ->imageCropAspectRatio('16:9')
                             ->imagePreviewHeight('320px')
-                            ->maxSize(2048)
+                            ->maxSize(1024)
                             ->directory('public')
                             ->disabled($this->disableForm)
                             ->required()
@@ -117,7 +118,7 @@ class AboutUsSettingPage extends Page implements HasForms
                             ->disk('public')
                             ->directory('uploads')
                             ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                            ->maxFileSize(2048)
+                            ->maxFileSize(1024)
                             ->extraInputAttributes(['style' => 'min-height: 320px;'])
                             ->disabled($this->disableForm)
                             ->required()
@@ -135,7 +136,7 @@ class AboutUsSettingPage extends Page implements HasForms
                                 ->imageEditor()
                                 ->imageCropAspectRatio('16:9')
                                 ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
+                                ->maxSize(1024)
                                 ->directory('public')
                                 ->disabled($this->disableForm)
                                 ->required()
@@ -163,7 +164,7 @@ class AboutUsSettingPage extends Page implements HasForms
                                 ->imageEditor()
                                 ->imageCropAspectRatio('16:9')
                                 ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
+                                ->maxSize(1024)
                                 ->directory('public')
                                 ->disabled($this->disableForm)
                                 ->required()
@@ -191,7 +192,7 @@ class AboutUsSettingPage extends Page implements HasForms
                                 ->imageEditor()
                                 ->imageCropAspectRatio('16:9')
                                 ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
+                                ->maxSize(1024)
                                 ->directory('public')
                                 ->disabled($this->disableForm)
                                 ->required()
@@ -219,7 +220,7 @@ class AboutUsSettingPage extends Page implements HasForms
                                 ->imageEditor()
                                 ->imageCropAspectRatio('16:9')
                                 ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
+                                ->maxSize(1024)
                                 ->directory('public')
                                 ->disabled($this->disableForm)
                                 ->required()
@@ -242,80 +243,142 @@ class AboutUsSettingPage extends Page implements HasForms
                                 }),
                         ]),
                     ]),
-                FC\Section::make('Section 1')
+                FC\Section::make('Section Factory')
                     ->schema([
-                        FC\FileUpload::make('sect1_thumbnail')
-                            ->label('Thumbnail')
-                            ->image()
-                            ->imageEditor()
-                            ->imageCropAspectRatio('16:9')
-                            ->imagePreviewHeight('320px')
-                            ->maxSize(2048)
-                            ->directory('public')
-                            ->disabled($this->disableForm)
-                            ->required()
-                            ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                            ->openable()
-                            ->downloadable(),
-                        FC\TextInput::make('sect1_title')
-                            ->label('Title')
-                            ->columnSpanFull()
-                            ->disabled($this->disableForm)
-                            ->required()
-                            ->afterStateHydrated(function ($set, $livewire) {
-                                $set('sect1_title', $livewire->data['sect1_title']);
-                            }),
-                        TiptapEditor::make('sect1_desc')
-                            ->label('Description')
-                            ->columnSpanFull()
-                            ->disk('public')
-                            ->directory('uploads')
-                            ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                            ->maxFileSize(2048)
-                            ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                            ->disabled($this->disableForm)
-                            ->required()
-                            ->afterStateHydrated(function ($set, $livewire) {
-                                $set('sect1_desc', $livewire->data['sect1_desc']);
-                            }),
-                    ]),
-                    FC\Section::make('Section 2')
+                        FC\TextInput::make('factory_title')
+                        ->label('Title')
+                        ->columnSpanFull()
+                        ->disabled($this->disableForm)
+                        ->required()
+                        ->afterStateHydrated(function ($set, $livewire) {
+                            $set('factory_title', $livewire->data['factory_title']);
+                        }),
+                    TiptapEditor::make('factory_desc')
+                        ->label('Description')
+                        ->columnSpanFull()
+                        ->disk('public')
+                        ->directory('uploads')
+                        ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
+                        ->maxFileSize(1024)
+                        ->extraInputAttributes(['style' => 'min-height: 320px;'])
+                        ->disabled($this->disableForm)
+                        ->required()->afterStateHydrated(function ($set, $livewire) {
+                            $set('factory_desc', $livewire->data['factory_desc']);
+                        }),
+                    FC\Grid::make(['default' => 1])
                         ->schema([
-                            FC\FileUpload::make('sect2_thumbnail')
-                                ->label('Thumbnail')
-                                ->image()
-                                ->imageEditor()
-                                ->imageCropAspectRatio('16:9')
-                                ->imagePreviewHeight('320px')
-                                ->maxSize(2048)
-                                ->directory('public')
-                                ->disabled($this->disableForm)
-                                ->required()
-                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
-                                ->openable()
-                                ->downloadable(),
-                            FC\TextInput::make('sect2_title')
-                                ->label('Title')
-                                ->columnSpanFull()
-                                ->disabled($this->disableForm)
-                                ->required()
-                                ->afterStateHydrated(function ($set, $livewire) {
-                                    $set('sect2_title', $livewire->data['sect2_title']);
-                                }),
-                            TiptapEditor::make('sect2_desc')
-                                ->label('Description')
-                                ->columnSpanFull()
-                                ->disk('public')
-                                ->directory('uploads')
-                                ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
-                                ->maxFileSize(2048)
-                                ->extraInputAttributes(['style' => 'min-height: 320px;'])
-                                ->disabled($this->disableForm)
-                                ->required()
-                                ->afterStateHydrated(function ($set, $livewire) {
-                                    $set('sect2_desc', $livewire->data['sect2_desc']);
-                                }),
-                    ]), 
+                            FC\Select::make('factory_type')
+                            ->label('Type')
+                            ->options([
+                                'thumbnail' => 'thumbnail',
+                                'youtube' => 'youtube',
+                            ])
+                            ->live()
+                            ->required()
+                            ->disabled($this->disableForm)
+                            ->afterStateUpdated(fn(FC\Select $component) => $component
+                                ->getContainer()
+                                ->getComponent('dynamicTypeFields')
+                                ->getChildComponentContainer()
+                                ->fill()),
+                            FC\Grid::make(1)
+                            ->schema(fn(Get $get): array => match ($get('factory_type')) {
+                                'youtube' => [
+                                    FC\TextInput::make('factory_youtube_url')
+                                        ->label('Youtube URL')
+                                        ->url()
+                                        ->activeUrl()
+                                        ->rule('regex:/^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/')
+                                        ->required()
+                                        ->maxLength(255),
+                                ],
+                                'thumbnail' => [
+                                    FC\FileUpload::make('factory_thumbnail')
+                                        ->label('Thumbnail')
+                                        ->columnSpanFull()
+                                        ->image()
+                                        ->imageEditor()
+                                        ->imageCropAspectRatio('16:9')
+                                        ->imagePreviewHeight('320px')
+                                        ->maxSize(1024)
+                                        ->directory('public')
+                                        ->disabled($this->disableForm)
+                                        ->required()
+                                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                        ->openable()
+                                        ->downloadable(),
+                                ],
+                                default => [],
+                            })->key('dynamicTypeFields'),
+                        ]),
+                    ]),
+                    FC\Section::make('Content Section')
+                        ->schema([
+                            FC\Repeater::make('content_data')
+                                ->schema([
+                                    FC\TextInput::make('content_title')
+                                        ->label('Title')
+                                        ->columnSpanFull()
+                                        ->disabled($this->disableForm)
+                                        ->required(),
+                                    TiptapEditor::make('content_desc')
+                                        ->label('Description')
+                                        ->columnSpanFull()
+                                        ->disk('public')
+                                        ->directory('uploads')
+                                        ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
+                                        ->maxFileSize(1024)
+                                        ->extraInputAttributes(['style' => 'min-height: 320px;'])
+                                        ->disabled($this->disableForm)
+                                        ->required(),
+                                    FC\Grid::make(['default' => 1])
+                                        ->schema([
+                                            FC\Select::make('content_type')
+                                            ->label('Type')
+                                            ->options([
+                                                'thumbnail' => 'thumbnail',
+                                                'youtube' => 'youtube',
+                                            ])
+                                            ->live()
+                                            ->disabled($this->disableForm)
+                                            ->required()
+                                            ->afterStateUpdated(fn(FC\Select $component) => $component
+                                                ->getContainer()
+                                                ->getComponent('dynamicTypeFields')
+                                                ->getChildComponentContainer()
+                                                ->fill()),
+                                            FC\Grid::make(1)
+                                            ->schema(fn(Get $get): array => match ($get('content_type')) {
+                                                'youtube' => [
+                                                    FC\TextInput::make('content_youtube_url')
+                                                        ->label('Youtube URL')
+                                                        ->url()
+                                                        ->activeUrl()
+                                                        ->rule('regex:/^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/')
+                                                        ->required()
+                                                        ->maxLength(255),
+                                                ],
+                                                'thumbnail' => [
+                                                    FC\FileUpload::make('content_thumbnail')
+                                                        ->label('Thumbnail')
+                                                        ->columnSpanFull()
+                                                        ->image()
+                                                        ->imageEditor()
+                                                        ->imageCropAspectRatio('16:9')
+                                                        ->imagePreviewHeight('320px')
+                                                        ->maxSize(1024)
+                                                        ->directory('public')
+                                                        ->disabled($this->disableForm)
+                                                        ->required()
+                                                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                                        ->openable()
+                                                        ->downloadable(),
+                                                ],
+                                                default => [],
+                                            })->key('dynamicTypeFields'),
+                                        ]),
+                        ])->addActionLabel('Add Content Data'),
+                    ]),
             ]);
     }
 

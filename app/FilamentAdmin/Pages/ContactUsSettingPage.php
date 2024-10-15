@@ -22,7 +22,7 @@ class ContactUsSettingPage extends Page implements HasForms
 
     protected static ?string $slug = 'contact-us/settings';
 
-    protected static string $view = 'filament.pages.contactus-settings-page';
+    protected static string $view = 'filament.pages.content-settings-page';
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 

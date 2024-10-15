@@ -21,12 +21,12 @@ class AboutUsSetting extends Settings
     public string $fb_thumbnail4;
     public string $fb_title4;
     public string $fb_desc4;
-    public string $sect1_thumbnail;
-    public string $sect1_title;
-    public string $sect1_desc;
-    public string $sect2_thumbnail;
-    public string $sect2_title;
-    public string $sect2_desc;
+    public string $factory_type;
+    public mixed $factory_youtube_url;
+    public mixed $factory_thumbnail;
+    public string $factory_title;
+    public string $factory_desc;
+    public array $content_data;
 
     public static function group(): string
     {
