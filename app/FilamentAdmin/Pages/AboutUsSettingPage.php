@@ -243,7 +243,7 @@ class AboutUsSettingPage extends Page implements HasForms
                                 }),
                         ]),
                     ]),
-                FC\Section::make('Section Factory')
+                FC\Section::make('Factory Section')
                     ->schema([
                         FC\TextInput::make('factory_title')
                         ->label('Title')
