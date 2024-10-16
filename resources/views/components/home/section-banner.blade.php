@@ -3,44 +3,15 @@
         <div class="row">
             <div class="col-12 col-lg-8 px-0 mb-5 mb-lg-0">
                 <div class="owl-carousel owl-carousel-1 owl-theme" data-aos="fade-in">
-                    <div class="item">
-                        <div class="banner">
-                            <div class="banner__thumb">
-                                <img src="{{ asset('img/banner/banner-1.jpeg') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
-                            <!-- <div class="banner__content">
-                                <h3>An Indonesian Furniture Factory, Crafted to Every Designs</h3>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="banner">
-                            <div class="banner__thumb">
-                                <img src="{{ asset('img/banner/banner-6.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
+                    @foreach(@$data->banner_data as $banner)
+                        <div class="item">
+                            <div class="banner">
+                                <div class="banner__thumb">
+                                    <img src="{{ public_url($banner['banner']) }}" class="img-fluid" alt="{{$banner['alt']}}" loading="lazy">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="banner">
-                            <div class="banner__thumb">
-                                <img src="{{ asset('img/banner/banner-3.png') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="banner">
-                            <div class="banner__thumb">
-                                <img src="{{ asset('img/banner/banner-4.png') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="banner">
-                            <div class="banner__thumb">
-                                <img src="{{ asset('img/banner/banner-7.jpg') }}" class="img-fluid" alt="Banner" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -53,10 +24,9 @@
                             <li><span class="title">Bespoke<span></li>
                             <li><span class="title">Furniture<span></li>
                         </ul> -->
-                        <h2>Bespoke Furniture Factory</h2>
+                        <h2>{{@$data->title}}</h2>
                         <p>
-                            Tailored to perfection, <br/>
-                            brought to life with us.
+                            {!! @$data->desc !!}
                         </p>
                     </div>
                     <a href="#" class="mt-5 btn btn-magnetic">

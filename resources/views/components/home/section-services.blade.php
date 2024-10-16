@@ -9,16 +9,18 @@
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
                 <a href="">
                     <div class="card-animation" data-aos="fade-in">
-                        <img src="{{ asset('img/service/OSV-Bespoke-Project.jpg') }}" class="card-animation__image" alt="" />
+                        <img src="{{ public_url(@$data->manufacture_thumb1)}}" class="card-animation__image lazy-load" alt="{{@$data->manufacture_title1}}" />
                         <div class="card-animation__overlay">
                             <div class="card-animation__header">
                                 <div class="card-animation__header-text">
-                                    <h4 class="card-animation__title">Hospitality Project</h4>
-                                    <p class="card-animation__description">Create unforgettable guest experiences with our bespoke furniture solutions. Benefit from our extensive experience in crafting premium furniture that complements your hospitality projects, anywhere in the world.</p>            
+                                    <h4 class="card-animation__title">{{@$data->manufacture_title1}}</h4>
+                                    <p class="card-animation__description">{!! @$data->manufacture_desc1 !!}</p>            
                                 </div>
                             </div>
                             <span class="card-animation__link pb-4">
-                                Learn More
+                                <a href="{{@$data->manufacture_link1}}">
+                                    Learn More
+                                </a>
                             </span>
                         </div>
                     </div>
@@ -27,16 +29,18 @@
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
                 <a href="">
                     <div class="card-animation" data-aos="fade-in">
-                        <img src="{{ asset('img/service/OSV-OEM-Product.jpg') }}" class="card-animation__image" alt="" />
+                        <img src="{{public_url(@$data->manufacture_thumb2)}}" class="card-animation__image" alt="{{@$data->manufacture_title2}}" />
                         <div class="card-animation__overlay">
                             <div class="card-animation__header">
                                 <div class="card-animation__header-text">
-                                    <h4 class="card-animation__title">OEM Manufacturer</h4>
-                                    <p class="card-animation__description">Experience the power of OEM manufacturing with our commitment to delivering exceptional quality and unparalleled customization.</p>            
+                                    <h4 class="card-animation__title">{{@$data->manufacture_title2}}</h4>
+                                    <p class="card-animation__description">{!! @$data->manufacture_desc2 !!}</p>            
                                 </div>
                             </div>
                             <span class="card-animation__link pb-4">
-                                Learn More
+                                <a href="{{@$data->manufacture_link2}}">
+                                    Learn More
+                                </a>
                             </span>
                         </div>
                     </div>
@@ -45,16 +49,18 @@
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
                 <a href="">
                     <div class="card-animation" data-aos="fade-in">
-                        <img src="{{ asset('img/service/OSV-Luxury-Furniture.jpg') }}" class="card-animation__image" alt="" />
+                        <img src="{{public_url(@$data->manufacture_thumb3)}}" class="card-animation__image" alt="{{@$data->manufacture_title3}}" />
                         <div class="card-animation__overlay">
                             <div class="card-animation__header">
                                 <div class="card-animation__header-text">
-                                    <h4 class="card-animation__title">White Label, ODM Products</h4>
-                                    <p class="card-animation__description">Benefit from our extensive manufacturing capabilities and global reach, delivering exceptional products that enhance your brand identity</p>            
+                                    <h4 class="card-animation__title">{{@$data->manufacture_title3}}</h4>
+                                    <p class="card-animation__description">{!! @$data->manufacture_desc3 !!}</p>            
                                 </div>
                             </div>
                             <span class="card-animation__link pb-4">
-                                Learn More
+                                <a href="{{@$data->manufacture_link3}}">
+                                    Learn More
+                                </a>
                             </span>
                         </div>
                     </div>

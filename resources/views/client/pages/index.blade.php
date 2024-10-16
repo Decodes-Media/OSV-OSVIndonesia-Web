@@ -1,11 +1,11 @@
 <x-layouts.app>
-    <x-home.section-banner />
-    <x-home.section-highlights />
+    <x-home.section-banner :data="$setting"/>
+    <x-home.section-highlights :data="$setting->video"/>
     <!-- <x-home.section-video /> -->
-    <x-home.section-services />
-    <x-home.section-running-text />
-    <x-home.section-intro />
-    <x-home.section-product-showcase />
+    <x-home.section-services :data="$setting"/>
+    <x-home.section-running-text :data="$setting"/>
+    <x-home.section-intro :data="$setting"/>
+    <x-home.section-product-showcase :data="$setting->support_image"/>
     <x-global.section-clients :data="$clients"/>
     <x-global.section-cta />
 </x-layouts.app>

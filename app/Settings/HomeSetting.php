@@ -6,9 +6,7 @@ use Spatie\LaravelSettings\Settings;
 
 class HomeSetting extends Settings
 {
-    public string $banner1;
-    public string $banner2;
-    public string $banner3;
+    public array $banner_data;
     public string $title;
     public string $desc;
     public string $video;
@@ -26,7 +24,10 @@ class HomeSetting extends Settings
     public string $manufacture_link3;
     public string $marquee_title;
     public string $marquee_bg_text;
-    public string $factory_thumb;
+    public string $factory_type;
+    public mixed $factory_thumbnail;
+    public mixed $factory_youtube_url;
+    public string $factory_title;
     public string $factory_desc;
     public string $factory_link;
     public array $support_image;

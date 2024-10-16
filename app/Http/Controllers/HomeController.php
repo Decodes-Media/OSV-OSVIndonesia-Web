@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\View\View;
 use App\Models\Client;
+use App\Settings\HomeSetting;
 
 class HomeController extends Controller
 {
@@ -11,6 +12,9 @@ class HomeController extends Controller
     {
         $clients = Client::orderBy('order')->get();
 
-        return view('client.pages.index', ['clients' => $clients]);
+        /** @var HomeSetting $setting */
+        $setting = app(HomeSetting::class);
+
+        return view('client.pages.index', ['clients' => $clients, 'setting' => $setting]);
     }
 }

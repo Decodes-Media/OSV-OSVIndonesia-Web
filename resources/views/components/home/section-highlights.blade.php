@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 px-0">
                 <section>
-                    <video src="{{ asset('img/videoplayback.mp4') }}" autoplay playsinline muted loop preload="auto"></video>
+                    <video src="{{ public_url(@$data) }}" autoplay playsinline muted loop preload="auto"></video>
                     <div class="section__content" data-aos="fade-in">
                         <p data-splitting>
                             <span>Indonesian Heritage, Worldwide Vison.</span><br/>
