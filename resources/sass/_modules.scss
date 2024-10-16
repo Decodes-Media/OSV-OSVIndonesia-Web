@@ -493,7 +493,7 @@ section {
         h3 {
             font-weight: $font-weight-light;
             text-transform: uppercase;
-            color: $primary-color;
+            color: $secondary-color;
         }
 
         h5 {
@@ -602,7 +602,7 @@ section {
 
         .banner {
             margin-bottom: 60px;
-            background-image: url('/public/img/AAK_4061.jpg');
+            background-image: url('/public/img/header-projects.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -629,7 +629,7 @@ section {
 
         .banner {
             margin-bottom: 60px;
-            background-image: url('/public/img/AAK_4061.jpg');
+            background-image: url('/public/img/header-factory.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -2108,6 +2108,9 @@ body:not(.no-js) .fading-up {
             font-size: 0.875rem;
             font-weight: $font-weight-light;
             color: $secondary-color;
+            text-decoration: underline !important;
+            text-underline-position: under !important;
+            cursor: pointer;
 
             &:hover {
                 color: $primary-color;

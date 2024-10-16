@@ -24,6 +24,14 @@
     "file": "assets/header-contact-4936cff0.jpg",
     "src": "public/img/header-contact.jpg"
   },
+  "public/img/header-factory.jpg": {
+    "file": "assets/header-factory-fd307e5d.jpg",
+    "src": "public/img/header-factory.jpg"
+  },
+  "public/img/header-projects.jpg": {
+    "file": "assets/header-projects-56f47e61.jpg",
+    "src": "public/img/header-projects.jpg"
+  },
   "public/js/button.js": {
     "file": "assets/button-60f460c6.js",
     "isEntry": true,
@@ -75,7 +83,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-b3236981.css",
+    "file": "assets/app-b416d6e3.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
