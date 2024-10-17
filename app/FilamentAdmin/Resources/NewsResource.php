@@ -27,6 +27,8 @@ class NewsResource extends PageResource
 
     protected static ?int $navigationSort = 3;
 
+    protected static bool $shouldRegisterNavigation = false;
+
     public static function getNavigationGroup(): ?string
     {
         return __('Content');

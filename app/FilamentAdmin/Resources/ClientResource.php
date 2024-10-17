@@ -59,6 +59,7 @@ class ClientResource extends Resource
             ->columns([
                 TC\ImageColumn::make('logo_path')->label('Logo'),
                 TC\TextColumn::make('name'),
+                TC\TextColumn::make('order'),
             ])
             ->filters([
                 //
