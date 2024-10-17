@@ -12,7 +12,7 @@
                     @for ($i = 1; $i <= 5; $i++)
                         @if($data->{'cert_image'.$i})
                             <div class="col-12 col-md-4">
-                                <img src="{{ public_url($data->{'cert_image'.$i}) }}" class="w-50 d-block mx-auto img-fluid lazy-load" alt="certification_{{$i}}" />
+                                <img src="{{ public_url($data->{'cert_image'.$i}) }}" class="w-100 d-block mx-auto img-fluid lazy-load" alt="certification_{{$i}}" />
                             </div>
                         @endif
                     @endfor

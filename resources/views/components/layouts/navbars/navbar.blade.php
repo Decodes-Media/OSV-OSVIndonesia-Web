@@ -28,7 +28,7 @@
                             <div class="wrapper">
                                 <div class="menu-item d-none d-lg-block">
                                     <a href="{{ url('/') }}">
-                                        <img src="{{ asset('img/logo-black.png') }}" class="img-fluid w-75 mb-5" alt="Logo" loading="lazy">
+                                        <img src="{{ asset('img/logo-black.png') }}" class="img-fluid w-50 mb-5" alt="Logo" loading="lazy">
                                     </a>
                                 </div>
 

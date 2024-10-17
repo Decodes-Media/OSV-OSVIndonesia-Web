@@ -1904,6 +1904,10 @@ body:not(.no-js) .fading-up {
     cursor: pointer;
 }
 
+.tagline p {
+    max-width: 250px;
+}
+
 @media screen and (max-width: $bp-xl) {
     body:not(.no-js) .image-wrap {
         height: 60vh;

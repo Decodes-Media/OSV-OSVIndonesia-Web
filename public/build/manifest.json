@@ -68,7 +68,7 @@
     "src": "public/js/preloader.js"
   },
   "public/js/projects.js": {
-    "file": "assets/projects-78e26277.js",
+    "file": "assets/projects-36d54fbc.js",
     "isEntry": true,
     "src": "public/js/projects.js"
   },
@@ -83,7 +83,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-b416d6e3.css",
+    "file": "assets/app-f26b3035.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

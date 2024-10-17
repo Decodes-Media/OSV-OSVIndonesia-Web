@@ -24,7 +24,7 @@
                 <div class="col-12 col-lg-3 text-center text-md-right d-flex align-items-end justify-content-center justify-content-lg-end">
                     <ul class="social-media mb-0">
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="https://www.instagram.com/osvindonesia" target="_blank">
                                 <i class="fab fa-instagram mr-1"></i>
                                 @osvindonesia
                             </a>

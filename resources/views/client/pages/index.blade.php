@@ -1,3 +1,13 @@
+<style>
+    img.header-logo {
+        display: none;
+    }
+
+    #toggle-btn {
+        display: flex !important;
+    }
+</style>
+
 <x-layouts.app>
     <x-home.section-banner :data="$setting"/>
     <x-home.section-highlights :data="$setting->video"/>

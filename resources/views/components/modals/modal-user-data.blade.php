@@ -12,20 +12,16 @@
                 <form method="POST" onsubmit="return validateForm()" class="form form-user-data">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <label>Full Name<span class="text-danger">*</span></label>
-                            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="eg. John Doe" required>
+                            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="Full Name" required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <label>Phone Number<span class="text-danger">*</span></label>
-                            <input id="phone" type="number" class="form-control" name="phone" placeholder="eg. 081234567890" required>
+                            <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number" required>
                         </div>
                         <div class="col-12">
-                            <label>Company Name<span class="text-danger">*</span></label>
-                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="eg. ABC Company" required>
+                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="Country" required>
                         </div>
                         <div class="col-12">
-                            <label>Company Email<span class="text-danger">*</span></label>
-                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="eg. john@abc.com" required>
+                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Name" required>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
