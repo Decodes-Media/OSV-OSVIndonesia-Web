@@ -3,13 +3,13 @@
         <div class="row">
             <div class="col-12 px-0">
                 <section>
-                    <video src="{{ public_url(@$data) }}" autoplay playsinline muted loop preload="auto"></video>
+                    <video src="{{ public_url(@$data->video) }}" autoplay playsinline muted loop preload="auto"></video>
                     <div class="section__content" data-aos="fade-in">
                         <p data-splitting>
-                            <span>Indonesian Heritage, Worldwide Vison.</span><br/>
-                            <span>20 Years of Furniture Industry Experience.</span><br/>
-                            <span>Committed to Delivering Global Solutions.</span><br/>
-                            <span>Skilled Craftsmanship, High Quality Material.</span>
+                            <span>{{@$data->highlight_text1}}</span><br/>
+                            <span>{{@$data->highlight_text2}}</span><br/>
+                            <span>{{@$data->highlight_text3}}</span><br/>
+                            <span>{{@$data->highlight_text4}}</span>
                         </p>
                     </div>
                 </section>

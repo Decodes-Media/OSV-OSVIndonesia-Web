@@ -1,6 +1,6 @@
 <x-layouts.app>
     <x-home.section-banner :data="$setting"/>
-    <x-home.section-highlights :data="$setting->video"/>
+    <x-home.section-highlights :data="$setting"/>
     <!-- <x-home.section-video /> -->
     <x-home.section-services :data="$setting"/>
     <x-home.section-running-text :data="$setting"/>
