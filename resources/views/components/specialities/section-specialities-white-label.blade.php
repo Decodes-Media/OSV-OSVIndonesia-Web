@@ -1,4 +1,4 @@
-<section class="specialities">
+<section class="white-label" id="white-label">
     <div class="container">
         <div class="row" data-aos="fade-in">
             <div class="col-12 col-lg-9 px-2 px-md-3 mb-4 mb-lg-0">

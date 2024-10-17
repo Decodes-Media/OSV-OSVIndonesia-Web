@@ -43,6 +43,14 @@ svg path {
     z-index: 9999;
 }
 
+#toggle-btn {
+    display: none;
+}
+
+.scrolled #toggle-btn {
+    display: flex;
+}
+
 .btn-outline {
     position: absolute;
     width: 60px;
@@ -63,8 +71,7 @@ svg path {
 .btn-download {
     color: $secondary-color !important;
     font-size: 1.5rem !important;
-    text-decoration: underline !important;
-    text-underline-position: under !important;
+    font-weight: $font-weight-light !important;
     padding: 0;
 }
 
@@ -216,7 +223,7 @@ svg path {
 
 .secondary-menu .menu-item a {
     font-family: $font-family;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: $font-weight-light;
 }
 

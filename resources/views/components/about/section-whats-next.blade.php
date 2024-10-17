@@ -8,7 +8,7 @@
                             @if($content['content_type'] == 'thumbnail')
                                 <img src="{{ public_url($content['content_thumbnail']) }}" class="w-100 img-fluid mb-4 lazy-load" alt="{{$content['content_title']}}" data-aos="fade-in" />
                             @else
-                                <iframe src="{{ $content['content_youtube_url'] }}" 
+                                <iframe src="{{ $content['content_youtube_url'] }}?controls=0" 
                                     frameborder="0" 
                                     allow="accelerometer; autoplay;" 
                                     referrerpolicy="strict-origin-when-cross-origin"

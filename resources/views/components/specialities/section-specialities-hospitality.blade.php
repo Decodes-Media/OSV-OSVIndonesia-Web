@@ -1,4 +1,4 @@
-<section class="hospitality">
+<section class="hospitality" id="bespoke-hospitality">
     <div class="container">
         <div class="row align-items-center mb-4" data-aos="fade-in">
             <div class="col-12 col-lg-6 px-2 px-md-3">

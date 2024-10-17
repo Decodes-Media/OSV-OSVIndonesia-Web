@@ -24,6 +24,7 @@
                             <li><span class="title">Bespoke<span></li>
                             <li><span class="title">Furniture<span></li>
                         </ul> -->
+                        <img src="{{ asset('img/logo-black.png') }}" class="img-fluid w-50 mb-5" alt="Logo" loading="lazy">
                         <h2>{{@$data->title}}</h2>
                         <p>
                             {!! @$data->desc !!}

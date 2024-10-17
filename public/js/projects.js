@@ -15,7 +15,6 @@ $(document).ready(function() {
         $('.modal-title').html(
             projectData.name + '<br>' +
             '<span>' +
-            '<i class="fa fa-map-pin mr-1"></i>' +
             projectData.location +
             '</span>'
         );

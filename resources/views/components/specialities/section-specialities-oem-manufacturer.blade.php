@@ -9,7 +9,7 @@
     </style>
 @endpush
 
-<section class="oem-manufacturer">
+<section class="oem-manufacturer" id="oem-manufacturer">
     <div class="container">
         <div class="row" data-aos="fade-in">
             <div class="col-12 mb-4 px-2 px-md-3">
