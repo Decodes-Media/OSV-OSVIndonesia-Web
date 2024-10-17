@@ -105,7 +105,6 @@ class ProjectSettingPage extends Page implements HasForms
                             ->directory('uploads')
                             ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
                             ->maxFileSize(2048)
-                            ->extraInputAttributes(['style' => 'min-height: 320px;'])
                             ->disabled($this->disableForm)
                             ->required()
                             ->afterStateHydrated(function ($set, $livewire) {

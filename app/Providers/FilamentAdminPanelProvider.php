@@ -82,16 +82,11 @@ class FilamentAdminPanelProvider extends PanelProvider
     public function boot(): void
     {
         Filament::getCurrentPanel()->navigationGroups([
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Membership')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Contact Us')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('About Us')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Access')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('System')),
+            'Home',
+            'Factory',
+            'About Us',
+            'Projects',
+            'Contact Us'
         ]);
 
         FilamentAsset::register([
