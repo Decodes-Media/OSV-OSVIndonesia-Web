@@ -18,6 +18,13 @@ class ClientResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
+    protected static ?int $navigationSort = 2;
+
+    public static function getNavigationGroup(): ?string
+    {
+        return __('Home');
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -27,8 +34,6 @@ class ClientResource extends Resource
                     ->columnSpanFull()
                     ->image()
                     ->imageEditor()
-                    ->imageCropAspectRatio('1:1')
-                    ->imagePreviewHeight('320px')
                     ->maxSize(2048)
                     ->directory('public')
                     ->required()

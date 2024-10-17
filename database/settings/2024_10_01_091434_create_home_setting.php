@@ -39,7 +39,7 @@ return new class extends SettingsMigration
         
         $this->migrator->add('home.banner_data', $bannerData);
         $this->migrator->add('home.title', 'Bespoke Furniture Factory');
-        $this->migrator->add('home.desc', 'Tailored to perfection, \nbrought to life with us.');
+        $this->migrator->add('home.desc', 'Tailored to perfection, brought to life with us.');
         $this->migrator->add('home.video', 'static/videoplayback2.mp4');
         $this->migrator->add('home.manufacture_thumb1', 'static/OSV-Bespoke-Project.jpg');
         $this->migrator->add('home.manufacture_title1', 'Hospitality Project');

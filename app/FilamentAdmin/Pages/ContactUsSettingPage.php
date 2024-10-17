@@ -94,8 +94,6 @@ class ContactUsSettingPage extends Page implements HasForms
                     FC\FileUpload::make('catalog_cover')
                         ->image()
                         ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
-                        ->imagePreviewHeight('320px')
                         ->maxSize(1024)
                         ->directory('public')
                         ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
@@ -133,7 +131,6 @@ class ContactUsSettingPage extends Page implements HasForms
                             ->directory('uploads')
                             ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
                             ->maxFileSize(2048)
-                            ->extraInputAttributes(['style' => 'min-height: 320px;'])
                             ->required()
                             ->afterStateHydrated(function ($set, $livewire) {
                                 $set('maps_desc', $livewire->data['maps_desc']);
