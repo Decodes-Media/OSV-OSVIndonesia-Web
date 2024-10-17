@@ -136,6 +136,38 @@ class HomeSettingPage extends Page implements HasForms
                             ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
                             ->openable()
                             ->downloadable(),
+                        FC\TextInput::make('highlight_text1')
+                            ->label('Highlight Text (Line 1)')
+                            ->maxLength(60)
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('highlight_text1', $livewire->data['highlight_text1']);
+                            }),
+                        FC\TextInput::make('highlight_text2')
+                            ->label('Highlight Text (Line 2)')
+                            ->maxLength(60)
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('highlight_text2', $livewire->data['highlight_text2']);
+                            }),
+                        FC\TextInput::make('highlight_text3')
+                            ->label('Highlight Text (Line 3)')
+                            ->maxLength(60)
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('highlight_text3', $livewire->data['highlight_text3']);
+                            }),
+                        FC\TextInput::make('highlight_text4')
+                            ->label('Highlight Text (Line 4)')
+                            ->maxLength(60)
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('highlight_text4', $livewire->data['highlight_text4']);
+                            }),
                     ]),
                 FC\Section::make('Manufacturing Section')
                     ->schema([

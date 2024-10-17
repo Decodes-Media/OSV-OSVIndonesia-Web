@@ -10,6 +10,10 @@ class HomeSetting extends Settings
     public string $title;
     public string $desc;
     public string $video;
+    public string $highlight_text1;
+    public string $highlight_text2;
+    public string $highlight_text3;
+    public string $highlight_text4;
     public string $manufacture_thumb1;
     public string $manufacture_title1;
     public string $manufacture_desc1;
