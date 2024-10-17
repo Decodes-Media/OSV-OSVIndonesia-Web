@@ -17,6 +17,7 @@ export default defineConfig({
         'public/js/preloader.js',
         'public/js/cookies.js',
         'public/js/projects.js',
+        'public/js/infinity-loader.js',
       ],
       refresh: [
         ...refreshPaths,

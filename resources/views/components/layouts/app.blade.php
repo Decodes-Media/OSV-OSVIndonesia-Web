@@ -100,6 +100,7 @@
     @vite('public/js/preloader.js')
     @vite('public/js/cookies.js')
     @vite('public/js/projects.js')
+    @vite('public/js/infinity-loader.js')
 
     @stack('pageScripts')
     @livewireScripts
