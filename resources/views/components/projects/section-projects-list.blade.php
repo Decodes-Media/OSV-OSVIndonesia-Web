@@ -10,7 +10,7 @@
         </div>
     </div>
     @if(!empty($projects))
-        <div class="container">
+        <div class="container projects-container">
             <div class="row">
                 <div class="col-12">
                     @foreach($projects as $key => $project)
@@ -32,7 +32,7 @@
                             ]]);
 
                         @endphp
-                        <div class="grid-container-projects" id="project{{$project->id}}">
+                        <div class="grid-container-projects project-item" id="project{{$project->id}}">
                             <div class="grid-item-projects">
                                 <a href="" data-toggle="modal" data-target="#project" data-project="{{$projectData}}">
                                     <div class="card--projects">
@@ -75,6 +75,9 @@
                     @endforeach
                 </div>
             </div>
+        </div>
+        <div class="load-more-container text-center d-flex justify-content-center mt-4">
+            <button id="load-more-btn" class="btn btn--outline-dark btn-magnetic">Load More</button>
         </div>
     @endif
 </section>
