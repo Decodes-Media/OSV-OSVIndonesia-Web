@@ -52,6 +52,11 @@
     "isEntry": true,
     "src": "public/js/global.js"
   },
+  "public/js/infinity-loader.js": {
+    "file": "assets/infinity-loader-2ca883f6.js",
+    "isEntry": true,
+    "src": "public/js/infinity-loader.js"
+  },
   "public/js/navbar.js": {
     "file": "assets/navbar-a5446f29.js",
     "isEntry": true,
@@ -83,7 +88,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-f26b3035.css",
+    "file": "assets/app-22ab67c8.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
