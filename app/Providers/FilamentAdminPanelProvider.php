@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Filament\Facades\Filament;
 use Filament\PanelProvider;
+use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentView;
@@ -91,6 +92,8 @@ class FilamentAdminPanelProvider extends PanelProvider
 
         FilamentAsset::register([
             Js::make('theme-js', url(Vite::asset('resources/js/filament-base-theme.js'))),
+            Css::make('antx-css', 'https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.css'),
+            Js::make('antx-js', 'https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.js'),
         ]);
 
         FilamentView::registerRenderHook('panels::head.end', fn () => '

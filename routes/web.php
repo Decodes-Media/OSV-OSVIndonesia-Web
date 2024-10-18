@@ -5,6 +5,7 @@ use App\Http\Controllers\FactoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\SpecialitiesController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
@@ -30,5 +31,6 @@ Route::get('/projects', [ProjectController::class, 'index'])
 Route::get('/factory', [FactoryController::class, 'index'])
     ->name('factory');
 
-Route::view('/specialities', 'client.pages.specialities')
+//Specialities Page
+Route::get('/specialities', [SpecialitiesController::class, 'index'])
     ->name('specialities');
