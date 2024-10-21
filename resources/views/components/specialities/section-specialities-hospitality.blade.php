@@ -35,12 +35,12 @@
                         <img src="{{ public_url(@$data->project_side_img4) }}" class="img-fluid w-100" alt="{{ @$data->project_title." 7" }}" loading="lazy">
                     </div>
                     <div class="col-12 mb-3">
-                    <img src="{{ public_url(@$data->project_thumbnail1) }}" class="img-fluid w-100" alt="{{ @$data->project_title." Thumbnail 1" }}" loading="lazy">
+                        <img src="{{ public_url(@$data->project_thumbnail2) }}" class="img-fluid w-100 mb-4" alt="{{ @$data->project_title." Thumbnail 2" }}" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6 px-2 px-md-3">
-                <img src="{{ public_url(@$data->project_thumbnail2) }}" class="img-fluid w-100 mb-4" alt="{{ @$data->project_title." Thumbnail 2" }}" loading="lazy">
+                <img src="{{ public_url(@$data->project_thumbnail1) }}" class="img-fluid w-100" alt="{{ @$data->project_title." Thumbnail 1" }}" loading="lazy">
                 {!! @$data->project_desc !!}
             </div>
         </div>

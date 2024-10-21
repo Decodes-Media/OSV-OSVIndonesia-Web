@@ -84,6 +84,7 @@ class FilamentAdminPanelProvider extends PanelProvider
     {
         Filament::getCurrentPanel()->navigationGroups([
             'Home',
+            'Specialities',
             'Factory',
             'About Us',
             'Projects',
