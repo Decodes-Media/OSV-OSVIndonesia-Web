@@ -43,6 +43,7 @@ class ClientResource extends Resource
                 FC\TextInput::make('name')
                     ->columnSpanFull()
                     ->label('Name')
+                    ->unique()
                     ->required()
                     ->afterStateHydrated(function ($set, $livewire) {
                         $set('name', $livewire->data['name']);

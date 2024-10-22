@@ -13,6 +13,8 @@ use Filament\Pages\Page;
 use Illuminate\Http\Response;
 use FilamentTiptapEditor\TiptapEditor;
 use Filament\Forms\Get;
+use App\Filament\MyForms;
+use App\Models\Material;
 
 /**
  * @property \Filament\Forms\ComponentContainer $form
@@ -388,6 +390,38 @@ class SpecialitiesSettingPage extends Page implements HasForms
             Actions\EditAction::make()
                 ->action(fn () => redirect(static::getUrl(['mode' => 'edit'])))
                 ->visible(fn ($livewire) => $livewire->disableForm),
+            Actions\Action::make('tag-image')
+                ->label('Tag Gambar')
+                ->outlined()
+                ->modalHeading('Tag Gambar Produk')
+                ->modalWidth('7xl')
+                ->modalSubmitAction(false)
+                ->modalCancelAction(false)
+                ->mountUsing(fn ($form, $record) => $form->fill([
+                    'material_ids' => @$record->metadata['material_ids'],
+                    'material_tags' => @$record->metadata['material_tags_w3c_anotation'] ?: null,
+                ]))
+                ->form([FC\Section::make()->schema([
+                    FC\Placeholder::make('material')->content(implode(', ', Material::all()->pluck('name')->toArray())),
+                    MyForms\ImageTagger::make('material_tags')
+                        ->hiddenLabel()
+                        ->afterStateUpdated(function ($state, $record) {
+                            $state = is_array($state) ? $state : json_decode($state);
+                            $metadata = (array) @$record->manufacture_metadata ?? [];
+                            $metadata['material_tags_w3c_anotation'] = $state;
+
+                            $this->setting->manufacture_metadata = $metadata;
+                            $this->setting->save();
+                            // $record->update(['manufacture_metadata' => $metadata]);
+                            $msg = 'Berhasil perbarui gambar tag produk';
+                            Notification::make()->success()->title($msg)->send();
+                            $this->js('window.location.reload()');
+                        }),
+                ])]),
+            // Actions\ViewAction::make()
+            //     ->label('Kunjungi')
+            //     ->url(fn ($livewire) => $livewire->record->public_url)
+            //     ->openUrlInNewTab(),
         ];
     }
 }

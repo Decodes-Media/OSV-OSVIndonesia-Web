@@ -45,6 +45,7 @@ return [
         \App\Models\Role::class => 'Role',
         \App\Models\Client::class => 'Client',
         \App\Models\Project::class => 'Project',
+        \App\Models\Material::class => 'Material',
         // SUPPORTING MODELS 🔽
         \App\Models\User::class => 'User',
         \App\Models\ActivityLog::class => 'Activity Log',

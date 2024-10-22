@@ -34,6 +34,7 @@ class ProjectResource extends Resource
             ->schema([
                 FC\TextInput::make('name')
                     ->label('Name')
+                    ->unique()
                     ->required(),
                 FC\TextInput::make('location')
                     ->label('Location')

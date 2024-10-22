@@ -33,6 +33,10 @@
     </div>
 </section>
 
+@php
+    $annoData = route('api.specialities.material_tags_w3c_anotation'); 
+@endphp
+
 @push('pageScripts')
     <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-selector-pack@latest/dist/annotorious-selector-pack.min.js"></script>
@@ -42,21 +46,30 @@
     <script>
         var anno = null;
         var annoShowDropdownProducts = function(annotation, element) {
-            var skus = annotation.body.map((ant) => ant.value);
-            var lists = skus.map((sku) => $(`#${sku}`).clone(true));
+            var materials = annotation.body.map((ant) => ant.value);
             anno.selectAnnotation(annotation.id);
             setTimeout(() => {
                 $('.prdc').remove();
                 $('.r6o-widget').append(`<div class="prdc"><ul id="prdx"></ul></div>`);
-                lists.forEach(element => {
-                    element.id = (Math.random() + 1).toString(36).substring(7);
-                    $('#prdx').append(element);
+                materials.map((name) =>  {
+                    const materialData =  @json($material);
+                    const material = '<li style="cursor: pointer" class="productx">' +
+                        '<div class="tile--similar-product">' +
+                            '<div class="tile--similar-product__thumbnail">' +
+                                '<img src="'+materialData[name]+'" alt="'+name+'">' +
+                            '</div>'+
+                            '<div class="tile--similar-product__desc">'+
+                                '<h4>'+name+'</h4>'+
+                            '</div>'+
+                        '</div>'+
+                        '</li>'
+                    $('#prdx').append(material);
                 });
             }, 123);
         };
         window.addEventListener('load', function() {
             anno = Annotorious.init({ image: 'img-insp', readOnly: true });
-            anno.loadAnnotations('');
+            anno.loadAnnotations('{{ $annoData }}');
             anno.on('mouseEnterAnnotation', annoShowDropdownProducts);
             anno.on('clickAnnotation', annoShowDropdownProducts);
             // anno.on('mouseLeaveAnnotation', function(annotation, element) {
