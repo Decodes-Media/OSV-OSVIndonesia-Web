@@ -1,12 +1,19 @@
-@php $record = $getRecord(); @endphp
+@php 
+    $record = app(\App\Settings\SpecialitiesSetting::class);
+
+    $metadata = null;
+    if(@$record->manufacture_metadata != null){
+        $metadata = $record->manufacture_metadata['material_tags_w3c_anotation'];
+    }
+
+    $materialName = json_encode(\App\Models\Material::all()->pluck('name'))
+@endphp
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
     <input type="hidden" id="vtags">
     <div x-data="{
         anno: null,
-        vocabulary: JSON.parse(`{{ json_encode(
-            $record->products?->pluck('sku')->toArray() ?: []
-        ) }}`),
+        vocabulary: JSON.parse(`{{ @$materialName }}`),
         state: $wire.entangle('{{ $getStatePath() }}').defer,
         init() {
             var self = this;
@@ -18,7 +25,7 @@
             {{-- Annotorious.SelectorPack(this.anno); --}}
             {{-- Annotorious.BetterPolygon(this.anno); --}}
             {{-- this.anno.setDrawingTool('polygon'); --}}
-            if(this.state) this.anno.loadAnnotations('{{ $record->cover_tags_url }}');
+            if(this.state) this.anno.loadAnnotations('{{ json_encode($metadata ?? []); }}');
             this.anno.on('createAnnotation', () => self.syncState());
             this.anno.on('updateAnnotation', () => self.syncState());
             this.anno.on('deleteAnnotation', () => self.syncState());
@@ -39,9 +46,9 @@
                 </button>
             </div><br>
         </div> --}}
-        <img style="width:auto;max-height:420px" id="my-image" src="{{ $record->cover_url }}"> <br>
+        <img style="width:auto;max-height:420px" id="my-image" src="{{ public_url(@$record->manufacture_thumbnail) }}"> <br>
         <x-filament::button wire:click="set('{{ $getStatePath() }}', document.getElementById('vtags').value);">
-            Simpan
+            {{ __('Save') }}
         </x-filament::button>
     </div>
 </x-dynamic-component>
