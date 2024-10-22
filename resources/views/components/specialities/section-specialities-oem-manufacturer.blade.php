@@ -47,16 +47,10 @@
         var anno = null;
         var annoShowDropdownProducts = function(annotation, element) {
             var materials = annotation.body.map((ant) => ant.value);
-            // var lists = materials.map((sku) => $(`#${sku}`).clone(true));
             anno.selectAnnotation(annotation.id);
             setTimeout(() => {
                 $('.prdc').remove();
                 $('.r6o-widget').append(`<div class="prdc"><ul id="prdx"></ul></div>`);
-                // lists.forEach(element => {
-                //     element.id = (Math.random() + 1).toString(36).substring(7);
-                //     $('#prdx').append(element);
-                // });
-
                 materials.map((name) =>  {
                     const materialData =  @json($material);
                     const material = '<li style="cursor: pointer" class="productx">' +
