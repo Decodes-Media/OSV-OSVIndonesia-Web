@@ -1796,7 +1796,7 @@ section {
 
 
 
-// Tilesp
+// Tiles
 .tile {
     &--client-logo {
         display: flex;
@@ -1823,6 +1823,75 @@ section {
 
         img {
             margin-bottom: 30px;
+        }
+    }
+
+    &--similar-product {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+
+        &__thumbnail {
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+            background-color: $grey;
+            padding: 5px;
+            border-radius: 8px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__desc {
+            padding-left: 15px;
+
+            h4 {
+                font-size: 1rem;
+                font-weight: $font-weight-reg;
+                color: $font-color;
+                display: -webkit-box;
+                max-width: 100%;
+                margin: 0 auto;
+                margin-bottom: 5px;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .price {
+                p {
+                    color: $font-color;
+                    font-weight: $font-weight-bold;
+                    font-size: 0.875rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            .quickview {
+                margin-top: 10px;
+
+                a {
+                    font-size: 0.875rem;
+                    font-weight: $font-weight-bold;
+                    color: $secondary-color;
+
+                    &:hover {
+                        color: $tertiary-color;
+                    }
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $grey;
+            transition: 0.3s;
         }
     }
 }
@@ -2344,4 +2413,86 @@ body:not(.no-js) .fading-up {
 
 #loader {
     display: flex;
+}
+
+
+
+// Image Tagging
+.r6o-editor {
+    width: 300px !important;
+    border-radius: 16px !important;
+    z-index: 999 !important;
+
+    .r6o-editor-inner {
+        border-radius: 8px !important;
+
+        .r6o-widget {
+            padding: 0;
+            // height: 230px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border-radius: 8px !important;
+            padding: 5px;
+
+            .prdc {
+                ul {
+                    width: 330px !important;
+
+                    li {
+                        .tile--similar-product {
+                            padding: 5px 10px !important;
+
+                            h4 {
+                                font-size: 0.875rem;
+                                font-weight: $font-weight-reg;
+                            }
+
+                            .tile--similar-product__thumbnail {
+                                width: 60px;
+                                min-width: 60px;
+                                height: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $bp-md) {
+    .r6o-editor {
+        width: 300px !important;
+
+        .r6o-editor-inner {
+            .r6o-widget {
+                // height: 200px;
+
+                .prdc {
+                    ul {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Annotation
+.a9s-annotation .a9s-outer,
+.a9s-annotation .a9s-inner {
+    stroke: $primary-color !important;
+    stroke-width: 2px !important;
+    border-radius: 0 !important;
+    position: relative;
+    fill: rgba(255,255,255,0.1) !important;
+    // width: 200px;
+    // height: 200px;
+}
+
+.a9s-annotation.selected .a9s-outer {
+    stroke: none !important;
+    fill: rgba(255,255,255,0.6) !important;
 }
