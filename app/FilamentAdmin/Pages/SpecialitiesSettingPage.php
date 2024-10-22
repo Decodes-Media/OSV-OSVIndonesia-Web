@@ -391,15 +391,14 @@ class SpecialitiesSettingPage extends Page implements HasForms
                 ->action(fn () => redirect(static::getUrl(['mode' => 'edit'])))
                 ->visible(fn ($livewire) => $livewire->disableForm),
             Actions\Action::make('tag-image')
-                ->label('Tag Gambar')
+                ->label('Image Tag')
                 ->outlined()
-                ->modalHeading('Tag Gambar Produk')
+                ->modalHeading('Image Tag')
                 ->modalWidth('7xl')
                 ->modalSubmitAction(false)
                 ->modalCancelAction(false)
                 ->mountUsing(fn ($form, $record) => $form->fill([
-                    'material_ids' => @$record->metadata['material_ids'],
-                    'material_tags' => @$record->metadata['material_tags_w3c_anotation'] ?: null,
+                    'material_tags' => $record->manufacture_metadata['material_tags_w3c_anotation'] ?? null,
                 ]))
                 ->form([FC\Section::make()->schema([
                     FC\Placeholder::make('material')->content(implode(', ', Material::all()->pluck('name')->toArray())),
@@ -412,8 +411,7 @@ class SpecialitiesSettingPage extends Page implements HasForms
 
                             $this->setting->manufacture_metadata = $metadata;
                             $this->setting->save();
-                            // $record->update(['manufacture_metadata' => $metadata]);
-                            $msg = 'Berhasil perbarui gambar tag produk';
+                            $msg = 'Success update image tag';
                             Notification::make()->success()->title($msg)->send();
                             $this->js('window.location.reload()');
                         }),
