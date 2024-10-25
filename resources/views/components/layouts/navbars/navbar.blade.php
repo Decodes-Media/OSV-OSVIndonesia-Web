@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('img/logo-white.png') }}" class="img-fluid header-logo logo-light" alt="Logo" loading="lazy">
+                    <img src="{{ asset('img/logo-white.png') }}" class="img-fluid header-logo logo-light center" alt="Logo" loading="lazy">
                     <img src="{{ asset('img/logo-black.png') }}" class="img-fluid header-logo logo-dark" alt="Logo" loading="lazy">
                 </a>
 
@@ -18,7 +18,7 @@
 
                 <div class="overlay">
                     <svg viewBox="0 0 1000 1000">
-                        <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+                        <path d="M0 1S175 0.5 500 1s500 0.5 500 1V0H0Z"></path>
                     </svg>
                 </div>
 
@@ -75,20 +75,20 @@
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="{{ url('specialities') }}"><span>•</span>Specialities</a>
-                                </div>
-
-                                <div class="menu-item">
-                                    <a href="{{ url('factory') }}"><span>•</span>Factory</a>
-                                </div>
-
-                                <div class="menu-item">
                                     <a href="{{ url('about-us') }}"><span>•</span>About Us</a>
+                                </div>
+
+                                <div class="menu-item">
+                                    <a href="{{ url('specialities') }}"><span>•</span>Specialities</a>
                                 </div>
 
                                 <div class="menu-item">
                                     <a href="{{ url('projects') }}"><span>•</span>Projects</a>
                                 </div>
+
+                                <div class="menu-item">
+                                    <a href="{{ url('factory') }}"><span>•</span>Factory</a>
+                                </div> 
 
                                 <div class="menu-item">
                                     <a href="{{ url('contact-us') }}"><span>•</span>Contact Us</a>

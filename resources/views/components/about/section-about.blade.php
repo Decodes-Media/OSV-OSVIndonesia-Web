@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12 text-center">
                     @if(@$data->factory_type == 'thumbnail')
-                        <img src="{{ public_url(@$data->factory_thumbnail) }}" class="w-100 img-fluid mb-4 lazy-load" alt="{{$data->factory_title}}" data-aos="fade-in" />
+                        <img src="{{ public_url(@$data->factory_thumbnail) }}" class="w-100 img-fluid mb-4 mb-md-5 lazy-load" alt="{{$data->factory_title}}" data-aos="fade-in" />
                     @else
                         <iframe src="{{ public_url(@$data->factory_youtube_url) }}?controls=0" 
                             frameborder="0" 

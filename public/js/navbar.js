@@ -76,7 +76,7 @@ function revealMenuItems() {
         "<"
     ).to(
         path,
-        0.8, {
+        0.5, {
             attr: {
                 d: end
             },
@@ -97,10 +97,10 @@ function revealMenuItems() {
         ".menu-item>a",
         0.5, {
             top: 0,
-            ease: "power3.in",
-            stagger: {
-                amount: 0.5
-            }
+            // ease: "power3.in",
+            // stagger: {
+            //     amount: 0.5
+            // }
         },
         "-=1"
     ).reverse();

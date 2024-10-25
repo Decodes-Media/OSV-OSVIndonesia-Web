@@ -47,6 +47,7 @@ section {
             font-weight: $font-weight-light;
             text-transform: uppercase;
             margin-left: -5px;
+            color: $secondary-color;
         }
 
         h4 {
@@ -203,6 +204,7 @@ section {
             animation: highlight both ease-in-out;
             animation-timeline: view();
             font-size: 2.5rem;
+            line-height: 1.2;
             font-family: $font-family;
         }
         
@@ -254,7 +256,7 @@ section {
             font-size: clamp(2rem, 5vw + 1rem, 4rem);
             font-weight: $font-weight-light;
             text-align: center;
-            color: $font-color;
+            color: $secondary-color;
         }
         
         p {
@@ -328,6 +330,12 @@ section {
         }
     }
 
+    &.product-showcase {
+        h3 {
+            color: $secondary-color;
+        }
+    }
+
     &.cta {
         background-image: url('/public/img/CTA-banner-visit-factory.jpg');
         background-size: cover;
@@ -345,6 +353,10 @@ section {
 
         p {
             color: $white;
+        }
+
+        a {
+            color: $white !important;
         }
     }
 
@@ -741,13 +753,20 @@ section {
         }
     }
 
-    &.hospitality {
+    &.hospitality,
+    &.white-label {
         h2 {
             color: $secondary-color;
         }
 
         img {
             border-radius: 12px;
+        }
+    }
+
+    &.projects-list {
+        h2 {
+            color: $secondary-color;
         }
     }
 }
@@ -998,56 +1017,56 @@ section {
 
 
 // Cursor
-.cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    z-index: 9999;
-    pointer-events: none;
+// .cursor {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 2.5rem;
+//     height: 2.5rem;
+//     z-index: 9999;
+//     pointer-events: none;
 
-    div {
-        position: absolute;
-        display: grid;
-        place-items: center;
+//     div {
+//         position: absolute;
+//         display: grid;
+//         place-items: center;
 
-        div {
-            border: 1px solid $white;
-            border-radius: 50%;
-            animation: pulse 2.5s linear infinite;
-            box-shadow: 0 0 50px 5px $tertiary-color;
-        }
+//         div {
+//             border: 1px solid $white;
+//             border-radius: 50%;
+//             animation: pulse 2.5s linear infinite;
+//             box-shadow: 0 0 50px 5px $tertiary-color;
+//         }
 
-        &:nth-child(1),
-        &:nth-child(2) {
-            width: 100%;
-            height: 100%;
-        }
+//         &:nth-child(1),
+//         &:nth-child(2) {
+//             width: 100%;
+//             height: 100%;
+//         }
 
-        &:nth-child(1) {
-            transition: transform 0.2s ease-out;
-        }
+//         &:nth-child(1) {
+//             transition: transform 0.2s ease-out;
+//         }
 
-        &:nth-child(2) {
-            transition: transform 0.1s ease-out;
+//         &:nth-child(2) {
+//             transition: transform 0.1s ease-out;
 
-            div {
-                background: $white;
-                border-radius: 50%;
-                width: 4px;
-                height: 4px;
-            }
-        }
-    }
-}
+//             div {
+//                 background: $white;
+//                 border-radius: 50%;
+//                 width: 4px;
+//                 height: 4px;
+//             }
+//         }
+//     }
+// }
 
-@media screen and (max-width: $bp-sm) {
-    .cursor {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-}
+// @media screen and (max-width: $bp-sm) {
+//     .cursor {
+//         width: 1.5rem;
+//         height: 1.5rem;
+//     }
+// }
 
 
 
@@ -1058,7 +1077,7 @@ section {
     &__thumb {
         overflow: hidden;
         border-radius: 0;
-        height: 720px;
+        height: 90vh;
 
         img {
             width: 100%;
@@ -1159,6 +1178,32 @@ section {
 // Buttons
 .btn {
     padding: 0;
+    color: $secondary-color !important;
+    font-weight: $font-weight-light !important;
+
+    // &:hover,
+    // &:focus {
+    //     transition: 0.3s;
+
+    //     &::after {
+    //         transform: scaleX(1);
+    //         transform-origin: bottom left;
+    //     }
+    // }
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     width: 100%;
+    //     transform: scaleX(0);
+    //     border-radius: 5px;
+    //     height: 0.05em;
+    //     bottom: 0;
+    //     left: 0;
+    //     background: currentcolor;
+    //     transform-origin: bottom right;
+    //     transition: transform 0.25s ease-out;
+    // }
 
     &--primary {
         background-color: $primary-color;
@@ -1546,7 +1591,7 @@ section {
     display: flex;
     align-items: flex-start;
     gap: 2em;
-    padding: 16px;
+    padding: 16px 0;
     transform: translateY(-100%);
     transition: .2s ease-in-out;
     background-color: $white;
@@ -1573,9 +1618,9 @@ section {
 .card-animation__description {
     margin: 0;
     color: $font-color;   
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 4;
     overflow: hidden;
 }
 
@@ -1583,17 +1628,22 @@ section {
     height: 150px;
 }
 
-.values .card-animation .card-animation__description {
-    opacity: 0;
-}
+// .values .card-animation .card-animation__description {
+//     opacity: 0;
+// }
 
-.values .card-animation:hover .card-animation__description {
-    opacity: 1;
-    transition: all 0.3s;
-}
+// .values .card-animation:hover .card-animation__description {
+//     opacity: 1;
+//     transition: all 0.3s;
+// }
 
 .card-animation__link {
-    padding: 0 16px 16px 16px;
+    padding: 0 0 16px 0;
+
+    a {
+        color: $secondary-color !important;
+        font-weight: $font-weight-light !important;
+    }
 }
 
 @media screen and (max-width: $bp-md) {
@@ -2323,7 +2373,7 @@ body:not(.no-js) .fading-up {
     display: flex;
     align-items: center;
     transform: translateX(0);
-    animation: a-text-scroll 35s linear infinite;
+    animation: a-text-scroll 100s linear infinite;
 }
 
 @keyframes a-text-scroll {

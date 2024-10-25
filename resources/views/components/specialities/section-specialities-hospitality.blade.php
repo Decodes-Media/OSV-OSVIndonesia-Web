@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 px-2 px-md-3">
-                <img src="{{ public_url(@$data->project_thumbnail1) }}" class="img-fluid w-100 mb-4" alt="{{ @$data->project_title." Thumbnail 1" }}" loading="lazy">
+                <img src="{{ public_url(@$data->project_thumbnail1) }}" class="img-fluid w-100 mb-4 mb-md-5" alt="{{ @$data->project_title." Thumbnail 1" }}" loading="lazy">
                 {!! @$data->project_desc !!}
             </div>
         </div>
