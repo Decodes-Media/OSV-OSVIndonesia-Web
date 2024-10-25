@@ -454,6 +454,10 @@ footer {
                         i {
                             color: $primary-color !important;
                         }
+
+                        svg path {
+                            fill: $font-color !important;
+                        }
                     }
                 }
             }
