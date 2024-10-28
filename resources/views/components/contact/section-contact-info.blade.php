@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-12">
                             <p>
-                                By sending your data, you agree to the <a ref="" data-toggle="modal" data-target="#privacy_policy">Privacy Policy.</a><br/>
+                                By sending your data, you agree to the <a ref="" data-toggle="modal" data-target="#privacy_policy">Privacy Policy.</a>
                                 We will process your details and contact you.
                             </p>
                         </div>
@@ -33,20 +33,6 @@
                         </button>
                     </div>
                 </form>
-
-                <!-- <h5>Follow OSV Indonesia</h5>
-                <ul class="social-media">
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                </ul> -->
             </div>
 
             @if(@$data)

@@ -58,7 +58,7 @@
     "src": "public/js/infinity-loader.js"
   },
   "public/js/navbar.js": {
-    "file": "assets/navbar-a5446f29.js",
+    "file": "assets/navbar-afb158c5.js",
     "isEntry": true,
     "src": "public/js/navbar.js"
   },
@@ -88,7 +88,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-bd5adcd6.css",
+    "file": "assets/app-9845c8dc.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

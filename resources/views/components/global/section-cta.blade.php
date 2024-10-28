@@ -6,7 +6,7 @@
             </div>
             <div class="col-12 col-md-6">
                 <p>Ready to see how we can bring your vision to life? Contact us to schedule a personalized tour.</p>
-                <a href="#" class="btn btn--outline-light btn-magnetic fill mt-4" cursor="link">Get in Touch</a>
+                <a href="{{ url('contact-us') }}" class="btn btn--outline-light btn-magnetic fill mt-4" cursor="link">Get in Touch</a>
             </div>
         </div>
     </div>
