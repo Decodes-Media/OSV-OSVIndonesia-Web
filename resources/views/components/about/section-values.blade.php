@@ -25,7 +25,7 @@
                                     </div>
                                 </div>
                                 <span class="card-animation__link pb-4">
-                                    <hr/>
+                                
                                 </span>
                             </div>
                         </div> 
