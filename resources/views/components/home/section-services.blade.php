@@ -7,64 +7,64 @@
         </div> -->
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
-                <a href="{{@$data->manufacture_link1}}">
-                    <div class="card-animation" data-aos="fade-in">
+                <div class="card-animation" data-aos="fade-in">
+                    <a href="{{@$data->manufacture_link1}}">
                         <img src="{{ public_url(@$data->manufacture_thumb1)}}" class="card-animation__image lazy-load" alt="{{@$data->manufacture_title1}}" />
-                        <div class="card-animation__overlay">
-                            <div class="card-animation__header">
-                                <div class="card-animation__header-text">
-                                    <h4 class="card-animation__title">{{@$data->manufacture_title1}}</h4>
-                                    <p class="card-animation__description">{!! @$data->manufacture_desc1 !!}</p>            
-                                </div>
+                    </a>
+                    <div class="card-animation__overlay">
+                        <div class="card-animation__header">
+                            <div class="card-animation__header-text">
+                                <h4 class="card-animation__title">{{@$data->manufacture_title1}}</h4>
+                                <p class="card-animation__description">{!! @$data->manufacture_desc1 !!}</p>            
                             </div>
-                            <span class="card-animation__link pb-4">
-                                <a href="{{@$data->manufacture_link1}}" class="btn btn-magnetic">
-                                    Learn More
-                                </a>
-                            </span>
                         </div>
+                        <span class="card-animation__link pb-4">
+                            <a href="{{@$data->manufacture_link1}}" class="btn btn-magnetic">
+                                LEARN MORE
+                            </a>
+                        </span>
                     </div>
-                </a> 
+                </div>
             </div>
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
-                <a href="{{@$data->manufacture_link2}}">
-                    <div class="card-animation" data-aos="fade-in">
+                <div class="card-animation" data-aos="fade-in">
+                    <a href="{{@$data->manufacture_link2}}">
                         <img src="{{public_url(@$data->manufacture_thumb2)}}" class="card-animation__image" alt="{{@$data->manufacture_title2}}" />
-                        <div class="card-animation__overlay">
-                            <div class="card-animation__header">
-                                <div class="card-animation__header-text">
-                                    <h4 class="card-animation__title">{{@$data->manufacture_title2}}</h4>
-                                    <p class="card-animation__description">{!! @$data->manufacture_desc2 !!}</p>            
-                                </div>
+                    </a>
+                    <div class="card-animation__overlay">
+                        <div class="card-animation__header">
+                            <div class="card-animation__header-text">
+                                <h4 class="card-animation__title">{{@$data->manufacture_title2}}</h4>
+                                <p class="card-animation__description">{!! @$data->manufacture_desc2 !!}</p>            
                             </div>
-                            <span class="card-animation__link pb-4">
-                                <a href="{{@$data->manufacture_link2}}" class="btn btn-magnetic">
-                                    Learn More
-                                </a>
-                            </span>
                         </div>
+                        <span class="card-animation__link pb-4">
+                            <a href="{{@$data->manufacture_link2}}" class="btn btn-magnetic">
+                                LEARN MORE
+                            </a>
+                        </span>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mb-4 mb-lg-0">
-                <a href="{{@$data->manufacture_link3}}">
-                    <div class="card-animation" data-aos="fade-in">
+                <div class="card-animation" data-aos="fade-in">
+                    <a href="{{@$data->manufacture_link3}}">
                         <img src="{{public_url(@$data->manufacture_thumb3)}}" class="card-animation__image" alt="{{@$data->manufacture_title3}}" />
-                        <div class="card-animation__overlay">
-                            <div class="card-animation__header">
-                                <div class="card-animation__header-text">
-                                    <h4 class="card-animation__title">{{@$data->manufacture_title3}}</h4>
-                                    <p class="card-animation__description">{!! @$data->manufacture_desc3 !!}</p>            
-                                </div>
+                    </a>
+                    <div class="card-animation__overlay">
+                        <div class="card-animation__header">
+                            <div class="card-animation__header-text">
+                                <h4 class="card-animation__title">{{@$data->manufacture_title3}}</h4>
+                                <p class="card-animation__description">{!! @$data->manufacture_desc3 !!}</p>            
                             </div>
-                            <span class="card-animation__link pb-4">
-                                <a href="{{@$data->manufacture_link3}}" class="btn btn-magnetic">
-                                    Learn More
-                                </a>
-                            </span>
                         </div>
+                        <span class="card-animation__link pb-4">
+                            <a href="{{@$data->manufacture_link3}}" class="btn btn-magnetic">
+                                LEARN MORE
+                            </a>
+                        </span>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </div>
