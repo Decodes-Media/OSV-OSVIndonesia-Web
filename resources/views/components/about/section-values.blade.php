@@ -9,7 +9,7 @@
 
             <div class="row">
                 @for ($i = 1; $i <= 4; $i++)
-                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 px-lg-4">
                         <div class="card-animation values">
                             @php
                                 $thumbnail = $data->{'fb_thumbnail'.$i};
