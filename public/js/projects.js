@@ -15,9 +15,11 @@ $(document).ready(function() {
         $('.modal-title').html(
             projectData.name + '<br>' +
             '<span>' +
+            '<img src="../img/map-icon.png" width="16px" height="16px" /> ' +
             projectData.location +
             '</span>'
         );
+        
 
         var projectGallery = '';
         for (let index = 0; index < projectData.image.length; index++) {

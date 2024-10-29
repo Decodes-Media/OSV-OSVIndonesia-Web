@@ -30,7 +30,7 @@
                             {!! @$data->desc !!}
                         </p>
                     </div>
-                    <a href="#" class="mt-5 btn btn-magnetic">
+                    <a href="{{ url('contact-us') }}" class="mt-5 btn btn-magnetic">
                         Speak to Us
                     </a>
                 </div>
