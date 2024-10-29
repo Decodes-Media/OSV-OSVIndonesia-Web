@@ -885,7 +885,7 @@ section {
 
         &.cta {
             padding: 100px 0;
-            background-size: contain;
+            background-attachment: unset;
     
             p {
                 font-size: 1.5rem;
