@@ -1,9 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var preloader = document.getElementById("preloader");
-    setTimeout(function() {
-        preloader.style.opacity = "0";
-        setTimeout(function() {
-            preloader.style.display = "none";
-        }, 500);
-    }, 2000);
+// Preloader
+document.querySelector('#app').style.opacity = 0;
+document.querySelector('#preloader').style.opacity = 1;
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelector('#preloader').style.opacity = 0;
+    document.querySelector('#preloader').setAttribute('aria-busy', false);
+    document.querySelector('#app').style.opacity = 1;
+  }, 1000);
 });

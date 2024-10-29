@@ -12,9 +12,11 @@ class Contact extends Model
     use HasUlids;
 
     protected $fillable = [
-        'name',
-        'email',
+        'fullname',
         'phone',
+        'country',
+        'company_name',
+        'company_email',
         'message',
         'internal_note',
         'metadata',

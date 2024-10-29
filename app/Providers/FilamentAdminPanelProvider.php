@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Filament\Facades\Filament;
 use Filament\PanelProvider;
+use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentView;
@@ -31,8 +32,8 @@ class FilamentAdminPanelProvider extends PanelProvider
             ->databaseNotifications(false)
             ->darkMode(true)
             ->colors([
-                'primary' => '#C52028',
-                'secondary' => '#0B539A',
+                'primary' => '#563627',
+                'secondary' => '#A88D6C',
             ])
             ->discoverResources(
                 in: app_path('FilamentAdmin/Resources'),
@@ -63,13 +64,13 @@ class FilamentAdminPanelProvider extends PanelProvider
             ->plugins([
                 \Awcodes\Overlook\OverlookPlugin::make()
                     ->includes([
-                        \App\FilamentAdmin\Resources\ProfileResource::class,
-                        \App\FilamentAdmin\Resources\RegisPersonalResource::class,
-                        \App\FilamentAdmin\Resources\RegisRecommendResource::class,
+                        // \App\FilamentAdmin\Resources\ProfileResource::class,
+                        // \App\FilamentAdmin\Resources\RegisPersonalResource::class,
+                        // \App\FilamentAdmin\Resources\RegisRecommendResource::class,
                         // \App\FilamentAdmin\Resources\AspirationResource::class,
                         // \App\FilamentAdmin\Resources\DonationResource::class,
                         \App\FilamentAdmin\Resources\ContactResource::class,
-                        \App\FilamentAdmin\Resources\MailingListResource::class,
+                        // \App\FilamentAdmin\Resources\MailingListResource::class,
                         // \App\FilamentAdmin\Resources\NewsResource::class,
                         // \App\FilamentAdmin\Resources\PageResource::class,
                         \App\FilamentAdmin\Resources\AdminResource::class,
@@ -82,20 +83,18 @@ class FilamentAdminPanelProvider extends PanelProvider
     public function boot(): void
     {
         Filament::getCurrentPanel()->navigationGroups([
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Membership')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Growth')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Content')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('Access')),
-            \Filament\Navigation\NavigationGroup::make()
-                ->label(__('System')),
+            'Home',
+            'Specialities',
+            'Factory',
+            'About Us',
+            'Projects',
+            'Contact Us'
         ]);
 
         FilamentAsset::register([
             Js::make('theme-js', url(Vite::asset('resources/js/filament-base-theme.js'))),
+            Css::make('antx-css', 'https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.css'),
+            Js::make('antx-js', 'https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.js'),
         ]);
 
         FilamentView::registerRenderHook('panels::head.end', fn () => '

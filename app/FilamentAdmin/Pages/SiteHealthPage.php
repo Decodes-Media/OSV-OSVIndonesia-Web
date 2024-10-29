@@ -21,6 +21,8 @@ class SiteHealthPage extends Page
 
     protected static ?int $navigationSort = 3;
 
+    protected static bool $shouldRegisterNavigation = false;
+
     public Collection $data;
 
     public function getTitle(): string
@@ -38,10 +40,10 @@ class SiteHealthPage extends Page
         return __('Site Health');
     }
 
-    public static function shouldRegisterNavigation(): bool
-    {
-        return filament_user_can('system.site_health');
-    }
+    // public static function shouldRegisterNavigation(): bool
+    // {
+    //     return filament_user_can('system.site_health');
+    // }
 
     public function mount(): void
     {

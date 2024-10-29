@@ -1,0 +1,1 @@
+const e=document.querySelector(".cookie-container"),t=document.querySelector(".agree button");setTimeout(()=>{e.classList.remove("hide")},1e3);t.addEventListener("click",()=>{e.classList.add("hide")});

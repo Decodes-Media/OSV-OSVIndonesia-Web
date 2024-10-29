@@ -26,7 +26,7 @@ class ContactResource extends Resource
 
     public static function getNavigationGroup(): ?string
     {
-        return __('Growth');
+        return __('Contact Us');
     }
 
     public static function getModelLabel(): string
@@ -45,7 +45,7 @@ class ContactResource extends Resource
             MyForms\CreatorEditorPlaceholder::make(),
             Forms\Components\Section::make()->schema([
                 Forms\Components\TextInput::make('name')
-                    ->label('Nama')
+                    ->label('Name')
                     ->columnSpanFull()
                     ->disabled(),
                 Forms\Components\TextInput::make('email')
@@ -53,21 +53,18 @@ class ContactResource extends Resource
                     ->columnSpanFull()
                     ->disabled(),
                 Forms\Components\TextInput::make('phone')
-                    ->label('No. Telepon')
+                    ->label('Phone')
                     ->columnSpanFull()
                     ->disabled(),
                 Forms\Components\Textarea::make('message')
-                    ->label('Pesan')
+                    ->label('Message')
                     ->columnSpanFull()
                     ->rows(3)
                     ->disabled(),
                 Forms\Components\Textarea::make('internal_note')
-                    ->label('Catatan Internal')
+                    ->label('Internal Notes')
                     ->columnSpanFull()
                     ->rows(3),
-                Forms\Components\KeyValue::make('metadata')
-                    ->label('Metadata')
-                    ->columnSpanFull(),
             ]),
         ]);
     }

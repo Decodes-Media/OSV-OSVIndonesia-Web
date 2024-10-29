@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("preloader");setTimeout(function(){e.style.opacity="0",setTimeout(function(){e.style.display="none"},500)},2e3)});
