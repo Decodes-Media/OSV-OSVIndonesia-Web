@@ -885,7 +885,7 @@ section {
 
         &.cta {
             padding: 100px 0;
-            background-size: cover;
+            background-size: contain;
     
             p {
                 font-size: 1.5rem;
@@ -1928,6 +1928,7 @@ section {
         text-align: center;;
         
         h3 {
+            font-size: 2rem;
             font-weight: $font-weight-light;
             margin-bottom: 15px;
         }
@@ -2007,6 +2008,15 @@ section {
     }
 }
 
+@media screen and (max-width: $bp-sm) {
+    .tile {
+        &--features {
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
 
 
 // Reveal Animation

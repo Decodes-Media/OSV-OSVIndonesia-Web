@@ -18,10 +18,10 @@
                             <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number" required>
                         </div>
                         <div class="col-12">
-                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="Country" required>
+                            <input id="country" type="text" class="form-control" name="country" placeholder="Country" required>
                         </div>
                         <div class="col-12">
-                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Name" required>
+                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Email" required>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
