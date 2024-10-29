@@ -391,14 +391,6 @@ svg path {
             display: none;
         }
     }
-
-    &.home {
-        img {
-            &.header-logo {
-                display: none !important;
-            }
-        }
-    }
 }
 
 @media screen and (max-width: $bp-sm) {
