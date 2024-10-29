@@ -374,7 +374,7 @@ svg path {
         display: none;
     }
 
-    .logo-white {
+    .logo-light {
         display: block;
     }
 
@@ -389,6 +389,24 @@ svg path {
 
         .logo-light {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    #navbar {
+        &.home {
+            background-color: $white;
+
+            img {
+                &.header-logo {
+                    display: block !important;
+                }
+            }
+
+            &.scrolled {
+                background-color: $white;
+            }
         }
     }
 }

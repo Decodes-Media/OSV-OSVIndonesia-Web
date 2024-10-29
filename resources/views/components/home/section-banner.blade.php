@@ -1,7 +1,7 @@
 <section class="banner">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-lg-8 px-0 mb-5 mb-lg-0">
+            <div class="col-12 col-lg-8 px-0 mb-3 mb-lg-0">
                 <div class="owl-carousel owl-carousel-1 owl-theme" data-aos="fade-in">
                     @foreach(@$data->banner_data as $banner)
                         <div class="item">

@@ -7,7 +7,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row px-md-2">
                 @for ($i = 1; $i <= 4; $i++)
                     <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 px-lg-4">
                         <div class="card-animation values">
