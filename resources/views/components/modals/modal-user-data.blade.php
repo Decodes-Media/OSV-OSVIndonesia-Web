@@ -21,6 +21,9 @@
                             <input id="country" type="text" class="form-control" name="country" placeholder="Country" required>
                         </div>
                         <div class="col-12">
+                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="Company Name" required>
+                        </div>
+                        <div class="col-12">
                             <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Email" required>
                         </div>
                     </div>

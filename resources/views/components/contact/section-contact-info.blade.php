@@ -18,6 +18,9 @@
                             <input id="companyName" type="text" class="form-control" name="companyName" placeholder="Company Name" required>
                         </div>
                         <div class="col-12">
+                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Email" required>
+                        </div>
+                        <div class="col-12">
                             <textarea id="message" class="form-control" name="message" rows="5" placeholder="Write your message.." required></textarea>
                         </div>
                         <div class="col-12">
