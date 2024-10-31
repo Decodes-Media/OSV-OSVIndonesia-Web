@@ -93,6 +93,16 @@ class FactorySettingPage extends Page implements HasForms
             ->schema([
                 FC\Section::make('Header Section')
                     ->schema([
+                        FC\FileUpload::make('banner')
+                            ->image()
+                            ->imageEditor()
+                            ->maxSize(1024)
+                            ->directory('public')
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                            ->openable()
+                            ->downloadable(),
                         FC\TextInput::make('title')
                             ->label('Title')
                             ->disabled($this->disableForm)

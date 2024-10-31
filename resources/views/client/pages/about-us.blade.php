@@ -1,4 +1,4 @@
-<title>OSV Indonesia - About Us</title>
+<title>{{$siteSetting->name}} - About Us</title>
 
 <x-layouts.app>
     <x-about.section-about-header :data="$setting"/>

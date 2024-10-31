@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row mb-4 mb-md-5">
                 <div class="col-12">
-                    <h2 class="text-center">Our Foundational Beliefs</h2>
+                    <h2 class="text-center">{{$data->fb_title}}</h2>
                 </div>
             </div>
 

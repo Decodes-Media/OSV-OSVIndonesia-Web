@@ -6,6 +6,7 @@ use Spatie\LaravelSettings\Settings;
 
 class ProjectSetting extends Settings
 {
+    public string $banner;
     public string $title;
     public string $desc;
 

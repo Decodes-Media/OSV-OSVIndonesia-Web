@@ -9,6 +9,7 @@ class AboutUsSetting extends Settings
     public string $banner;
     public string $banner_title;
     public string $banner_desc;
+    public string $fb_title;
     public string $fb_thumbnail1;
     public string $fb_title1;
     public string $fb_desc1;
