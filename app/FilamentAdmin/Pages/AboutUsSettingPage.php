@@ -125,6 +125,14 @@ class AboutUsSettingPage extends Page implements HasForms
                     ]),
                 FC\Section::make('Foundational Beliefs Section')
                     ->schema([
+                        FC\TextInput::make('fb_title')
+                        ->label('Title')
+                        ->disabled($this->disableForm)
+                        ->columnSpanFull()
+                        ->required()
+                        ->afterStateHydrated(function ($set, $livewire) {
+                            $set('fb_title', $livewire->data['fb_title']);
+                        }),
                         FC\Grid::make(['default' => 2])->schema([
                             FC\FileUpload::make('fb_thumbnail1')
                                 ->label('Thumbnail 1')

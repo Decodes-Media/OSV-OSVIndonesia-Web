@@ -1,4 +1,4 @@
-<title>OSV Indonesia - Projects</title>
+<title>{{$siteSetting->name}} - Projects</title>
 
 <x-layouts.app>
     <x-projects.section-projects-header />

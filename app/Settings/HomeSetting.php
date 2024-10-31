@@ -35,6 +35,11 @@ class HomeSetting extends Settings
     public string $factory_desc;
     public string $factory_link;
     public array $support_image;
+    public string $cta_background;
+    public string $cta_title;
+    public string $cta_desc;
+    public string $cta_link_text;
+    public string $cta_link_url;
 
     public static function group(): string
     {

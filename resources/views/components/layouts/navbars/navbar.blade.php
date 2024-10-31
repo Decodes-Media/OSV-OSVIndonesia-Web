@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('img/logo-white.png') }}" class="img-fluid header-logo logo-light d-none" alt="Logo" loading="lazy">
-                    <img src="{{ asset('img/logo-black.png') }}" class="img-fluid header-logo logo-dark" alt="Logo" loading="lazy">
+                    <img src="{{ public_url($setting->logo_white_path) }}" class="img-fluid header-logo logo-light d-none" alt="Logo" loading="lazy">
+                    <img src="{{ public_url($setting->logo_black_path) }}" class="img-fluid header-logo logo-dark" alt="Logo" loading="lazy">
                 </a>
 
                 <div id="toggle-btn" class="btn">
@@ -29,14 +29,14 @@
                             <div class="wrapper">
                                 <div class="menu-item d-none d-lg-block">
                                     <a href="{{ url('/') }}">
-                                        <img src="{{ asset('img/logo-black.png') }}" class="img-fluid w-50 mb-5" alt="Logo" loading="lazy">
+                                        <img src="{{ public_url($setting->logo_black_path) }}" class="img-fluid w-50 mb-5" alt="Logo" loading="lazy">
                                     </a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="mailto:info@osvindonesia.com" target="_blank">
+                                    <a href="mailto:{{$setting->email}}" target="_blank">
                                         <i class="far fa-envelope mr-1"></i>
-                                        info@osvindonesia.com
+                                        {{$setting->email}}
                                     </a>
                                 </div>
 
@@ -48,16 +48,16 @@
                                 </div> -->
 
                                 <div class="menu-item">
-                                    <a href="https://www.instagram.com/osvindonesia" target="_blank">
+                                    <a href="{{$setting->social_instagram_url}}" target="_blank">
                                         <i class="fab fa-instagram mr-1"></i>
-                                        @osvindonesia
+                                        {{{$setting->social_instagram_name}}}
                                     </a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="#" target="_blank">
+                                    <a href="{{$setting->social_linkedin_url}}" target="_blank">
                                         <i class="fab fa-linkedin mr-1"></i>
-                                        OSV Indonesia
+                                        {{$setting->social_linkedin_name}}
                                     </a>
                                 </div>
 
@@ -108,8 +108,8 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('img/logo-white.png') }}" class="img-fluid header-logo logo-light center" alt="Logo" loading="lazy">
-                    <img src="{{ asset('img/logo-black.png') }}" class="img-fluid header-logo logo-dark" alt="Logo" loading="lazy">
+                    <img src="{{ public_url($setting->logo_white_path) }}" class="img-fluid header-logo logo-light center" alt="Logo" loading="lazy">
+                    <img src="{{ public_url($setting->logo_black_path) }}" class="img-fluid header-logo logo-dark" alt="Logo" loading="lazy">
                 </a>
 
                 <div id="toggle-btn" class="btn">
@@ -133,14 +133,14 @@
                             <div class="wrapper">
                                 <div class="menu-item d-none d-lg-block">
                                     <a href="{{ url('/') }}">
-                                        <img src="{{ asset('img/logo-black.png') }}" class="img-fluid w-50 mb-5" alt="Logo" loading="lazy">
+                                        <img src="{{ public_url($setting->logo_black_path) }}" class="img-fluid w-50 mb-5" alt="Logo" loading="lazy">
                                     </a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="mailto:info@osvindonesia.com" target="_blank">
+                                    <a href="mailto:{{$setting->email}}" target="_blank">
                                         <i class="far fa-envelope mr-1"></i>
-                                        info@osvindonesia.com
+                                        {{$setting->email}}
                                     </a>
                                 </div>
 
@@ -152,16 +152,16 @@
                                 </div> -->
 
                                 <div class="menu-item">
-                                    <a href="https://www.instagram.com/osvindonesia" target="_blank">
+                                    <a href="{{$setting->social_instagram_url}}" target="_blank">
                                         <i class="fab fa-instagram mr-1"></i>
-                                        @osvindonesia
+                                        {{{$setting->social_instagram_name}}}
                                     </a>
                                 </div>
 
                                 <div class="menu-item">
-                                    <a href="#" target="_blank">
+                                    <a href="{{$setting->social_linkedin_url}}" target="_blank">
                                         <i class="fab fa-linkedin mr-1"></i>
-                                        OSV Indonesia
+                                        {{$setting->social_linkedin_name}}
                                     </a>
                                 </div>
 

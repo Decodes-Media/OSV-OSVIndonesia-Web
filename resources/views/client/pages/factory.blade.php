@@ -1,4 +1,4 @@
-<title>OSV Indonesia - Factory</title>
+<title>{{$siteSetting->name}} - Factory</title>
 
 <x-layouts.app>
     <x-factories.section-factories-header/>

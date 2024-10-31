@@ -2,7 +2,7 @@
 <html lang="id">
 
 @php
-    $seo_title = config('app.name').' '.@$subtitle;
+    $seo_title = $siteSetting->name.' '.@$subtitle;
 @endphp
 
 <head>
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>OSV Indonesia</title>
+    <title>{{$siteSetting->name}}</title>
     <link rel="shortcut icon" href="{{ asset('faviconx.ico') }}" />
 
     <meta name="robots" content="index, follow">
@@ -50,8 +50,12 @@
 </head>
 
 <body>
+    @php
+        /** @var \App\Settings\SiteSetting $setting */
+        $setting = app(\App\Settings\SiteSetting::class);
+    @endphp
     <div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-        <img src="{{ asset('img/logo-black.png') }}" class="icon" alt="Preloader Logo">
+        <img src="{{ public_url($setting->logo_black_path) }}" class="icon" alt="Preloader Logo">
     </div>
 
     <div id="app">
@@ -64,9 +68,9 @@
             </div>
         </div>
         
-        <x-layouts.navbars.navbar />
+        <x-layouts.navbars.navbar :setting="$setting"/>
         {{ $slot }}
-        <x-layouts.footers.footer />
+        <x-layouts.footers.footer :setting="$setting"/>
 
         <!-- <div class="cookie-container hide">
             <p class="cookie-text">

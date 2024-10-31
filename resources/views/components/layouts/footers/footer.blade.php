@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3 text-center text-md-left mb-4 mb-md-0 d-flex align-items-end justify-content-center justify-content-lg-start">
                     <a href="#">
-                        <img src="{{ asset('img/logo-black.png') }}" class="img-fluid footer-logo" alt="Logo" loading="lazy">
+                        <img src="{{ public_url($setting->logo_black_path) }}" class="img-fluid footer-logo" alt="Logo" loading="lazy">
                     </a>
                 </div>
 
@@ -28,12 +28,12 @@
                 <div class="col-12 col-lg-3 text-center text-md-right d-flex align-items-end justify-content-center justify-content-lg-end">
                     <ul class="social-media mb-0 d-flex">
                         <li class="mr-2">
-                            <a href="#" target="_blank">
+                            <a href="{{$setting->social_linkedin_url}}" target="_blank">
                                 <i class="fab fa-linkedin mr-1"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/osvindonesia" target="_blank">
+                            <a href="{{$setting->social_instagram_url}}" target="_blank">
                                 <i class="fab fa-instagram mr-1"></i>
                             </a>
                         </li>

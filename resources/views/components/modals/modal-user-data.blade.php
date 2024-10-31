@@ -1,3 +1,9 @@
+@php
+    /** @var \App\Settings\ContactUsSetting $setting */
+    $setting = app(\App\Settings\ContactUsSetting::class);
+    $companyDoc = $setting->company_document
+@endphp
+
 <div class="modal fade" id="modalUserData" tabindex="-1" role="dialog" aria-labelledby="modalUserDataTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -50,7 +56,7 @@
             return false;
         }
 
-        window.location.href = "/files/OSV Company Profile-2024 (Digital).pdf";
+        window.location.href = "/storage/"+"{{$companyDoc}}";
         return false;
     }
 </script>

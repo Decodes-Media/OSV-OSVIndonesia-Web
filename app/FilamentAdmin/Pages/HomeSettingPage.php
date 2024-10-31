@@ -386,6 +386,55 @@ class HomeSettingPage extends Page implements HasForms
                         ])->minItems(3)
                         ->addActionLabel('Add Support Image')->addable($this->disableForm != true)->deletable($this->disableForm != true),
                     ]),
+                FC\Section::make('CTA Section')
+                    ->schema([
+                        FC\Grid::make(['default' => 2])->schema([
+                            FC\FileUpload::make('cta_background')
+                                ->label('Background')
+                                ->columnSpanFull()
+                                ->image()
+                                ->imageEditor()
+                                ->maxSize(1024)
+                                ->directory('public')
+                                ->disabled($this->disableForm)
+                                ->required()
+                                ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                                ->openable()
+                                ->downloadable(),
+                            FC\TextInput::make('cta_title')
+                                ->label('Title')
+                                ->disabled($this->disableForm)
+                                ->columnSpanFull()
+                                ->required()
+                                ->afterStateHydrated(function ($set, $livewire) {
+                                    $set('cta_title', $livewire->data['cta_title']);
+                                }),
+                            FC\Textarea::make('cta_desc')
+                                ->label('Description')
+                                ->disabled($this->disableForm)
+                                ->columnSpanFull()
+                                ->required()
+                                ->afterStateHydrated(function ($set, $livewire) {
+                                    $set('cta_desc', $livewire->data['cta_desc']);
+                                }),
+                            FC\TextInput::make('cta_link_text')
+                                ->label('Link Text')
+                                ->disabled($this->disableForm)
+                                ->required()
+                                ->afterStateHydrated(function ($set, $livewire) {
+                                    $set('cta_link_text', $livewire->data['cta_link_text']);
+                                }),
+                            FC\TextInput::make('cta_link_url')
+                                ->label('Link URL')
+                                ->url()
+                                ->activeUrl()
+                                ->disabled($this->disableForm)
+                                ->required()
+                                ->afterStateHydrated(function ($set, $livewire) {
+                                    $set('cta_link_url', $livewire->data['cta_link_url']);
+                                }),
+                        ])
+                    ])
                 
             ]);
     }

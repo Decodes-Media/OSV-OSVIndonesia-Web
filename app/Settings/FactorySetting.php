@@ -6,6 +6,7 @@ use Spatie\LaravelSettings\Settings;
 
 class FactorySetting extends Settings
 {
+    public string $banner;
     public string $title;
     public string $desc;
     // public string $sect1_thumbnail;

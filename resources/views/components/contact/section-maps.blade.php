@@ -12,10 +12,7 @@
                         {!! @$data->maps_desc !!}
                     </div>
                     <div class="bottom">
-                        <p>
-                            Please schedule an appointment to visit our factory: <br/>
-                            <a href="mailto:info@osvindonesia.com" target="_blank">info@osvindonesia.com</a>
-                        </p>
+                        {!! @$data->maps_bottom_text !!}
                     </div>
                 </div>
             </div>
