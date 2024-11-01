@@ -156,6 +156,38 @@ class SiteSettingPage extends Page implements HasForms
                                 ->activeUrl()
                                 ->required(),
                         ]),
+                        FC\Fieldset::make('Footer')->schema([
+                            FC\TextInput::make('factory_text')
+                                ->label('Factory Text')
+                                ->disabled($this->disableForm)
+                                ->required(),
+                            FC\TextInput::make('factory_location_text')
+                                ->label('Factory Location')
+                                ->disabled($this->disableForm)
+                                ->required(),
+                            FC\TextInput::make('factory_link')
+                                ->label('Factory Link')
+                                ->disabled($this->disableForm)
+                                ->activeUrl()
+                                ->required(),
+                            FC\TextInput::make('office_text')
+                                ->label('Office Text')
+                                ->disabled($this->disableForm)
+                                ->required(),
+                            FC\TextInput::make('office_location_text')
+                                ->label('Office Location')
+                                ->disabled($this->disableForm)
+                                ->required(),
+                            FC\TextInput::make('office_link')
+                                ->label('Office Link')
+                                ->disabled($this->disableForm)
+                                ->activeUrl()
+                                ->required(),
+                            FC\TextInput::make('copyright')
+                                ->label('Copyright')
+                                ->disabled($this->disableForm)
+                                ->required(),
+                        ]),
                         TiptapEditor::make('privacy_policy')
                             ->label('Privacy Policy')
                             ->columnSpanFull()
