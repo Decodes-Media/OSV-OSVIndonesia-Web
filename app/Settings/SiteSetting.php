@@ -16,6 +16,8 @@ class SiteSetting extends Settings
     public string $social_instagram_url;
     public string $social_linkedin_name;
     public string $social_linkedin_url;
+    public string $privacy_policy;
+    public string $term_conditions;
 
     public static function group(): string
     {
