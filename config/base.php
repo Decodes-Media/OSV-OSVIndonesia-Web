@@ -10,7 +10,7 @@ return [
         'admin_domain' => env('APP_ADMIN_DOMAIN'),
         'web_path' => env('APP_WEB_PATH', '/'),
         'api_path' => env('APP_API_PATH', '/api'),
-        'admin_path' => env('APP_ADMIN_PATH', '/cpanel'),
+        'admin_path' => env('APP_ADMIN_PATH', '/admin'),
     ],
 
     'records_limit' => [
@@ -109,9 +109,26 @@ return [
             ['projects_setting.update', 'Project Setting — Update'],
         ],
         [
+            ['projects_projects.*', 'Projects Projects — All Access'],
+            ['projects_projects.view', 'Projects Projects — View'],
+            ['projects_projects.create', 'Projects Projects — Create'],
+            ['projects_projects.update', 'Projects Projects — Update'],
+            ['projects_projects.delete', 'Projects Projects — Delete'],
+        ],
+        [
             ['contact_us_setting.*', 'Contact Us Setting — All Access'],
             ['contact_us_setting.view', 'Contact Us Setting — View'],
             ['contact_us_setting.update', 'Contact Us Setting — Update'],
+        ],
+        [
+            ['contact_us_contacts.*', 'Contact Us Contacts — All Access'],
+            ['contact_us_contacts.view', 'Contact Us Contacts — View'],
+            ['contact_us_contacts.update', 'Contact Us Contacts — Update'],
+        ],
+        [
+            ['contact_us_document_download.*', 'Contact Us Document Downloads — All Access'],
+            ['contact_us_document_download.view', 'Contact Us Document Downloads — View'],
+            ['contact_us_document_download.update', 'Contact Us Document Downloads — Update'],
         ],
         // [
         //     ['reg_personal.*', 'Regis Personal — All Access'],
@@ -202,9 +219,10 @@ return [
             ['role.export', 'Role — Export'],
         ],
         [
+            ['system.site_setting', 'System — Site Setting'],
             ['system.log_activities', 'System — Log Activities'],
             ['system.log_application', 'System — Log Application'],
-            ['system.site_health', 'System — Site Health'],
+            // ['system.site_health', 'System — Site Health'],
             // ['system.site_backup', 'System — Site Backups'],
         ],
     ],
