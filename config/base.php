@@ -10,7 +10,7 @@ return [
         'admin_domain' => env('APP_ADMIN_DOMAIN'),
         'web_path' => env('APP_WEB_PATH', '/'),
         'api_path' => env('APP_API_PATH', '/api'),
-        'admin_path' => env('APP_ADMIN_PATH', '/cpanel'),
+        'admin_path' => env('APP_ADMIN_PATH', '/admin'),
     ],
 
     'records_limit' => [
