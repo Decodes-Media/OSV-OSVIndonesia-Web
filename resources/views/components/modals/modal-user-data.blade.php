@@ -46,7 +46,7 @@
 </div>
 
 <script>
-    async function validateForm() {
+    async function validateForm(event) {
         event.preventDefault(); // Prevent the default form submission
 
         var fullName = document.getElementById("fullName").value.trim();
@@ -59,7 +59,6 @@
             return false;
         }
 
-        // If validation passes, send the form data via AJAX
         const formData = new FormData(event.target);
 
         try {
@@ -74,13 +73,24 @@
             const result = await response.json();
 
             if (response.ok && result.downloadUrl) {
-                // Open the download URL in a new tab to download the file
                 window.open(result.downloadUrl, '_blank');
+
+                event.target.reset();
+                closeModal();
+
+                setTimeout(() => {
+                    window.location.href = window.location.href;
+                }, 500);
             } else {
                 alert(result.error || 'An error occurred.');
             }
         } catch (error) {
             console.error('Error:', error);
         }
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("modalId");
+        modal.style.display = "none";
     }
 </script>
