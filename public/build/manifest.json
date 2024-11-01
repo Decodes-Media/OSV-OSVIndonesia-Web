@@ -1,6 +1,6 @@
 {
   "public/css/owl-carousel-custom.css": {
-    "file": "assets/owl-carousel-custom-23e61b25.css",
+    "file": "assets/owl-carousel-custom-7be0ba66.css",
     "isEntry": true,
     "src": "public/css/owl-carousel-custom.css"
   },
@@ -88,7 +88,7 @@
     "src": "resources/js/filament-base-theme.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-723c0efc.css",
+    "file": "assets/app-22e23da7.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

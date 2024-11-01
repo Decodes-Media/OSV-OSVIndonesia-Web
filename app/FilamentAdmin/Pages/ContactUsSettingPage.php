@@ -91,6 +91,16 @@ class ContactUsSettingPage extends Page implements HasForms
             ->statePath('data')
             ->schema([
                 FC\Section::make('Header Section')->schema([
+                    FC\FileUpload::make('banner')
+                        ->image()
+                        ->imageEditor()
+                        ->maxSize(1024)
+                        ->directory('public')
+                        ->disabled($this->disableForm)
+                        ->required()
+                        ->getUploadedFileNameForStorageUsing(fn ($file) => uniqid().$file->hashName())
+                        ->openable()
+                        ->downloadable(),
                     FC\FileUpload::make('catalog_cover')
                         ->image()
                         ->imageEditor()
@@ -134,6 +144,14 @@ class ContactUsSettingPage extends Page implements HasForms
                             ->required()
                             ->afterStateHydrated(function ($set, $livewire) {
                                 $set('maps_desc', $livewire->data['maps_desc']);
+                            }),
+                        TiptapEditor::make('maps_bottom_text')
+                            ->label('Bottom Text')
+                            ->columnSpanFull()
+                            ->profile('basic')
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('maps_bottom_text', $livewire->data['maps_bottom_text']);
                             }),
                     ]),
                 ]),

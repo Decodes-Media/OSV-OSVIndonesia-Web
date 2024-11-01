@@ -1,4 +1,4 @@
-<title>OSV Indonesia - Specialities</title>
+<title>{{$siteSetting->name}} - Specialities</title>
 
 <x-layouts.app>
     <x-specialities.section-specialities-header :data="$setting"/>

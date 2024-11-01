@@ -44,27 +44,33 @@ class ContactResource extends Resource
         return $form->schema([
             MyForms\CreatorEditorPlaceholder::make(),
             Forms\Components\Section::make()->schema([
-                Forms\Components\TextInput::make('name')
-                    ->label('Name')
-                    ->columnSpanFull()
-                    ->disabled(),
-                Forms\Components\TextInput::make('email')
-                    ->label('Email')
-                    ->columnSpanFull()
-                    ->disabled(),
-                Forms\Components\TextInput::make('phone')
-                    ->label('Phone')
-                    ->columnSpanFull()
-                    ->disabled(),
-                Forms\Components\Textarea::make('message')
-                    ->label('Message')
-                    ->columnSpanFull()
-                    ->rows(3)
-                    ->disabled(),
-                Forms\Components\Textarea::make('internal_note')
-                    ->label('Internal Notes')
-                    ->columnSpanFull()
-                    ->rows(3),
+                Forms\Components\Grid::make(['default' => 2])->schema([
+                    Forms\Components\TextInput::make('fullname')
+                        ->label('Full Name')
+                        ->columnSpanFull()
+                        ->disabled(),
+                    Forms\Components\TextInput::make('phone')
+                        ->label('Phone')
+                        ->disabled(),
+                    Forms\Components\TextInput::make('country')
+                        ->label('Country')
+                        ->disabled(),
+                    Forms\Components\TextInput::make('company_name')
+                        ->label('Company Name')
+                        ->disabled(),
+                    Forms\Components\TextInput::make('company_email')
+                        ->label('Company Email')
+                        ->disabled(),
+                    Forms\Components\Textarea::make('message')
+                        ->label('Message')
+                        ->columnSpanFull()
+                        ->rows(3)
+                        ->disabled(),
+                    Forms\Components\Textarea::make('internal_note')
+                        ->label('Internal Notes')
+                        ->columnSpanFull()
+                        ->rows(3),
+                ])
             ]),
         ]);
     }
@@ -76,36 +82,49 @@ class ContactResource extends Resource
             ->columns([
                 MyColumns\CreatedAt::make()
                     ->toggleable(false, false),
-                Tables\Columns\TextColumn::make('name')
-                    ->label('Nama')
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('email')
-                    ->label('Email')
+                Tables\Columns\TextColumn::make('fullname')
+                    ->label('Full Name')
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('phone')
-                    ->label('No. Telepon')
+                    ->label('Phone')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('country')
+                    ->label('Country')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('company_name')
+                    ->label('Company Name')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('company_email')
+                    ->label('Company Email')
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('message')
-                    ->label('Pesan')
+                    ->label('Message')
                     ->searchable()
                     ->sortable()
                     ->limit(256)
                     ->wrap()
                     ->extraHeaderAttributes(['style' => 'width:280px']),
+                Tables\Columns\TextColumn::make('internal_note')
+                    ->label('Internal Note')
+                    ->searchable()
+                    ->sortable(),
                 MyColumns\UpdatedAt::make(),
             ])
             ->filters([
-                MyFilters\DateRangeBasicFilter::make('created_at', 'Tgl Dibuat dari', 'Tgl Dibuat sampai'),
+                // MyFilters\DateRangeBasicFilter::make('created_at', 'Tgl Dibuat dari', 'Tgl Dibuat sampai'),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make()->label('')->icon(''),
+                Tables\Actions\EditAction::make(),
+                // Tables\Actions\ViewAction::make()->label('')->icon(''),
             ])
             ->bulkActions([
-                MyActions\CancelBulkAction::make(),
-                Tables\Actions\DeleteBulkAction::make(),
+                // MyActions\CancelBulkAction::make(),
+                // Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 

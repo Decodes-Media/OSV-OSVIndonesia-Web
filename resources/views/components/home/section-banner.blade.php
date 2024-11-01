@@ -1,7 +1,7 @@
 <section class="banner">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-lg-8 px-0 mb-5 mb-lg-0">
+            <div class="col-12 col-lg-8 px-0 mb-3 mb-lg-0">
                 <div class="owl-carousel owl-carousel-1 owl-theme" data-aos="fade-in">
                     @foreach(@$data->banner_data as $banner)
                         <div class="item">
@@ -24,7 +24,7 @@
                             <li><span class="title">Bespoke<span></li>
                             <li><span class="title">Furniture<span></li>
                         </ul> -->
-                        <img src="{{ asset('img/logo-black_2.png') }}" class="img-fluid mb-5" alt="Logo" loading="lazy" width="100px">
+                        <img src="{{ asset('img/logo-black_2.png') }}" class="img-fluid mb-5 d-none d-md-block" alt="Logo" loading="lazy" width="100px">
                         <h2>{{@$data->title}}</h2>
                         <p>
                             {!! @$data->desc !!}

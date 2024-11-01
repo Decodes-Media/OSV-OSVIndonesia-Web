@@ -25,4 +25,8 @@ class Contact extends Model
     protected $casts = [
         'metadata' => 'json',
     ];
+
+    public static function store($data) {
+        Contact::create($data);
+    }
 }

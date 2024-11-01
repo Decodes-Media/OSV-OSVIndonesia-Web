@@ -15,15 +15,7 @@
                         @if($content['content_type'] == 'thumbnail')
                             <img src="{{ public_url($content['content_thumbnail']) }}" class="w-100 img-fluid mb-4 lazy-load" alt="{{$content['content_title']}}" data-aos="fade-in" />
                         @else
-                            <iframe src="{{ $content['content_youtube_url'] }}?controls=0?autoplay=1?loop=1" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay;" 
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen 
-                                muted
-                                class="youtube"
-                                data-aos="fade-in" >
-                            </iframe>
+                            <iframe class="youtube" src="{{ $content['content_youtube_url'] }}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" frameborder="0" allowfullscreen"></iframe>
                         @endif
                     </div>
                     <div class="col-12 col-lg-6 d-flex align-items-center">

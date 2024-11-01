@@ -7,7 +7,7 @@
                     <p>
                         {!! @$data->factory_desc !!}
                     </p>
-                    <a href="{{@$data->factory_link}}" class="btn btn--outline-dark btn-magnetic fill mt-4" cursor="link">
+                    <a href="{{ url('factory') }}" class="btn btn--outline-dark btn-magnetic fill mt-4" cursor="link">
                         Know More
                     </a>
                 </div>
@@ -15,15 +15,7 @@
                     @if(@$data->factory_type == 'thumbnail')
                         <img src="{{ public_url(@$data->factory_thumbnail) }}" class="w-100 img-fluid lazy-load" alt="{{@$data->factory_title}}" data-aos="fade-in" />
                     @else
-                        <iframe src="{{ @$data->factory_youtube_url }}?controls=0" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay;" 
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen 
-                            muted
-                            class="youtube"
-                            data-aos="fade-in" >
-                        </iframe>
+                        <iframe class="youtube" src="{{ @$data->factory_youtube_url }}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" frameborder="0" allowfullscreen"></iframe>
                     @endif
                 </div>
             </div>

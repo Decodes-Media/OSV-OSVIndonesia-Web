@@ -1,3 +1,9 @@
+@php
+    /** @var \App\Settings\ContactUsSetting $setting */
+    $setting = app(\App\Settings\ContactUsSetting::class);
+    $companyDoc = $setting->company_document
+@endphp
+
 <div class="modal fade" id="modalUserData" tabindex="-1" role="dialog" aria-labelledby="modalUserDataTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -9,19 +15,23 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" onsubmit="return validateForm()" class="form form-user-data">
+                <form method="POST" onsubmit="validateForm(event)" action="{{ route('company-document-downloads') }}" class="form form-user-data">
+                    @csrf
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="Full Name" required>
+                            <input id="fullName" type="text" class="form-control" name="fullname" placeholder="Full Name" required>
                         </div>
                         <div class="col-12 col-md-6">
                             <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number" required>
                         </div>
                         <div class="col-12">
-                            <input id="companyName" type="text" class="form-control" name="companyName" placeholder="Country" required>
+                            <input id="country" type="text" class="form-control" name="country" placeholder="Country" required>
                         </div>
                         <div class="col-12">
-                            <input id="companyEmail" type="email" class="form-control" name="companyEmail" placeholder="Company Name" required>
+                            <input id="companyName" type="text" class="form-control" name="company_name" placeholder="Company Name" required>
+                        </div>
+                        <div class="col-12">
+                            <input id="companyEmail" type="email" class="form-control" name="company_email" placeholder="Company Email" required>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
@@ -36,7 +46,9 @@
 </div>
 
 <script>
-    function validateForm() {
+    async function validateForm() {
+        event.preventDefault(); // Prevent the default form submission
+
         var fullName = document.getElementById("fullName").value.trim();
         var phone = document.getElementById("phone").value.trim();
         var companyName = document.getElementById("companyName").value.trim();
@@ -47,7 +59,28 @@
             return false;
         }
 
-        window.location.href = "/files/OSV Company Profile-2024 (Digital).pdf";
-        return false;
+        // If validation passes, send the form data via AJAX
+        const formData = new FormData(event.target);
+
+        try {
+            const response = await fetch(event.target.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.downloadUrl) {
+                // Open the download URL in a new tab to download the file
+                window.open(result.downloadUrl, '_blank');
+            } else {
+                alert(result.error || 'An error occurred.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
     }
 </script>
