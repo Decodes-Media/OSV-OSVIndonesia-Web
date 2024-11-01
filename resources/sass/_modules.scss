@@ -606,6 +606,43 @@ section {
             border-radius: 6px;
             margin-bottom: 30px;
         }
+
+        .tab-area {
+            .nav-tabs {
+                border-bottom: 0;
+
+                .nav-item {
+                    margin-right: 8px;
+
+                    a {
+                        font-size: 1rem;
+                        font-weight: $font-weight-light;
+                        padding: 12px 24px;
+                        color: $secondary-color;
+                        border-radius: 6px;
+                        border: 1px solid $secondary-color;
+
+                        &.active {
+                            background-color: $secondary-color;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .tab-content {
+                padding: 20px 0;
+
+                h4 {
+                    font-weight: $font-weight-light;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 
     &.projects-header {
@@ -767,6 +804,12 @@ section {
     &.projects-list {
         h2 {
             color: $secondary-color;
+        }
+    }
+
+    &.profile {
+        img {
+            border-radius: 6px;
         }
     }
 }
