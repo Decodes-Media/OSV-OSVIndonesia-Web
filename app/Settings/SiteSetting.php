@@ -18,6 +18,13 @@ class SiteSetting extends Settings
     public string $social_linkedin_url;
     public string $privacy_policy;
     public string $term_conditions;
+    public string $factory_text;
+    public string $factory_location_text;
+    public string $factory_link;
+    public string $office_text;
+    public string $office_location_text;
+    public string $office_link;
+    public string $copyright;
 
     public static function group(): string
     {
