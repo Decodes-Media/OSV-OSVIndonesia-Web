@@ -13,6 +13,7 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Http\Response;
+use FilamentTiptapEditor\TiptapEditor;
 
 /**
  * @property \Filament\Forms\ComponentContainer $form
@@ -155,6 +156,30 @@ class SiteSettingPage extends Page implements HasForms
                                 ->activeUrl()
                                 ->required(),
                         ]),
+                        TiptapEditor::make('privacy_policy')
+                            ->label('Privacy Policy')
+                            ->columnSpanFull()
+                            ->disk('public')
+                            ->directory('uploads')
+                            ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
+                            ->maxFileSize(1024)
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('privacy_policy', $livewire->data['privacy_policy']);
+                            }),
+                        TiptapEditor::make('term_conditions')
+                            ->label('Term Conditions')
+                            ->columnSpanFull()
+                            ->disk('public')
+                            ->directory('uploads')
+                            ->acceptedFileTypes(['image/jpg', 'image/jpeg', 'image/png'])
+                            ->maxFileSize(1024)
+                            ->disabled($this->disableForm)
+                            ->required()
+                            ->afterStateHydrated(function ($set, $livewire) {
+                                $set('term_conditions', $livewire->data['term_conditions']);
+                            }),
                     ]),
                     FC\Tabs\Tab::make('Default SEO')->columns(2)->schema([
                         FC\FileUpload::make('seo_default.cover_path')

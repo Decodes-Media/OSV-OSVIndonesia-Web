@@ -6,23 +6,23 @@ use App\Filament\MyActions;
 use App\Filament\MyColumns;
 use App\Filament\MyFilters;
 use App\Filament\MyForms;
-use App\FilamentAdmin\Resources\ContactResource\Pages;
-use App\Models\Contact;
+use App\FilamentAdmin\Resources\CompanyDocumentDownloadResource\Pages;
+use App\Models\CompanyDocumentDownload;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class ContactResource extends Resource
+class CompanyDocumentDownloadResource extends Resource
 {
-    protected static ?string $model = Contact::class;
+    protected static ?string $model = CompanyDocumentDownload::class;
 
-    protected static ?string $slug = 'contacts';
+    protected static ?string $slug = 'company-document-download';
 
     protected static ?string $navigationIcon = 'heroicon-o-inbox-arrow-down';
 
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 4;
 
     public static function getNavigationGroup(): ?string
     {
@@ -31,12 +31,12 @@ class ContactResource extends Resource
 
     public static function getModelLabel(): string
     {
-        return __('Contact');
+        return __('Document Download');
     }
 
     public static function getPluralModelLabel(): string
     {
-        return __('Contacts');
+        return __('Document Downloads');
     }
 
     public static function form(Form $form): Form
@@ -60,11 +60,6 @@ class ContactResource extends Resource
                         ->disabled(),
                     Forms\Components\TextInput::make('company_email')
                         ->label('Company Email')
-                        ->disabled(),
-                    Forms\Components\Textarea::make('message')
-                        ->label('Message')
-                        ->columnSpanFull()
-                        ->rows(3)
                         ->disabled(),
                     Forms\Components\Textarea::make('internal_note')
                         ->label('Internal Notes')
@@ -102,13 +97,6 @@ class ContactResource extends Resource
                     ->label('Company Email')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('message')
-                    ->label('Message')
-                    ->searchable()
-                    ->sortable()
-                    ->limit(256)
-                    ->wrap()
-                    ->extraHeaderAttributes(['style' => 'width:280px']),
                 Tables\Columns\TextColumn::make('internal_note')
                     ->label('Internal Note')
                     ->searchable()
@@ -131,9 +119,8 @@ class ContactResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListContacts::route('/'),
-            'view' => Pages\ViewContact::route('/{record}'),
-            'edit' => Pages\EditContact::route('/{record}/edit'),
+            'index' => Pages\ListCompanyDocumentDownloads::route('/'),
+            'edit' => Pages\EditCompanyDocumentDownload::route('/{record}/edit'),
         ];
     }
 }

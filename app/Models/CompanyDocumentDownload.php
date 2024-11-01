@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class CompanyDocumentDownload extends Model
 {
     use HasFactory;
     use HasUlids;
@@ -17,7 +17,6 @@ class Contact extends Model
         'country',
         'company_name',
         'company_email',
-        'message',
         'internal_note',
         'metadata',
     ];
@@ -27,6 +26,6 @@ class Contact extends Model
     ];
 
     public static function store($data) {
-        Contact::create($data);
+        CompanyDocumentDownload::create($data);
     }
 }
