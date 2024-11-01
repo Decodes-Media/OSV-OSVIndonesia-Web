@@ -56,28 +56,28 @@ class BaseDatabaseSeeder extends Seeder
 
         $super->assignRole($role);
 
-        Role::insert([
-            'id' => strtolower(Str::ulid()),
-            'name' => 'Admin',
-            'guard_name' => 'web:admin',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        // Role::insert([
+        //     'id' => strtolower(Str::ulid()),
+        //     'name' => 'Admin',
+        //     'guard_name' => 'web:admin',
+        //     'created_at' => now(),
+        //     'updated_at' => now(),
+        // ]);
 
-        $role = Role::findByName('Admin', 'web:admin')->givePermissionTo([
-            'contact.*',
-            'news.*',
-            'page.*',
-        ]);
+        // $role = Role::findByName('Admin', 'web:admin')->givePermissionTo([
+        //     'contact.*',
+        //     'news.*',
+        //     'page.*',
+        // ]);
 
-        $admin = Admin::create([
-            'id' => strtolower(Str::ulid()),
-            'name' => 'Admin Satu',
-            'email' => 'admin@osvi.app',
-            'password' => Hash::make('password'),
-            'password_updated_at' => now(),
-        ]);
+        // $admin = Admin::create([
+        //     'id' => strtolower(Str::ulid()),
+        //     'name' => 'Admin Satu',
+        //     'email' => 'admin@osvi.app',
+        //     'password' => Hash::make('password'),
+        //     'password_updated_at' => now(),
+        // ]);
 
-        $admin->assignRole($role);
+        // $admin->assignRole($role);
     }
 }
