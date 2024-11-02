@@ -1,5 +1,5 @@
 <section class="profile mt-5">
-    <div class="container px-lg-0">
+    {{-- <div class="container px-lg-0">
         <div class="row mb-6">
             <div class="col-12 col-lg-6 d-flex align-items-center order-2 order-lg-1">
                 <div class="content">
@@ -11,5 +11,5 @@
                 <img src="{{ asset('img/cover-compro.jpg') }}" class="w-100 img-fluid lazy-load" alt="Founder" data-aos="fade-in" />
             </div>
         </div>
-    </div>
+    </div> --}}
 </section>
